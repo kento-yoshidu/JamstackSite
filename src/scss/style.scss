@@ -35,6 +35,7 @@ html {
   .header-sub-title {
     font-weight: 100;
     text-shadow: -1px 2px 0 rgba(100,100,100,1);
+    text-align: center;
   }
   
   .header-title {
@@ -52,15 +53,17 @@ html {
   .my-skill {
     display: block;
     padding: 2%;
-    border: 2px solid #ddd;
-    border-radius: 10px;
     color: #ddd;
     text-decoration: none;
     transition: .5s;
 
     &:hover {
       color: orange;
-      border-color: orange;
+    }
+
+    @media screen and (max-width: 768px) {
+      min-width: 60%;
+      max-width: 80%;
     }
 
     .my-skill-title {
@@ -73,14 +76,21 @@ html {
       margin-top: 20px;
       display: flex;
 
+      @media screen and (max-width: 768px) {
+        flex-direction: column;
+      }
+
+
       div{
         margin: 0 20px;
+        text-align: center;
         p {
-          font-size: 2rem;
+          font-size: 1.6rem;
           font-weight: 100;
           margin-bottom: 10px;
           i {
-            margin-right: 10px;
+            margin-right: 8px;
+            font-size: 2.2rem;
           }
         }
       }
@@ -132,9 +142,99 @@ html {
     transform: translateY(10px) rotate(45deg);
   }
 }
+} //header
+
+.section-title {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 100;
+  font-size: 3.8rem;
+  color: #444;
 }
 
-#sec1 {
-  background: red;
-  height: 100vh;
+.section-links {
+  padding: 5% 0 3%;  
+
+  .links-wrapper {
+    display: flex;
+    justify-content: center;
+    margin: 40px 0 30px;
+  }
+
+  .links-title {
+    color: #555;
+    text-align: center;
+    letter-spacing: 5px;
+  }
+
+  .link-item {
+    display: block;
+    width: 25%;
+    margin: 0 1.2%;
+    padding: 30px 0 10px;
+    border: 1px solid rgb(240,240,240);
+    border-radius: 3px;
+    color: #444;
+    text-decoration: none;
+    text-align: center;
+    &:hover {
+      background: rgb(248,248,248);
+      color: orange;
+    }
+
+    .link-title {
+      font-size: 2.2rem;
+      letter-spacing: 2px;
+      margin: 10px 0 30px 0;
+    }
+
+    i {
+      font-size: 6rem;
+      margin: 0;
+    }
+
+    p {
+      width: 80%;
+      margin: 30px auto;
+      font-family: "游ゴシック", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
+      font-size: 1.5rem;
+    }
+  } //link-item
+
+  .nogi {
+    background: linear-gradient(to bottom right, #fff 50%, rgb(147,41,147) 50.3%) no-repeat bottom right/100% 100%;
+    width: 62px;
+    height: 62px;
+    position: relative;
+    margin: 0 auto;
+    &::after {
+      content: "47";
+      font: 18px/1em -webkit-pictograph;
+      color: #fff;
+      right: 4px;
+      bottom: 0;
+      position: absolute;
+    }
+  }
+} //section-links
+
+.link-btn {
+  display: inline-block;
+  font-size: 1.8rem;
+  background: $main-color;
+  letter-spacing: 1px;
+  border-radius: 2px;
+  margin: 1% 0;
+  padding: 10px 25px;
+  &:hover {
+    background: desaturate($main-color,15%);
+    color: #fff;
+  }
+
+  &-article {
+    background: #888;
+    margin-top: 30px;
+    &:hover {
+      background: #777;
+    }
+  }
 }
