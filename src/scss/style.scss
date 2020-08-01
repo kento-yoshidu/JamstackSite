@@ -1,3 +1,140 @@
+@charset "UTF-8";
+
+@import "../../common_src/scss/master";
+@import "./keyframes";
+@import "./fadein";
+
+$main-color: rgba(53, 155, 155, 1);
+
+html {
+  font-size: 62.5%;
+  //font-family: 'Hiragino Kaku Gothic Pro','ヒラギノ角ゴ Pro W3','メイリオ',Meiryo,'ＭＳ Ｐゴシック',sans-serif;
+  font-family: "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+  scroll-behavior: smooth;
+}
+
 .header {
-  color: red;
+  background: $main-color;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-weight: 100;
+
+  .header-title,
+  .header-sub-title,
+  .my-skill {
+    font-family: 'Open Sans', sans-serif;
+    animation-name: top-to-down;
+    animation-duration: 2s;
+  }
+
+  .header-title,
+  .header-sub-title {
+    font-weight: 100;
+    text-shadow: -1px 2px 0 rgba(100,100,100,1);
+  }
+  
+  .header-title {
+    margin-bottom: 50px;
+    font-size: 6.3rem;
+    letter-spacing: 4px;
+  }
+
+  .header-sub-title {
+    margin-bottom: 20px;
+    font-size: 4rem;
+    letter-spacing: 2px;
+  }
+
+  .my-skill {
+    display: block;
+    padding: 2%;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    color: #ddd;
+    text-decoration: none;
+    transition: .5s;
+
+    &:hover {
+      color: orange;
+      border-color: orange;
+    }
+
+    .my-skill-title {
+      font-size: 3.5rem;
+      letter-spacing: 1px;
+      text-align: center;
+    }
+
+    .skill-wrapper {
+      margin-top: 20px;
+      display: flex;
+
+      div{
+        margin: 0 20px;
+        p {
+          font-size: 2rem;
+          font-weight: 100;
+          margin-bottom: 10px;
+          i {
+            margin-right: 10px;
+          }
+        }
+      }
+    }
+  }
+
+  .arrow-container {
+    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+    width: 50px;
+
+    &:hover .arrow {
+      border-color: orange;
+    }
+
+    .arrow {
+      width: 25px;
+      height: 25px;
+      border-bottom: 1px solid #fff;
+      border-right: 1px solid #fff;
+      transform: rotate(45deg);
+      animation: arrow-move 1.5s infinite;
+      transition: .5s;
+
+      &:not(:first-child) {
+        margin-top: -10px;
+      }
+      @for $i from 1 through 3 {
+        &:nth-child(#{$i}) {
+          animation-delay: .15 * $i + s;
+        }
+      }
+    }
+  }
+@keyframes arrow-move {
+  0% {
+    opacity: 0;
+    transform: rotate(45deg);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(10px) rotate(45deg);
+  }
+}
+}
+
+#sec1 {
+  background: red;
+  height: 100vh;
 }

@@ -5,6 +5,7 @@ const fs = require('fs');
 
 const app = express();
 
+app.use(express.static('common_src'));
 app.use(express.static('src'));
 app.use(express.static('views'));
 
@@ -18,4 +19,4 @@ app.get('/', (req, res) => {
 
 const server = http.createServer(app);
 
-server.listen('80');
+server.listen('3000');

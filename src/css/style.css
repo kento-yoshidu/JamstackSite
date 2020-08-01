@@ -1,2 +1,301 @@
+/**
+ * html5doctor.com Reset Stylesheet v1.6.1 (http://html5doctor.com/html-5-reset-stylesheet/)
+ * Richard Clark (http://richclarkdesign.com)
+ * http://cssreset.com
+ */
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  vertical-align: baseline;
+  background: transparent; }
+
+body {
+  line-height: 1; }
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+nav ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent; }
+
+/* change colours to suit your needs */
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none; }
+
+/* change colours to suit your needs */
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold; }
+
+del {
+  text-decoration: line-through; }
+
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* change border colour to suit your needs */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0; }
+
+input, select {
+  vertical-align: middle; }
+
+@-webkit-keyframes top-to-down {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-50px);
+    transform: translateY(-50px); }
+  99.9%, to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0); } }
+
+@keyframes top-to-down {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-50px);
+    transform: translateY(-50px); }
+  99.9%, to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0); } }
+
+.sa {
+  opacity: 0;
+  -webkit-transition: all .9s ease;
+  -o-transition: all .9s ease;
+  transition: all .9s ease; }
+
+.sa.show {
+  opacity: 1;
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none; }
+
+.sa--lr {
+  -webkit-transform: translate(-100px, 0);
+  -ms-transform: translate(-100px, 0);
+  transform: translate(-100px, 0); }
+
+.sa--rl {
+  -webkit-transform: translate(100px, 0);
+  -ms-transform: translate(100px, 0);
+  transform: translate(100px, 0); }
+
+.sa--up {
+  -webkit-transform: translate(0, 200px);
+  -ms-transform: translate(0, 200px);
+  transform: translate(0, 200px); }
+
+.sa--down {
+  -webkit-transform: translate(0, -100px);
+  -ms-transform: translate(0, -100px);
+  transform: translate(0, -100px); }
+
+.sa--scaleUp {
+  -webkit-transform: scale(0.5);
+  -ms-transform: scale(0.5);
+  transform: scale(0.5); }
+
+.sa--scaleDown {
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5); }
+
+.sa--rotateL {
+  -webkit-transform: rotate(1800deg);
+  -ms-transform: rotate(1800deg);
+  transform: rotate(1800deg); }
+
+.sa--rotateR {
+  -webkit-transform: rotate(-180deg);
+  -ms-transform: rotate(-180deg);
+  transform: rotate(-180deg); }
+
+html {
+  font-size: 62.5%;
+  font-family: "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+  scroll-behavior: smooth; }
+
 .header {
-  color: red; }
+  background: #359b9b;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #fff;
+  font-weight: 100; }
+  .header .header-title,
+  .header .header-sub-title,
+  .header .my-skill {
+    font-family: 'Open Sans', sans-serif;
+    -webkit-animation-name: top-to-down;
+    animation-name: top-to-down;
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s; }
+  .header .header-title,
+  .header .header-sub-title {
+    font-weight: 100;
+    text-shadow: -1px 2px 0 #646464; }
+  .header .header-title {
+    margin-bottom: 50px;
+    font-size: 6.3rem;
+    letter-spacing: 4px; }
+  .header .header-sub-title {
+    margin-bottom: 20px;
+    font-size: 4rem;
+    letter-spacing: 2px; }
+  .header .my-skill {
+    display: block;
+    padding: 2%;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    color: #ddd;
+    text-decoration: none;
+    -webkit-transition: .5s;
+    -o-transition: .5s;
+    transition: .5s; }
+    .header .my-skill:hover {
+      color: orange;
+      border-color: orange; }
+    .header .my-skill .my-skill-title {
+      font-size: 3.5rem;
+      letter-spacing: 1px;
+      text-align: center; }
+    .header .my-skill .skill-wrapper {
+      margin-top: 20px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; }
+      .header .my-skill .skill-wrapper div {
+        margin: 0 20px; }
+        .header .my-skill .skill-wrapper div p {
+          font-size: 2rem;
+          font-weight: 100;
+          margin-bottom: 10px; }
+          .header .my-skill .skill-wrapper div p i {
+            margin-right: 10px; }
+  .header .arrow-container {
+    display: block;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-top: 25px;
+    width: 50px; }
+    .header .arrow-container:hover .arrow {
+      border-color: orange; }
+    .header .arrow-container .arrow {
+      width: 25px;
+      height: 25px;
+      border-bottom: 1px solid #fff;
+      border-right: 1px solid #fff;
+      -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      transform: rotate(45deg);
+      -webkit-animation: arrow-move 1.5s infinite;
+      animation: arrow-move 1.5s infinite;
+      -webkit-transition: .5s;
+      -o-transition: .5s;
+      transition: .5s; }
+      .header .arrow-container .arrow:not(:first-child) {
+        margin-top: -10px; }
+      .header .arrow-container .arrow:nth-child(1) {
+        -webkit-animation-delay: 0.15s;
+        animation-delay: 0.15s; }
+      .header .arrow-container .arrow:nth-child(2) {
+        -webkit-animation-delay: 0.3s;
+        animation-delay: 0.3s; }
+      .header .arrow-container .arrow:nth-child(3) {
+        -webkit-animation-delay: 0.45s;
+        animation-delay: 0.45s; }
+
+@-webkit-keyframes arrow-move {
+  0% {
+    opacity: 0;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg); }
+  50% {
+    opacity: 1; }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(10px) rotate(45deg);
+    transform: translateY(10px) rotate(45deg); } }
+
+@keyframes arrow-move {
+  0% {
+    opacity: 0;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg); }
+  50% {
+    opacity: 1; }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(10px) rotate(45deg);
+    transform: translateY(10px) rotate(45deg); } }
+
+#sec1 {
+  background: red;
+  height: 100vh; }
