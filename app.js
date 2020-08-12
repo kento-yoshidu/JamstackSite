@@ -17,6 +17,14 @@ app.get('/', (req, res) => {
   })
 })
 
+app.get('/sample-page/sample1', (req, res) => {
+  fs.readFile('sample-page/sample1/index.html', 'UTF-8', (err, data) => {
+    res.writeHead(200, { 'Content-Type': 'text/html' });
+    res.write(data);
+    res.end();
+  })
+})
+
 const server = http.createServer(app);
 
 server.listen('3000');
