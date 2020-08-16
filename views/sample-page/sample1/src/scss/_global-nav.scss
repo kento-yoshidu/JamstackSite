@@ -1,0 +1,130 @@
+@import "./variables";
+
+.global-nav {
+  height: 70px;
+  background-color: #fff;
+  border-bottom: 1.5px solid #eee;
+  width: 100%;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+  .nav-title {
+    font-size: 2.1rem;
+    font-weight: 100;
+    color: #666;
+    letter-spacing: 3px;
+    line-height: 70px;
+    margin-left: 100px;
+  }
+  .nav-list {
+    padding: 0;
+    list-style: none;
+    display: flex;
+    margin-right: 3%;
+    .nav-item {
+      padding: 0 14px;
+      a {
+        position: relative;
+        display: block;
+        font-size: 1.2rem;
+        letter-spacing: 2px;
+        height: 70px;
+        line-height: 70px;
+        color: #333;
+        font-weight: 500;
+        text-decoration: none;
+        transition: .3s;
+        &:hover {
+          color: $main-color;
+        }
+        &::before,
+        &::after {
+          position: absolute;
+          left: 50%;
+          content: '';
+          width: 0;
+          height: 1px;
+          background-color: $main-color;
+          transition: .3s;
+          transform: translateX(-50%);
+        }
+        &::before {
+          top: 20px;
+        }
+        &::after {
+          bottom: 20px;
+        }
+        &:hover::before,
+        &:hover::after {
+          width: 130%;
+        }
+      } //a
+    } //nav-item
+  } //nav-list
+  &.clone-nav {
+    position: fixed;
+    //最初は-100pxで画面外に隠しとく
+    top: -100px;
+    left: 0;
+    height: 50px;
+    line-height: 50px;
+    transition: all 1s;
+    background: rgba(200,200,200,.1);
+    @media screen and (max-width: 768px) {
+      background: rgba(100, 100, 100, .1);
+      width: 100%;
+    }
+    .nav-title {
+      color: #222;
+      line-height: 50px;
+    }
+    .nav-list {
+      .nav-item {
+        a {
+          color: #222;
+          height: 50px;
+          line-height: 50px;
+          &:hover {
+            color: $main-color;
+          }
+          &::before {
+            top: 12px;
+          }
+          &::after {
+            bottom: 12px;
+          }
+        } //a
+      } //nav-item
+    } //nav-list
+    &.is-fixed-nav {
+      //0を指定して画面上部に配置
+      top: 0;
+    }
+  } //clone-nav
+} //global-nav
+
+@media (max-width:768px) {
+    .nav-title {
+      display: none;
+    }
+    .nav-list {
+      justify-content: center;
+      margin: 0 auto;
+      .nav-item {
+        line-height: 30px;
+        margin: 0;
+        a {
+          font-size: .9rem;
+          &::before {
+            top: 5px;
+          }
+          &::after {
+            bottom: 5px;
+          }
+        }
+      }
+    } //nav-list
+  }
