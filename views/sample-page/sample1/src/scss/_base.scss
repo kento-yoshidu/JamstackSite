@@ -1,0 +1,21 @@
+@import "variables";
+
+html {
+  font-size: 62.5%;
+}
+
+ul {
+  list-style: none;
+}
+.flex {
+  display: flex;
+}
+
+a {
+  color: #333;
+  transition: .3s;
+  &:hover {
+    color: $main-color;
+  }
+}
+

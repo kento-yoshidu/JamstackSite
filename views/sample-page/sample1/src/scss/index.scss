@@ -1,9 +1,8 @@
 @charset "UTF-8";
 
-@import "common/reset";
-@import "common/base";
-@import "layout/global-nav";
-@import "../../../../src/scss/common/keyframes";
+@import "../../../../../common_src/scss/master";
+@import "./base";
+@import "global-nav";
 
 .section {
   padding-top: 70px;
@@ -340,6 +339,10 @@
     text-align: center;
     @media screen and (max-width: 768px) {
       margin-top: 20px;
+    }
+    a {
+      color: #fff;
+      font-size: 1.4rem;
     }
   }
 }
