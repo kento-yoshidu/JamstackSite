@@ -307,67 +307,79 @@ html {
     -webkit-transform: translateY(10px) rotate(45deg);
     transform: translateY(10px) rotate(45deg); } }
 
+.section {
+  padding: 5% 0 3%; }
+
 .section-title {
+  color: #444;
   font-family: 'Open Sans', sans-serif;
   font-weight: 100;
   font-size: 3.8rem;
-  color: #444; }
+  text-align: center; }
 
-.section-links {
-  padding: 5% 0 3%; }
-  .section-links .links-wrapper {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    margin: 40px 0 30px; }
-  .section-links .links-title {
-    color: #555;
-    text-align: center;
-    letter-spacing: 5px; }
-  .section-links .link-item {
+.section-links .links-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin: 40px 0 30px; }
+
+.section-links .links-title {
+  color: #555;
+  letter-spacing: 5px; }
+
+.section-links .link-item {
+  display: block;
+  width: 25%;
+  margin: 0 1.2%;
+  padding: 30px 0 10px;
+  border: 1px solid #f0f0f0;
+  border-radius: 3px;
+  color: #444;
+  text-decoration: none;
+  text-align: center; }
+  .section-links .link-item:hover {
+    background: #f8f8f8;
+    color: orange; }
+  .section-links .link-item .link-title {
+    font-size: 2.2rem;
+    letter-spacing: 2px;
+    margin: 10px 0 30px 0; }
+  .section-links .link-item i {
+    font-size: 6rem;
+    margin: 0; }
+  .section-links .link-item p {
+    width: 80%;
+    margin: 30px auto;
+    font-family: "游ゴシック", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
+    font-size: 1.5rem; }
+
+.section-links .nogi {
+  background: -webkit-gradient(linear, left top, right bottom, color-stop(50%, #fff), color-stop(50.3%, #932993)) no-repeat bottom right/100% 100%;
+  background: -webkit-linear-gradient(top left, #fff 50%, #932993 50.3%) no-repeat bottom right/100% 100%;
+  background: -o-linear-gradient(top left, #fff 50%, #932993 50.3%) no-repeat bottom right/100% 100%;
+  background: linear-gradient(to bottom right, #fff 50%, #932993 50.3%) no-repeat bottom right/100% 100%;
+  width: 62px;
+  height: 62px;
+  position: relative;
+  margin: 0 auto; }
+  .section-links .nogi::after {
+    content: "47";
+    font: 18px/1em -webkit-pictograph;
+    color: #fff;
+    right: 4px;
+    bottom: 0;
+    position: absolute; }
+
+.section-constitution {
+  max-width: 1200px;
+  margin: 0 auto; }
+  .section-constitution .img {
     display: block;
-    width: 25%;
-    margin: 0 1.2%;
-    padding: 30px 0 10px;
-    border: 1px solid #f0f0f0;
-    border-radius: 3px;
-    color: #444;
-    text-decoration: none;
-    text-align: center; }
-    .section-links .link-item:hover {
-      background: #f8f8f8;
-      color: orange; }
-    .section-links .link-item .link-title {
-      font-size: 2.2rem;
-      letter-spacing: 2px;
-      margin: 10px 0 30px 0; }
-    .section-links .link-item i {
-      font-size: 6rem;
-      margin: 0; }
-    .section-links .link-item p {
-      width: 80%;
-      margin: 30px auto;
-      font-family: "游ゴシック", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
-      font-size: 1.5rem; }
-  .section-links .nogi {
-    background: -webkit-gradient(linear, left top, right bottom, color-stop(50%, #fff), color-stop(50.3%, #932993)) no-repeat bottom right/100% 100%;
-    background: -webkit-linear-gradient(top left, #fff 50%, #932993 50.3%) no-repeat bottom right/100% 100%;
-    background: -o-linear-gradient(top left, #fff 50%, #932993 50.3%) no-repeat bottom right/100% 100%;
-    background: linear-gradient(to bottom right, #fff 50%, #932993 50.3%) no-repeat bottom right/100% 100%;
-    width: 62px;
-    height: 62px;
-    position: relative;
-    margin: 0 auto; }
-    .section-links .nogi::after {
-      content: "47";
-      font: 18px/1em -webkit-pictograph;
-      color: #fff;
-      right: 4px;
-      bottom: 0;
-      position: absolute; }
+    width: 80%;
+    margin: 50px auto; }
 
 .link-btn {
   display: inline-block;
