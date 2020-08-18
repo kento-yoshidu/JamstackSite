@@ -1,0 +1,69 @@
+@import "../settings/variables";
+
+.swiper-container {
+  width: 60%;
+  margin: 20px auto 50px;
+  height: 420px;
+
+  @media screen and (max-width: 768px) {
+    width: 90%;
+    height: 38vh;
+    margin-bottom: 0;
+  }
+}
+
+.swiper-wrapper {
+  //border-radius: 5px;
+  //border: 1px solid red;
+}
+
+.swiper-slide {
+  color: $main-color;
+  position: relative;
+  .slide-title {
+    font-size: 3.6rem;
+    font-family: 'Bitter', serif;
+    font-weight: 100;
+    letter-spacing: 3px;
+    margin: 20px 0 0 20px;
+    width: 90%;
+    background: rgba(100,100,100,.9);
+
+    @media screen and (max-width: 768px) {
+      font-size: 2.2rem;
+      letter-spacing: 1px;
+      margin: 10px 0 0 10px;
+    }
+  }
+  .slide-text {
+    font-size: 2.5rem;
+    margin: 10px 0 0 20px;
+    width: 60%;
+    background: rgba(100,100,100,.9);
+
+    @media screen and (max-width: 768px) {
+      font-size: 2.1rem;
+      margin: 5px 0 0 10px;
+      background: rgba(100,100,100,.6);
+      width: 90%;
+    }
+  }
+}
+
+.slide-1 {
+  background-image: url("../images/live_photograph/live1.jpg");
+  background-size: cover;
+}
+.slide-2 {
+  background-image: url("../images/live_photograph/live2.jpg");
+  background-size: cover;
+}
+.slide-3 {
+  background-image: url("../images/live_photograph/live3.jpg");
+  background-size: cover;
+}
+/*
+.swiper-button-prev,
+.swiper-button-next {
+  color: red;
+}*/
