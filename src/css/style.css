@@ -218,6 +218,12 @@ html {
     margin-bottom: 20px;
     font-size: 2rem;
     color: #ddd; }
+    @media (max-width: 768px) {
+      .header p {
+        font-size: 1.5rem; } }
+    .header p time {
+      font-weight: 100;
+      letter-spacing: 1px; }
   .header .my-skill {
     display: block;
     width: 60%;
@@ -229,8 +235,7 @@ html {
       color: orange; }
     @media screen and (max-width: 768px) {
       .header .my-skill {
-        width: 90%;
-        border: 1px solid red; } }
+        width: 90%; } }
     .header .my-skill .my-skill-title {
       font-size: 3.5rem;
       letter-spacing: 1px;
@@ -256,6 +261,9 @@ html {
         margin: 0 auto 15px;
         text-align: center;
         width: 50%; }
+        @media (max-width: 768px) {
+          .header .my-skill .skill-wrapper div {
+            width: 95%; } }
         .header .my-skill .skill-wrapper div p {
           font-size: 1.6rem;
           font-weight: 100;
@@ -283,6 +291,9 @@ html {
     align-items: center;
     margin-top: 25px;
     width: 50px; }
+    @media (max-width: 768px) {
+      .header .arrow-container {
+        margin-top: -20px; } }
     .header .arrow-container:hover .arrow {
       border-color: orange; }
     .header .arrow-container .arrow {
@@ -335,7 +346,7 @@ html {
     transform: translateY(10px) rotate(45deg); } }
 
 .section {
-  padding: 5% 0 3%; }
+  padding: 6% 0 3%; }
 
 .section-title {
   color: #444;
@@ -343,6 +354,9 @@ html {
   font-weight: 100;
   font-size: 3.8rem;
   text-align: center; }
+  @media (max-width: 768px) {
+    .section-title {
+      font-size: 3rem; } }
 
 .section-links .links-wrapper {
   display: -webkit-box;
@@ -352,6 +366,12 @@ html {
   -ms-flex-pack: center;
   justify-content: center;
   margin: 40px 0 30px; }
+  @media (max-width: 768px) {
+    .section-links .links-wrapper {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column; } }
 
 .section-links .links-title {
   color: #555;
@@ -370,6 +390,10 @@ html {
   .section-links .link-item:hover {
     background: #f8f8f8;
     color: orange; }
+  @media (max-width: 768px) {
+    .section-links .link-item {
+      width: 75%;
+      margin: 0 auto 20px; } }
   .section-links .link-item .link-title {
     font-size: 2.2rem;
     letter-spacing: 2px;
