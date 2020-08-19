@@ -67,6 +67,13 @@ html {
     margin-bottom: 20px;
     font-size: 2rem;
     color: #ddd;
+    @media (max-width: 768px) {
+      font-size: 1.5rem;
+    }
+    time {
+      font-weight: 100;
+      letter-spacing: 1px;
+    }
   }
 
   .my-skill {
@@ -83,7 +90,6 @@ html {
 
     @media screen and (max-width: 768px) {
       width: 90%;
-      border: 1px solid red;
     }
 
     .my-skill-title {
@@ -104,6 +110,9 @@ html {
         margin: 0 auto 15px;
         text-align: center;
         width: 50%;
+        @media (max-width: 768px) {
+          width: 95%;
+        }
         p {
           font-size: 1.6rem;
           font-weight: 100;
@@ -126,6 +135,9 @@ html {
     align-items: center;
     margin-top: 25px;
     width: 50px;
+    @media (max-width: 768px) {
+      margin-top: -20px;
+    }
 
     &:hover .arrow {
       border-color: orange;
@@ -166,7 +178,7 @@ html {
 } //header
 
 .section {
-  padding: 5% 0 3%;  
+  padding: 6% 0 3%;  
 
 }
 .section-title {
@@ -175,6 +187,9 @@ html {
   font-weight: 100;
   font-size: 3.8rem;
   text-align: center;
+  @media (max-width: 768px) {
+    font-size: 3rem;
+  }
 }
 
 .section-links {
@@ -182,6 +197,10 @@ html {
     display: flex;
     justify-content: center;
     margin: 40px 0 30px;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
   }
 
   .links-title {
@@ -202,6 +221,10 @@ html {
     &:hover {
       background: rgb(248,248,248);
       color: orange;
+    }
+    @media (max-width: 768px) {
+      width: 75%;
+      margin: 0 auto 20px;
     }
 
     .link-title {
