@@ -163,7 +163,8 @@ html {
 
 .header {
   background: #359b9b;
-  height: 100vh;
+  height: 95vh;
+  padding-top: 5%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -177,10 +178,11 @@ html {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  color: #fff;
+  color: #eee;
   font-weight: 100; }
   .header .header-title,
   .header .header-sub-title,
+  .header p,
   .header .my-skill {
     font-family: 'Open Sans', sans-serif;
     -webkit-animation-name: top-to-down;
@@ -192,50 +194,75 @@ html {
     font-weight: 100;
     text-shadow: -1px 2px 0 #646464;
     text-align: center; }
+    @media (max-width: 768px) {
+      .header .header-title,
+      .header .header-sub-title {
+        width: 80%; } }
   .header .header-title {
-    margin-bottom: 50px;
+    margin-bottom: 30px;
     font-size: 6.3rem;
     letter-spacing: 4px; }
+    @media (max-width: 768px) {
+      .header .header-title {
+        font-size: 5rem;
+        letter-spacing: 2px; } }
   .header .header-sub-title {
     margin-bottom: 20px;
     font-size: 4rem;
     letter-spacing: 2px; }
+    @media (max-width: 768px) {
+      .header .header-sub-title {
+        font-size: 3rem;
+        letter-spacing: 1px; } }
+  .header p {
+    margin-bottom: 20px;
+    font-size: 2rem;
+    color: #ddd; }
   .header .my-skill {
     display: block;
+    width: 60%;
     padding: 2%;
     color: #ddd;
-    text-decoration: none;
-    -webkit-transition: .5s;
-    -o-transition: .5s;
-    transition: .5s; }
-    .header .my-skill:hover {
+    text-decoration: none; }
+    .header .my-skill:hover .my-skill-title,
+    .header .my-skill:hover .skill-wrapper div p {
       color: orange; }
     @media screen and (max-width: 768px) {
       .header .my-skill {
-        min-width: 60%;
-        max-width: 80%; } }
+        width: 90%;
+        border: 1px solid red; } }
     .header .my-skill .my-skill-title {
       font-size: 3.5rem;
       letter-spacing: 1px;
-      text-align: center; }
+      text-align: center;
+      -webkit-transition: .2s;
+      -o-transition: .2s;
+      transition: .2s; }
     .header .my-skill .skill-wrapper {
       margin-top: 20px;
       display: -webkit-box;
       display: -ms-flexbox;
-      display: flex; }
-      @media screen and (max-width: 768px) {
-        .header .my-skill .skill-wrapper {
-          -webkit-box-orient: vertical;
-          -webkit-box-direction: normal;
-          -ms-flex-direction: column;
-          flex-direction: column; } }
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column; }
       .header .my-skill .skill-wrapper div {
-        margin: 0 20px;
-        text-align: center; }
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-pack: distribute;
+        justify-content: space-around;
+        margin: 0 auto 15px;
+        text-align: center;
+        width: 50%; }
         .header .my-skill .skill-wrapper div p {
           font-size: 1.6rem;
           font-weight: 100;
-          margin-bottom: 10px; }
+          margin-bottom: 10px;
+          -webkit-transition: .2s;
+          -o-transition: .2s;
+          transition: .2s; }
           .header .my-skill .skill-wrapper div p i {
             margin-right: 8px;
             font-size: 2.2rem; }
