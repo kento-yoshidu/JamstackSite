@@ -272,24 +272,59 @@ html {
     margin: 50px auto;
   }
 }
-.link-btn {
-  display: inline-block;
-  font-size: 1.8rem;
-  background: $main-color;
-  letter-spacing: 1px;
-  border-radius: 2px;
-  margin: 1% 0;
-  padding: 10px 25px;
-  &:hover {
-    background: desaturate($main-color,15%);
-    color: #fff;
-  }
 
-  &-article {
-    background: #888;
-    margin-top: 30px;
+.btn-wrapper {
+  margin: 0 auto;
+  text-align: center;
+  .link-btn {
+    display: inline-block;
+    border: 1px solid;
+    position: relative;
+    background: #fff;
+    color:$main-color;
+    font-size: 1.8rem;
+    font-weight: 500;
+    text-decoration: none;
+    border: 1px solid $main-color;
+    padding:1rem 5rem 1rem 2rem;
+    transition: .1s;
+
+    &:before,&:after{
+      content:"";
+      position:absolute;
+      display: block;
+      transition: all .3s;
+      right: 1.5rem;
+      top:50%;
+    }
+
+    &:before{
+      width: 2rem;
+      height: 2px;
+      background: $main-color;
+      transform: translateY(-50%) ;
+    }
+
+    &:after{
+      opacity:0;
+      width: 0;
+      height:0;
+      border-top: solid 2px currentColor;
+      border-right: solid 2px currentColor;
+      transform: translateY(-50%) rotate(45deg);
+    }
+
     &:hover {
-      background: #777;
+      transform: scale(1.05);
+      &:before{
+        width:1.5rem;
+      }
+      &:after {
+        opacity:1;
+        width: 8px;
+        height: 8px;
+        transition-delay: .2s;
+      }
     }
   }
 }
