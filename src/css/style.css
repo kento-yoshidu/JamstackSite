@@ -271,9 +271,15 @@ html {
           -webkit-transition: .2s;
           -o-transition: .2s;
           transition: .2s; }
+          @media screen and (max-width: 768px) {
+            .header .my-skill .skill-wrapper div p {
+              font-size: 1.3rem; } }
           .header .my-skill .skill-wrapper div p i {
             margin-right: 8px;
             font-size: 2.2rem; }
+            @media screen and (max-width: 768px) {
+              .header .my-skill .skill-wrapper div p i {
+                font-size: 1.9rem; } }
   .header .arrow-container {
     display: block;
     display: -webkit-box;
@@ -346,13 +352,14 @@ html {
     transform: translateY(10px) rotate(45deg); } }
 
 .section {
-  padding: 6% 0 3%; }
+  padding: 7% 0 10%; }
 
 .section-title {
   color: #444;
   font-family: 'Open Sans', sans-serif;
   font-weight: 100;
   font-size: 3.8rem;
+  letter-spacing: 2px;
   text-align: center; }
   @media (max-width: 768px) {
     .section-title {
@@ -374,7 +381,6 @@ html {
       flex-direction: column; } }
 
 .section-links .links-title {
-  color: #555;
   letter-spacing: 5px; }
 
 .section-links .link-item {
@@ -392,7 +398,7 @@ html {
     color: orange; }
   @media (max-width: 768px) {
     .section-links .link-item {
-      width: 75%;
+      width: 70%;
       margin: 0 auto 20px; } }
   .section-links .link-item .link-title {
     font-size: 2.2rem;
