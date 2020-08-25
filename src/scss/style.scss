@@ -118,9 +118,15 @@ html {
           font-weight: 100;
           margin-bottom: 10px;
           transition: .2s;
+          @media screen and (max-width: 768px) {
+            font-size: 1.3rem;
+          }
           i {
             margin-right: 8px;
             font-size: 2.2rem;
+            @media screen and (max-width: 768px) {
+              font-size: 1.9rem;
+            }
           }
         }
       }
@@ -162,30 +168,32 @@ html {
       }
     }
   }
-@keyframes arrow-move {
-  0% {
-    opacity: 0;
-    transform: rotate(45deg);
+  @keyframes arrow-move {
+    0% {
+      opacity: 0;
+      transform: rotate(45deg);
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(10px) rotate(45deg);
+    }
   }
-  50% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-    transform: translateY(10px) rotate(45deg);
-  }
-}
 } //header
 
 .section {
-  padding: 6% 0 3%;  
+  padding: 7% 0 10%;  
 
 }
+
 .section-title {
   color: #444;
   font-family: 'Open Sans', sans-serif;
   font-weight: 100;
   font-size: 3.8rem;
+  letter-spacing: 2px;
   text-align: center;
   @media (max-width: 768px) {
     font-size: 3rem;
@@ -197,14 +205,12 @@ html {
     display: flex;
     justify-content: center;
     margin: 40px 0 30px;
-
     @media (max-width: 768px) {
       flex-direction: column;
     }
   }
 
   .links-title {
-    color: #555;
     letter-spacing: 5px;
   }
 
@@ -223,7 +229,7 @@ html {
       color: orange;
     }
     @media (max-width: 768px) {
-      width: 75%;
+      width: 70%;
       margin: 0 auto 20px;
     }
 
