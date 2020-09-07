@@ -388,7 +388,7 @@ html {
   width: 25%;
   margin: 0 1.2%;
   padding: 30px 0 10px;
-  border: 1px solid #f0f0f0;
+  border: 1.5px solid #d2d2d2;
   border-radius: 3px;
   color: #444;
   text-decoration: none;
@@ -435,7 +435,7 @@ html {
   margin: 0 auto; }
   .section-constitution .img {
     display: block;
-    width: 60%;
+    width: 50%;
     margin: 50px auto; }
     @media screen and (max-width: 768px) {
       .section-constitution .img {
@@ -450,11 +450,11 @@ html {
     position: relative;
     background: #fff;
     color: #359b9b;
-    font-size: 1.8rem;
+    font-size: 2.4rem;
     font-weight: 500;
     text-decoration: none;
-    border: 1px solid #359b9b;
-    padding: 1rem 5rem 1rem 2rem;
+    border: 2px solid #359b9b;
+    padding: 1.3rem 5.5rem 1.3rem 2.2rem;
     -webkit-transition: .1s;
     -o-transition: .1s;
     transition: .1s; }
