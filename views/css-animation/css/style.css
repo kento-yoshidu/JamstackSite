@@ -7,30 +7,45 @@ html {
   font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif; }
 
 .header {
-  height: 20vh;
+  position: relative;
+  height: 25vh;
   text-align: right; }
   .header .header-title {
     line-height: 20vh;
+    font-size: 6rem;
+    margin-right: 10vw;
     color: #aaa;
-    font-size: 4rem;
-    margin-right: 5vw;
     font-weight: 600; }
+  .header .link-btn {
+    position: absolute;
+    top: 15vh;
+    left: 15vw;
+    text-align: left;
+    color: #aaa;
+    font-size: 2.5rem;
+    margin-left: 0; }
 
 .main {
   width: 50%;
-  margin: 0 auto; }
+  margin: 0 auto;
+  padding-top: 60px; }
 
-.section {
-  min-height: 10vh;
-  margin-bottom: 30px; }
-  .section > .page-title {
+.top-section {
+  min-height: 10vh; }
+  .top-section > .top-title {
     text-align: center;
     color: #aaa;
     font-size: 6rem;
     font-weight: 100; }
+
+.section {
+  min-height: 10vh;
+  margin-bottom: 50px; }
   .section > .section-title {
     color: #444;
-    font-size: 2.2rem; }
+    font-size: 3.5rem;
+    text-align: center;
+    margin-bottom: 30px; }
   .section p {
     color: #444;
     font-size: 1.7rem;
@@ -40,18 +55,17 @@ html {
     margin-bottom: 20px; }
 
 .wrapper {
-  max-width: 1000px;
+  max-width: 800px;
   margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center; }
+  -ms-flex-pack: distribute;
+  justify-content: space-around; }
 
 .box {
-  width: 33%;
-  height: 300px;
+  width: 20vw;
+  height: 20vw;
   border: 1.5px solid #ddd; }
 
 .ani1 {
