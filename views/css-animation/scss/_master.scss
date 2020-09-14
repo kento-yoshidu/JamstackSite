@@ -24,6 +24,7 @@ html {
     margin-right: 10vw;
     color: #aaa;
     font-weight: 600;
+    border: 1px solid red;
   }
 
   .link-btn {
@@ -34,6 +35,17 @@ html {
     color: #aaa;
     font-size: 2.5rem;
     margin-left: 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .header {
+    text-align: center;
+
+    .header-title {
+      font-size: 3rem;
+      margin: 0;
+    }
   }
 }
 
@@ -54,6 +66,13 @@ html {
   }
 }
 
+@media screen and (max-width: 768px) {
+  .top-section {
+    & > .top-title {
+      font-size: 3rem;
+    }
+  }
+}
 .section {
   min-height: 10vh;
   margin-bottom: 50px;
