@@ -10,10 +10,24 @@
   justify-content: space-around;
 }
 
+@media screen and (max-width: 768px) {
+  .wrapper {
+    border: 1px solid red;
+    justify-content: center;
+  }
+}
+
 .box {
   width: 20vw;
   height: 20vw;
   border: 1.5px solid #ddd;
+}
+
+@media screen and (max-width: 768px) {
+  .box {
+    width: 30vw;
+    height: 30vw;
+  }
 }
 
 .ani1 {
