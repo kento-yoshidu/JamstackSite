@@ -1,0 +1,80 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+html {
+  font-size: 62.5%;
+  font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif; }
+
+.header {
+  height: 20vh;
+  text-align: right; }
+  .header .header-title {
+    line-height: 20vh;
+    color: #aaa;
+    font-size: 4rem;
+    margin-right: 5vw;
+    font-weight: 600; }
+
+.main {
+  width: 50%;
+  margin: 0 auto; }
+
+.section {
+  min-height: 10vh;
+  margin-bottom: 30px; }
+  .section > .page-title {
+    text-align: center;
+    color: #aaa;
+    font-size: 6rem;
+    font-weight: 100; }
+  .section > .section-title {
+    color: #444;
+    font-size: 2.2rem; }
+  .section p {
+    color: #444;
+    font-size: 1.7rem;
+    line-height: 1.8;
+    letter-spacing: 1px;
+    text-indent: .8rem;
+    margin-bottom: 20px; }
+
+.wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+
+.box {
+  width: 33%;
+  height: 300px;
+  border: 1.5px solid #ddd; }
+
+.ani1 {
+  position: relative;
+  overflow: hidden; }
+  .ani1 .mask {
+    position: absolute;
+    top: 75%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #323232;
+    color: #fff;
+    letter-spacing: 3px;
+    text-align: center;
+    -webkit-transition: .8s;
+    -o-transition: .8s;
+    transition: .8s; }
+    .ani1 .mask h3 {
+      font-size: 1.8rem;
+      font-weight: 900;
+      line-height: 2.5; }
+    .ani1 .mask p {
+      font-size: 1rem; }
+  .ani1:hover .mask {
+    top: 0; }
