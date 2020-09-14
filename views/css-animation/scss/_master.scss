@@ -1,0 +1,58 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Helvetica Neue",
+    Arial,
+    "Hiragino Kaku Gothic ProN",
+    "Hiragino Sans",
+    Meiryo,
+    sans-serif;
+}
+
+.header {
+  height: 20vh;
+  text-align: right;
+
+  .header-title {
+    line-height: 20vh;
+    color: #aaa;
+    font-size: 4rem;
+    margin-right: 5vw;
+    font-weight: 600;
+  }
+}
+
+.main {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.section {
+  min-height: 10vh;
+  margin-bottom: 30px;
+
+  & > .page-title {
+    text-align: center;
+    color: #aaa;
+    font-size: 6rem;
+    font-weight: 100;
+  }
+
+  & > .section-title {
+    color: #444;
+    font-size: 2.2rem;
+  }
+
+  p {
+    color: #444;
+    font-size: 1.7rem;
+    line-height: 1.8;
+    letter-spacing: 1px;
+    text-indent: .8rem;
+    margin-bottom: 20px;
+  }
+}

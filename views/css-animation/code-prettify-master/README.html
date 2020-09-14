@@ -1,0 +1,183 @@
+<html>
+      <head>
+        <meta charset="UTF-8">
+        <title>README.md</title>
+      </head>
+      <body>
+        <h1 id="status-archived">Status: Archived</h1>
+<p><img src="https://img.shields.io/badge/status-inactive-red.svg" alt="status: inactive"></p>
+<p>This repository has been archived and is no longer maintained.</p>
+<hr>
+<h1 id="javascript-code-prettifier">JavaScript code prettifier</h1>
+<p>Announcement: <a href="https://groups.google.com/forum/#!topic/js-code-prettifier/IFHev_kLm30"><strong>Action required</strong> <em>rawgit.com</em> is going away</a>.</p>
+<p>An embeddable script that makes source-code snippets in HTML prettier.</p>
+<ul>
+<li>Works on HTML pages.</li>
+<li>Works even if code contains embedded links, line numbers, etc.</li>
+<li>Simple API: include some JS &amp; CSS and add an onload handler.</li>
+<li>Lightweights: small download and does not block page from loading while
+running.</li>
+<li>Customizable styles via CSS. See the <a href="https://raw.githack.com/google/code-prettify/master/styles/index.html">themes gallery</a>.</li>
+<li>Supports all C-like, Bash-like, and XML-like languages. No need to specify
+the language.</li>
+<li>Extensible language handlers for other languages. You can specify the
+language.</li>
+<li>Widely used with good cross-browser support. Powers <a href="https://code.google.com/">https://code.google.com/</a>
+and <a href="http://stackoverflow.com/">http://stackoverflow.com/</a></li>
+</ul>
+<p><a href="https://raw.githack.com/google/code-prettify/master/examples/quine.html">See an example</a>.</p>
+<h2 id="setup">Setup</h2>
+<ul>
+<li>Include the script tag below in your document:<pre><code class="lang-HTML">&lt;script src=&quot;https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js&quot;&gt;&lt;/script&gt;
+</code></pre>
+</li>
+<li>See <a href="docs/getting_started.md">Getting Started</a> to configure that URL with
+options you need.</li>
+<li>Look at the <a href="https://raw.githack.com/google/code-prettify/master/styles/index.html">skin gallery</a> and pick styles that suit you.</li>
+</ul>
+<h2 id="usage">Usage</h2>
+<p>Put code snippets in <code>&lt;pre class=&quot;prettyprint&quot;&gt;...&lt;/pre&gt;</code> or
+<code>&lt;code class=&quot;prettyprint&quot;&gt;...&lt;/code&gt;</code> and it will automatically be
+pretty-printed.</p>
+<pre><code class="lang-HTML">&lt;pre class=&quot;prettyprint&quot;&gt;class Voila {
+public:
+  // Voila
+  static const string VOILA = &quot;Voila&quot;;
+
+  // will not interfere with embedded &lt;a href=&quot;#voila2&quot;&gt;tags&lt;/a&gt;.
+}&lt;/pre&gt;
+</code></pre>
+<h2 id="faq">FAQ</h2>
+<h3 id="for-which-languages-does-it-work-">For which languages does it work?</h3>
+<p>The comments in <code>prettify.js</code> are authoritative but the lexer should work on a
+number of languages including C and friends, Java, Python, Bash, SQL, HTML,
+XML, CSS, JavaScript, Makefile, and Rust.</p>
+<p>It works passably on Ruby, PHP, VB, and Awk and a decent subset of Perl and
+Ruby, but because of commenting conventions, doesn&#39;t work on Smalltalk, OCaml,
+etc. without a language extension.</p>
+<p>Other languages are supported via extensions:</p>
+<p><a href="src/lang-apollo.js">Apollo</a>;
+<a href="src/lang-basic.js">Basic</a>;
+<a href="src/lang-clj.js">Clojure</a>;
+<a href="src/lang-css.js">CSS</a>;
+<a href="src/lang-dart.js">Dart</a>;
+<a href="src/lang-erlang.js">Erlang</a>;
+<a href="src/lang-go.js">Go</a>;
+<a href="src/lang-hs.js">Haskell</a>;
+<a href="src/lang-lasso.js">Lasso</a>;
+<a href="src/lang-lisp.js">Lisp, Scheme</a>;
+<a href="src/lang-llvm.js">LLVM</a>;
+<a href="src/lang-logtalk.js">Logtalk</a>;
+<a href="src/lang-lua.js">Lua</a>;
+<a href="src/lang-matlab.js">MATLAB</a>;
+<a href="src/lang-ml.js">MLs: F#, Ocaml,SML</a>;
+<a href="src/lang-mumps.js">Mumps</a>;
+<a href="src/lang-n.js">Nemerle</a>;
+<a href="src/lang-pascal.js">Pascal</a>;
+<a href="src/lang-proto.js">Protocol buffers</a>;
+<a href="src/lang-r.js">R, S</a>;
+<a href="src/lang-rd.js">RD</a>;
+<a href="src/lang-rust.js">Rust</a>;
+<a href="src/lang-scala.js">Scala</a>;
+<a href="src/lang-sql.js">SQL</a>;
+<a href="src/lang-swift.js">Swift</a>;
+<a href="src/lang-tcl.js">TCL</a>;
+<a href="src/lang-tex.js">LaTeX</a>;
+<a href="src/lang-vb.js">Visual Basic</a>;
+<a href="src/lang-vhdl.js">VHDL</a>;
+<a href="src/lang-wiki.js">Wiki</a>;
+<a href="src/lang-xq.js">XQ</a>;
+<a href="src/lang-yaml.js">YAML</a></p>
+<p>If you&#39;d like to add an extension for your favorite language, please look at
+<code>src/lang-lisp.js</code> and submit a pull request.</p>
+<h3 id="how-do-i-specify-the-language-of-my-code-">How do I specify the language of my code?</h3>
+<p>You don&#39;t need to specify the language since <code>PR.prettyPrint()</code> will guess.
+You can specify a language by specifying the language extension along with the
+<code>prettyprint</code> class:</p>
+<pre><code class="lang-HTML">&lt;pre class=&quot;prettyprint lang-html&quot;&gt;
+  The lang-* class specifies the language file extensions.
+  File extensions supported by default include:
+    &quot;bsh&quot;, &quot;c&quot;, &quot;cc&quot;, &quot;cpp&quot;, &quot;cs&quot;, &quot;csh&quot;, &quot;cyc&quot;, &quot;cv&quot;, &quot;htm&quot;, &quot;html&quot;, &quot;java&quot;,
+    &quot;js&quot;, &quot;m&quot;, &quot;mxml&quot;, &quot;perl&quot;, &quot;pl&quot;, &quot;pm&quot;, &quot;py&quot;, &quot;rb&quot;, &quot;sh&quot;, &quot;xhtml&quot;, &quot;xml&quot;,
+    &quot;xsl&quot;.
+&lt;/pre&gt;
+</code></pre>
+<p>You may also use the <a href="http://dev.w3.org/html5/spec-author-view/the-code-element.html#the-code-element">HTML 5</a> convention of embedding a <code>&lt;code&gt;</code> element
+inside the <code>&lt;pre&gt;</code> and using <code>language-java</code> style classes:</p>
+<pre><code class="lang-HTML">&lt;pre class=&quot;prettyprint&quot;&gt;&lt;code class=&quot;language-java&quot;&gt;...&lt;/code&gt;&lt;/pre&gt;
+</code></pre>
+<h3 id="it-doesn-t-work-on-obfuscated-code-sample-">It doesn&#39;t work on &quot;obfuscated code sample&quot;?</h3>
+<p>Yes. Prettifying obfuscated code is like putting lipstick on a pig &mdash;
+i.e. outside the scope of this tool.</p>
+<h3 id="which-browsers-does-it-work-with-">Which browsers does it work with?</h3>
+<p>It&#39;s been tested with IE 6, Firefox 1.5 &amp; 2, and Safari 2.0.4. Look at
+<a href="https://raw.githack.com/google/code-prettify/master/tests/prettify_test.html">the tests</a> to see if it works in your browser.</p>
+<h3 id="what-s-changed-">What&#39;s changed?</h3>
+<p>See the <a href="CHANGES.md">changelog</a>.</p>
+<h3 id="why-doesn-t-prettyprinting-of-strings-work-on-wordpress-">Why doesn&#39;t Prettyprinting of strings work on WordPress?</h3>
+<p>Apparently wordpress does &quot;smart quoting&quot; which changes close quotes.  This
+causes end quotes to not match up with open quotes.</p>
+<p>This breaks prettifying as well as copying and pasting of code samples.  See
+<a href="http://wordpress.org/support/topic/125038">WordPress&#39;s help center</a> for info on how to stop smart quoting of code
+snippets.</p>
+<h3 id="how-do-i-put-line-numbers-in-my-code-">How do I put line numbers in my code?</h3>
+<p>You can use the <code>linenums</code> class to turn on line numbering.  If your code
+doesn&#39;t start at line number <code>1</code>, you can add a colon and a line number to the
+end of that class as in <code>linenums:52</code>. For example:</p>
+<pre><code class="lang-HTML">&lt;pre class=&quot;prettyprint linenums:4&quot;
+&gt;// This is line 4.
+foo();
+bar();
+baz();
+boo();
+far();
+faz();
+&lt;/pre&gt;
+</code></pre>
+<h3 id="how-do-i-prevent-a-portion-of-markup-from-being-marked-as-code-">How do I prevent a portion of markup from being marked as code?</h3>
+<p>You can use the <code>nocode</code> class to identify a span of markup that is not code:</p>
+<pre><code class="lang-HTML">&lt;pre class=&quot;prettyprint&quot;&gt;
+int x = foo();  /* This is a comment  &lt;span class=&quot;nocode&quot;&gt;This is not code&lt;/span&gt;
+  Continuation of comment */
+int y = bar();
+&lt;/pre&gt;
+</code></pre>
+<p>For a more complete example see the <a href="https://raw.githack.com/google/code-prettify/master/tests/prettify_test.html#issue22">issue #22 testcase</a>.</p>
+<h3 id="i-get-an-error-message-a-is-not-a-function-or-opt_whendone-is-not-a-function">I get an error message &quot;a is not a function&quot; or &quot;opt_whenDone is not a function&quot;</h3>
+<p>If you are calling <code>prettyPrint</code> via an event handler, wrap it in a function.
+Instead of doing:</p>
+<pre><code class="lang-JavaScript">addEventListener(&#39;load&#39;, PR.prettyPrint, false);
+</code></pre>
+<p>wrap it in a closure like:</p>
+<pre><code class="lang-JavaScript">addEventListener(&#39;load&#39;, function(event) { PR.prettyPrint(); }, false);
+</code></pre>
+<p>so that the browser does not pass an event object to <code>PR.prettyPrint</code>
+which will confuse it.</p>
+<h3 id="how-can-i-customize-the-colors-and-styles-of-my-code-">How can I customize the colors and styles of my code?</h3>
+<p>Prettify adds <code>&lt;span&gt;</code> with <code>class</code>es describing the kind of code.  You can
+create CSS styles to matches these classes.</p>
+<p>See the <a href="https://raw.githack.com/google/code-prettify/master/styles/index.html">theme gallery</a> for examples.</p>
+<h3 id="i-can-t-add-classes-to-my-code-because-it-comes-from-markdown-etc-">I can&#39;t add classes to my code (because it comes from Markdown, etc.)</h3>
+<p>Instead of <code>&lt;pre class=&quot;prettyprint ...&quot;&gt;</code> you can use a comment or processing
+instructions that survives processing instructions: <code>&lt;?prettify ...?&gt;</code> works
+as explained in <a href="docs/getting_started.md">Getting Started</a>.</p>
+<h3 id="how-can-i-put-line-numbers-on-every-line-instead-of-just-every-fifth-line-">How can I put line numbers on every line instead of just every fifth line?</h3>
+<p>Prettify puts lines into an HTML list element so that line numbers aren&#39;t
+caught by copy/paste, and the line numbering is controlled by CSS in the
+default stylesheet, <code>prettify.css</code>.</p>
+<p>The following should turn line numbering back on for the other lines:</p>
+<pre><code class="lang-HTML">&lt;style&gt;
+li.L0, li.L1, li.L2, li.L3,
+li.L5, li.L6, li.L7, li.L8 {
+  list-style-type: decimal !important;
+}
+&lt;/style&gt;
+</code></pre>
+<h2 id="discussion">Discussion</h2>
+<p>Please use the official <a href="http://groups.google.com/group/js-code-prettifier">support group</a> for discussions, suggestions, and
+general feedback.</p>
+<h2 id="license">License</h2>
+<p><a href="COPYING">Apache License 2.0</a></p>
+
+      </body>
+    </html>

@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+html {
+  font-size: 62.5%; }
+
+.header {
+  height: 20vh;
+  text-align: right; }
+  .header .header-title {
+    line-height: 20vh;
+    color: #aaa;
+    font-size: 4rem;
+    margin-right: 5vw;
+    font-weight: 600; }
+
+.section {
+  min-height: 10vh; }
+  .section > .page-title {
+    text-align: center;
+    color: #aaa;
+    font-size: 3rem;
+    font-weight: 100; }
+  .section > .section-title {
+    color: #444; }
+  .section p {
+    color: #444;
+    font-size: 1.8rem;
+    line-height: 1.8;
+    text-indent: .8rem; }
+
+.main {
+  width: 60%;
+  margin: 0 auto; }

@@ -1,0 +1,56 @@
+.box {
+  width: 30vw;
+  height: 30vw;
+  border: 1px solid #aaa;
+  margin: 10vh auto;
+
+  position: relative;
+  overflow: hidden;
+
+  .mask {
+    position: absolute;
+    top: 75%;
+    height: 100%;
+    color: #fff;
+    text-align: center;
+    background-color: rgb(50, 50, 50);
+    transition-duration: .5s;
+
+    &:hover {
+      top: 0;
+    }
+
+    .hoverme {
+      font-size: 3vw;
+      line-height: 7.5vw;
+      letter-spacing: 2px;
+    }
+
+    .text {
+      font-size: 2rem;
+      line-height: 1.5;
+      width: 90%;
+      margin: 0 auto;
+
+    }
+  }
+}
+
+.prettyprint {
+  /*
+  overflow: auto;
+  resize: horizontal;
+  */
+  font-family: Monaco, Menlo, Consolas, 'Courier New', Courier, monospace, sans-serif;
+  font-size: 1.8rem;
+
+  ol.linenums li {
+    list-style: decimal inside;
+    margin-bottom: 6px;
+    code {
+      font-family: Menlo, Consolas, 'DejaVu Sans Mono', monospace;
+      font-weight: 100;
+      margin-left: 10px;
+    }
+  }
+}
