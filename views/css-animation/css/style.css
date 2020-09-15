@@ -8,6 +8,7 @@ html {
 
 .header {
   height: 30vh;
+  max-width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -33,15 +34,28 @@ html {
 
 @media screen and (max-width: 768px) {
   .header {
-    text-align: center; }
+    height: 20vh;
+    text-align: center;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    border: 1px solid red; }
     .header .header-title {
       font-size: 3rem;
-      margin: 0; } }
+      text-align: center;
+      margin: 0; }
+    .header .link-btn {
+      font-size: 1.8rem;
+      margin: 0;
+      text-align: center; } }
 
 .main {
   width: 50%;
   margin: 0 auto;
   padding-top: 60px; }
+
+@media screen and (max-width: 768px) {
+  .main {
+    width: 90%; } }
 
 .top-section {
   min-height: 10vh; }
@@ -56,7 +70,6 @@ html {
     font-size: 3rem; } }
 
 .section {
-  min-height: 10vh;
   margin-bottom: 50px; }
   .section > .section-title {
     color: #444;
@@ -71,6 +84,15 @@ html {
     letter-spacing: 1px;
     text-indent: .8rem;
     margin-bottom: 20px; }
+
+@media screen and (max-width: 768px) {
+  .section > .section-title {
+    font-size: 2.8rem; } }
+
+.img {
+  max-width: 90%;
+  margin: 0 auto 20px;
+  height: auto; }
 
 .wrapper {
   max-width: 800px;
