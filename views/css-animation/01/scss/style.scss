@@ -36,13 +36,12 @@
 }
 
 .prettyprint {
-  /*
-  overflow: auto;
-  resize: horizontal;
-  */
   font-family: Monaco, Menlo, Consolas, 'Courier New', Courier, monospace, sans-serif;
   font-size: 1.8rem;
 
+  ol {
+
+  }
   ol.linenums li {
     list-style: decimal inside;
     margin-bottom: 6px;
@@ -51,5 +50,11 @@
       font-weight: 100;
       margin-left: 10px;
     }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .prettyprint {
+    font-size: 1.2rem;
   }
 }
