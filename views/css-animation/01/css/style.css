@@ -1,8 +1,8 @@
 .box {
-  width: 25vw;
-  height: 25vw;
+  width: 15vw;
+  height: 15vw;
   border: 1px solid #aaa;
-  margin: 0 auto 10vh;
+  margin: 0 auto 5vh;
   position: relative;
   overflow: hidden; }
   .box .mask {
@@ -18,11 +18,11 @@
     .box .mask:hover {
       top: 0; }
     .box .mask .hoverme {
-      font-size: 3vw;
-      line-height: 7.5vw;
+      font-size: 2vw;
+      line-height: 3.8vw;
       letter-spacing: 2px; }
     .box .mask .text {
-      font-size: 2rem;
+      font-size: 1rem;
       line-height: 1.5;
       width: 90%;
       margin: 0 auto; }

@@ -7,24 +7,29 @@ html {
   font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif; }
 
 .header {
-  position: relative;
-  height: 25vh;
-  text-align: right; }
+  height: 30vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-bottom: 50px; }
   .header .header-title {
-    line-height: 20vh;
-    font-size: 6rem;
-    margin-right: 10vw;
+    font-size: 5rem;
     color: #aaa;
     font-weight: 600;
-    border: 1px solid red; }
+    text-align: right;
+    margin-right: 10vw; }
   .header .link-btn {
-    position: absolute;
-    top: 15vh;
-    left: 15vw;
     text-align: left;
     color: #aaa;
     font-size: 2.5rem;
-    margin-left: 0; }
+    margin-left: 10vw; }
 
 @media screen and (max-width: 768px) {
   .header {
@@ -43,7 +48,7 @@ html {
   .top-section > .top-title {
     text-align: center;
     color: #aaa;
-    font-size: 6rem;
+    font-size: 4rem;
     font-weight: 100; }
 
 @media screen and (max-width: 768px) {
@@ -56,7 +61,8 @@ html {
   .section > .section-title {
     color: #444;
     font-size: 3.5rem;
-    text-align: center;
+    border-left: 10px solid orange;
+    padding-left: 20px;
     margin-bottom: 30px; }
   .section p {
     color: #444;
