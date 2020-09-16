@@ -126,6 +126,78 @@
 </section>
 
   <section class="section">
+    <h2 class="section-title">`:hover`擬似クラスを指定する</h2>
+    <p>まず、ここまでのCSSの内容を整理しておきます。maskクラスに指定した`left: 10px`は、例として挙げただけなので不要です、消してください。</p>
+
+<pre class="prettyprint lang-css linenums">
+<code>(略)
+
+.box {
+  position: relative;
+  height: 30vw;
+  width: 30vw;
+  border: 1px solid #aaa;
+}
+
+.mask {
+  position: absolute;
+  top: 70%;
+  width: 100%;
+  height: 100%;
+  background-color: #445;
+  color: #fff;
+}</code>
+</pre>
+
+  <p>今回はmaskクラスにカーソルを載せたときの動作を記述するので、以下のようにhover擬似要素を指定します。</p>
+      
+<pre class="prettyprint lang-css linenums">
+<code>(略)
+
+.mask {
+  position: absolute;
+  top: 70%;
+  left: 10px;
+  width: 100%;
+  height: 100%;
+  background-color: #445;
+  color: #fff;
+}
+
+.mask:hover {
+  top: 0;
+}
+</code>
+</pre>
+
+  <p>これでカーソルを乗せた時、top: 0;の位置まで移動するようにできました。</p>
+  <p><img src="./images/01.gif"></p>
+
+  <p>続けて、親要素であるboxクラスからはみ出している部分を隠すために、`overflow-y: hidden;`を適用します。</p>
+
+<pre class="prettyprint lang-css linenums">
+<code>（略）
+
+.box {
+  position: relative;
+  height: 30vw;
+  width: 30vw;
+  border: 1px solid #aaa;
+  overflow-y: hidden;
+}
+
+（略）</code>
+</pre>
+
+  <p><img src="./images/02.gif"></p>
+  <p>あとはアニメーションを付ければ完成です。</p>
+
+  </section>
+
+  <p>MDNによると、「CSS トランジションは、 CSS プロパティが変化する際のアニメーションの速度を操作する手段を提供します。プロパティの変更を直ちに有効にするのではなく、プロパティの変更を一定期間にわたって発生させることを可能にします。」とあります。</p>
+  <p>もうちょっとかみ砕いて言うと、状態の変化をアニメーションとして表現することができる機能であるということです。今回で言う「状態の変化」とは、Top: 70%からtop: 0;への変化ですね。</p>
+  <h2 class="section-title">positionプロパティって何なの?</h2>
+  <section class="section">
   <h2 class="section-title">positionプロパティって何なの?</h2>
 
   <p>以上</p>
