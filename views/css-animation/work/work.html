@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .box {
+      position: relative;
+      margin-top: 100px;
+      margin-left: 100px;
+      height: 300px;
+      width: 300px;
+      border: 1px solid #aaa;
+      overflow-y: hidden;
+    }
+
+    .mask {
+      position: absolute;
+      top: 70%;
+      width: 100%;
+      height: 100%;
+      background-color: #445;
+      color: #fff;
+    } 
+
+    .mask:hover {
+      top: 0;
+    }
+  </style>
+<title>test</title>
+</head>
+
+<div class="box">
+  ここがboxクラスです
+  <div class="mask">
+    <p class="slideUp">Slide Up</p>
+    <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident</p>
+  </div>
+</div>
