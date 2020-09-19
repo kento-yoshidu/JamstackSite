@@ -11,6 +11,7 @@ html {
     "Hiragino Sans",
     Meiryo,
     sans-serif;
+  scroll-behavior: smooth;
 }
 
 .il {
@@ -22,26 +23,25 @@ html {
 }
 
 .header {
-  height: 30vh;
+  height: 25vh;
   max-width: 100%;
   display: flex;
   flex-direction: column; 
   justify-content: center; 
-  margin-bottom: 50px;
 
   .header-title {
     font-size: 5rem;
     color: #aaa;
     font-weight: 600;
     text-align: right;
-    margin-right: 10vw;
+    margin-right: 15vw;
   }
 
   .link-btn {
     text-align: left;
     color: #aaa;
     font-size: 2.5rem;
-    margin-left: 10vw;
+    margin-left: 15vw;
   }
 }
 
@@ -54,7 +54,6 @@ html {
     .header-title {
       font-size: 3rem;
       text-align: center;
-      margin: 0;
     }
     .link-btn {
       font-size: 1.8rem;
@@ -64,6 +63,36 @@ html {
   }
 }
 
+.top-section {
+  min-height: 10vh;
+  width: 60%;
+  margin: 0 auto;
+
+  .top-title {
+    text-align: center;
+    color: #aaa;
+    font-size: 4rem;
+    font-weight: 100;
+    margin-bottom: 60px;
+  }
+
+  p {
+    color: #444;
+    font-size: 1.7rem;
+    font-weight: 900;
+    letter-spacing: 1px;
+    text-indent: .8rem;
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .top-section {
+    & > .top-title {
+      font-size: 3rem;
+    }
+  }
+}
 /*
 nav {
   position: fixed;
@@ -82,6 +111,7 @@ nav {
 .main-wrapper {
   width: 90%;
   margin: 0 auto;
+  padding-top: 50px;
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-around;
@@ -99,15 +129,32 @@ nav {
 	width: 20vw;
 	height: auto;
   max-height: 80vh;
-  border: 1px solid #aaa;
+
+  p {
+    font-size: 1.6rem;
+    margin: 10px 0;
+    i {
+      margin-right: 10px;
+    }
+    time {
+      letter-spacing: 1px;
+    }
+  }
 
 	@media screen and (max-width: 768px) {
 		display: none;	
 	}
+
 	.nav {
-		padding-top: 5vh;
+    margin-top: 30px;
+    list-style: none;
 		.nav-item {
+      margin-bottom: 7px;
 			a {
+        font-size: 1.8rem;
+        letter-spacing: 1px;
+        line-height: 1.3;
+        text-indent: .8rem;
 				button {
 					letter-spacing: 1px;
 				}
@@ -119,7 +166,6 @@ nav {
 .main {
   width: 60%;
   margin: 0 0 0 6%;
-  padding-top: 60px;
 }
 
 @media screen and (max-width: 768px) {
@@ -129,24 +175,6 @@ nav {
   }
 }
 
-.top-section {
-  min-height: 10vh;
-
-  & > .top-title {
-    text-align: center;
-    color: #aaa;
-    font-size: 4rem;
-    font-weight: 100;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .top-section {
-    & > .top-title {
-      font-size: 3rem;
-    }
-  }
-}
 
 .section {
   margin-bottom: 70px;
