@@ -16,6 +16,7 @@
   <link href="../css/style.css" rel="stylesheet">
   <link href="./css/style.css" rel="stylesheet">
   <link href="../code-prettify-master/src/prettify.css" rel="stylesheet">
+  <link href="../../common_src/fontawesome/css/all.min.css" rel="stylesheet">
   <title>#1 Slide Up | CSS Animation</title>
 </head>
 
@@ -27,47 +28,41 @@
 
   <section class="top-section">
     <h2 class="top-title">#1 Slide Up</h2>
+
+    <div class="box">
+      <div class="mask">
+        <p class="hoverme">Slide Up</p>
+        <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident</p>
+      </div>
+    </div>
+  
+    <p>こんにちは。</p>
+    <p>CSS-Animationと題しましたこのコンテンツ、第一回目はカーソルを合わせた時にスライドアップしてくるボックスです。仕組みが分かってしまえばすごく簡単です。</p>
+    <p>positionの使い方に慣れるのにぴったりだと思い、第一回目の題材に持ってきました。</p>
   </section>
 
-  <div class="box">
-    <div class="mask">
-      <p class="hoverme">Slide Up</p>
-      <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident</p>
-    </div>
-  </div>
-  
   <div class="main-wrapper">
 
-
   <nav class="global-nav">
+    <p><i class="far fa-clock"></i><time>2020/09/20</time></p>
+    <p><i class="fas fa-sync"></i><time>2020/09/20</time></p>
     <ul class="nav">
       <li class="nav-item">
-        <a>jgajrep</a>
+        <a href="#sec1">boxクラスとmaskクラスを用意する</a>
+      </li>
+      <li class="nav-item">
+        <a href="#sec2">maskクラスの位置を決定する</a>
+      </li>
+      <li class="nav-item">
+        <a href="#sec3">maskクラスの位置を決定する</a>
       </li>
     </ul> 
   </nav>
 
   <main class="main">
 
-  <!--
-  <nav>
-    <ul>
-      <li>boxとmaskを用意する</li>
-      <li>maskクラスの位置を決定する</li>
-      <li>hover擬似クラスを指定する</li>
-      <li>CSSトランジションでアニメーションを適用する</li>
-        <li style="margin-left: 10px;">`transition-duration`</li>
-    </ul>
-  </nav>
--->
-  <section class="section">
-    <p>こんにちは。</p>
-    <p>CSS-Animationと題しましたこのコンテンツ、第一回目はカーソルを合わせた時にスライドアップしてくるボックスです。仕組みが分かってしまえばすごく簡単です。</p>
-    <p>positionの使い方に慣れるのにぴったりだと思い、第一回目の題材に持ってきました。</p>
-  </section>
-
-  <section class="section">
-    <h2 class="section-title">boxとmaskを用意する</h2>
+  <section class="section" id="sec1">
+    <h2 class="section-title">boxクラスとmaskクラスを用意する</h2>
 
     <p>外枠としてboxクラス、浮かび上がってくる部分としてmaskクラスを用意します。</p>
     <p>maskクラスの中には適当な文字列を入れてあげてください。</p>
@@ -77,7 +72,7 @@
   ここがboxクラスです
   &lt;div class="mask"&gt;
     &lt;p class="slideUp"&gt;Slide Up&lt;/p&gt;
-    &lt;p class="text"&gt;Lorem ipsum dolor...略&lt;/p&gt;
+    &lt;p class="text"&gt;Lorem dolor ...略&lt;/p&gt;
   &lt;/div&gt;
 &lt;/div&gt;</code>
 </pre>
@@ -111,7 +106,7 @@
 
   </section>
 
-  <section class="section">
+  <section class="section" id="sec2">
   <h2 class="section-title">maskクラスの位置を決定する</h2>
   <p>次にboxクラスを基準とし、maskクラスの位置を決定します。使用するCSSプロパティは<strong>position</strong>です。</p>
 
