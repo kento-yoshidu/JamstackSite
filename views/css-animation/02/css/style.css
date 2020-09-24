@@ -1,0 +1,56 @@
+.box .fa-heart {
+  font-size: 8rem;
+  color: pink;
+  -webkit-animation: beating-heart-ani 1.2s infinite;
+  animation: beating-heart-ani 1.2s infinite;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s; }
+  .box .fa-heart:hover {
+    text-shadow: 0 1px 0 #373737; }
+
+@-webkit-keyframes beating-heart-ani {
+  from {
+    -webkit-transform: scale(1);
+    transform: scale(1); }
+  35% {
+    -webkit-transform: scale(1);
+    transform: scale(1); }
+  36% {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9); }
+  50% {
+    -webkit-transform: scale(1);
+    transform: scale(1); }
+  60% {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9); }
+  68% {
+    -webkit-transform: scale(1);
+    transform: scale(1); }
+  to {
+    -webkit-transform: scvale(1);
+    transform: scvale(1); } }
+
+@keyframes beating-heart-ani {
+  from {
+    -webkit-transform: scale(1);
+    transform: scale(1); }
+  35% {
+    -webkit-transform: scale(1);
+    transform: scale(1); }
+  36% {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9); }
+  50% {
+    -webkit-transform: scale(1);
+    transform: scale(1); }
+  60% {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9); }
+  68% {
+    -webkit-transform: scale(1);
+    transform: scale(1); }
+  to {
+    -webkit-transform: scvale(1);
+    transform: scvale(1); } }
