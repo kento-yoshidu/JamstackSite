@@ -1,7 +1,4 @@
-* {
-  margin: 0;
-  padding: 0;
-}
+@import "../../../common_src/scss/reset";
 
 html {
   font-size: 62.5%;
@@ -47,16 +44,18 @@ html {
 
 @media screen and (max-width: 768px) {
   .header {
-    height: 20vh;
+    height: 19vh;
     text-align: center;
-    justify-content: space-around;
+    justify-content: center;
 
     .header-title {
-      font-size: 3rem;
+      font-size: 3.3rem;
       text-align: center;
+      margin-right: 0;
+      margin-bottom: 2vh;
     }
     .link-btn {
-      font-size: 1.8rem;
+      font-size: 2rem;
       margin: 0;
       text-align: center;
     }
@@ -81,6 +80,7 @@ html {
     font-size: 1.7rem;
     font-weight: 900;
     letter-spacing: 1px;
+    line-height: 1.5;
     text-indent: .8rem;
     margin-bottom: 20px;
   }
@@ -88,25 +88,13 @@ html {
 
 @media screen and (max-width: 768px) {
   .top-section {
+    width: 85%;
+
     & > .top-title {
       font-size: 3rem;
     }
   }
 }
-/*
-nav {
-  position: fixed;
-  right: 4%;
-  top: 100px;
-  width: 25%;
-  ul {
-    list-style: none;
-    li {
-      font-size: 1.5rem;
-      margin-bottom: 12px;;
-    }
-  }
-}*/
 
 .main-wrapper {
   width: 90%;
@@ -170,7 +158,7 @@ nav {
 
 @media screen and (max-width: 768px) {
   .main {
-    width: 90%;
+    width: 88%;
     margin: 0 auto;
   }
 }
@@ -212,11 +200,15 @@ nav {
     & > .section-title {
       font-size: 2.5rem;
     }
+    p {
+      line-height: 1.5;
+      margin-bottom: 15px;
+    }
   }
 }
 
 .img {
-  max-width: 90%;
+  max-width: 92%;
   margin: 0 auto 20px;
   height: auto;
 }
