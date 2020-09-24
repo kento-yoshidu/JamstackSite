@@ -1,0 +1,35 @@
+.box {
+  .fa-heart {
+    font-size: 8rem;
+    color: pink;
+    animation: beating-heart-ani 1.2s infinite;
+    transition: .3s;
+    &:hover {
+      text-shadow: 0 1px 0 rgba(55, 55, 55, 1);
+    }
+  }
+}
+
+@keyframes beating-heart-ani {
+  from {
+    transform: scale(1);
+  }
+  35% {
+    transform: scale(1);
+  }
+  36% {
+    transform: scale(0.9);
+  }
+  50% {
+    transform: scale(1);
+  }
+  60% {
+    transform: scale(0.9);
+  } 
+  68% {
+    transform: scale(1);
+  }
+  to {
+    transform: scvale(1);
+  }
+}
