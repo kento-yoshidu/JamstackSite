@@ -16,14 +16,19 @@
   }
 }
 
-.box {
+.boxes {
   width: 20vw;
   height: 20vw;
   border: 1.5px solid #ddd;
+  border-radius: 2px;
+  transition: .3s;
+  &:hover {
+    border: 1.5px solid orange;
+  }
 }
 
 @media screen and (max-width: 768px) {
-  .box {
+  .boxes {
     width: 30vw;
     height: 30vw;
   }
@@ -33,6 +38,15 @@
   position: relative;
   overflow: hidden;
 
+  & > p {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    width: 100%;
+    transform: translateX(-50%);
+    font-size: 2.6rem;
+    text-align: center;
+  }
   .mask {
     position: absolute;
     top: 75%;
@@ -43,21 +57,65 @@
     color: #fff;
     letter-spacing: 3px;
     text-align: center;
-    transition: .8s;
+    transition: .5s;
 
-    h3 {
-      font-size: 1.8rem;
-      font-weight: 900;
-      line-height: 2.5;
+    .hoverme {
+      color: #fff;
+      font-size: 2.28rem;
+      font-weight: 100;
+      line-height: 5vw;
     }
 
     p {
-      font-size: 1rem;
+      color: #fff;
+      font-size: 1.5rem;
     }
 
   }
 
   &:hover .mask {
     top: 0;
+  }
+}
+
+.ani2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;;
+  flex-direction: column;
+  text-decoration: none;
+  p {
+    font-size: 2.6rem;
+  }
+  i {
+    top: 50%;
+    left: 50%;
+    color: pink;
+    font-size: 13rem;
+    animation: beating-heart-ani 1.4s infinite;
+  }
+}
+
+@keyframes beating-heart-ani {
+  from {
+    transform: scale(1);
+  }
+  35% {
+    transform: scale(1);
+  }
+  36% {
+    transform: scale(0.85);
+  }
+  50% {
+    transform: scale(1);
+  }
+  60% {
+    transform: scale(0.85);
+  } 
+  64% {
+    transform: scale(1);
+  }
+  to {
+    transform: scvale(1);
   }
 }
