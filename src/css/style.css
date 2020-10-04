@@ -441,6 +441,26 @@ html {
       .section-constitution .img {
         width: 90%; } }
 
+.section-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 80%;
+  margin: 30px auto 50px; }
+  .section-wrapper .img {
+    display: block;
+    width: 35%; }
+  .section-wrapper p {
+    width: 40%;
+    color: #444;
+    font-size: 1.8rem;
+    line-height: 1.5; }
+
 .btn-wrapper {
   margin: 0 auto;
   text-align: center; }
