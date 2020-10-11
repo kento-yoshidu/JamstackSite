@@ -18,6 +18,7 @@
   "homepage": "https://github.com/kento-yoshidu/PortfolioSite#readme",
   "dependencies": {
     "express": "^4.17.1",
+    "pg": "^8.4.1",
     "typescript": "^3.9.7"
   }
 }
