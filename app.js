@@ -7,6 +7,7 @@ const app = express();
 
 app.use(express.static('common_src'));
 app.use(express.static('src'));
+app.use(express.static('apps'));
 app.use(express.static('views'));
 
 app.get('/', (req, res) => {
