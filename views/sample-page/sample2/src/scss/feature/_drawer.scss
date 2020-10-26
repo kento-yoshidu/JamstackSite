@@ -1,7 +1,120 @@
+
+// チェックボックスの非表示
+.check {
+  display: none;
+}
+
+.drawer-menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 300px;
+  height: 100%;
+  padding: 120px 0;
+  background: linear-gradient(to bottom, #343434, #676767);
+
+  transition-duration: .8s;
+  transform: translateX(-1vw); //少し左にずらしておく
+  opacity: 0; //透明にしておく
+
+  .drawer-list {
+    .drawer-item { 
+      text-align: left;
+      a {
+        padding-left: 50px;
+        display: block;
+        height: 50px;
+        line-height: 50px;
+        font-size: 1.5rem;
+        color: #fff;
+        transition: .6s;
+        &:hover {
+          color: #444;
+          background: #bbb;
+          font-size: 1.6rem;
+        }
+      }
+    } //drawer-item
+  } //drawer-list
+} //drawer-menu
+
+.menu-btn {
+  position: fixed;
+  top: 15px;
+  right: 40px;
+  cursor: pointer;
+  z-index: 100;
+  .bar {
+    display: block;
+    width: 45px;
+    height: 3px;
+    background: #666;
+    border-radius: 3px;
+    transition: .5s;
+  }
+
+  .bar-top {
+    transform: translate(0);
+    margin-bottom: 10px;
+  }
+  .bar-middle {
+    margin-bottom: 10px;
+  }
+  &:hover .bar {
+    background: orange;
+  }
+}
+
+//ドロワーメニュー開いた時の左側の部分
+.close-menu {
+  position: fixed;
+  top: 0;
+  right: 300px;//ドロワーメニューの分だけ右にずらす
+  width: 100%;
+  height: 100vh;
+  cursor: url(http://theorthodoxworks.com/demo/images/cross.svg),auto;
+  transition-property: all;
+  transition-duration: .3s;
+  visibility: hidden;
+  opacity: 0;
+}
+
+//以下、チェックした時の動作
+.check:checked ~ .drawer-menu {
+  transition-delay: .1s;
+  transform: none;
+  opacity: 1;
+  z-index: 2;
+}
+
+.check:checked ~ .close-menu {
+  transition-duration: 1s;
+  transition-delay: .1s;
+  background: rgba(150,150,150,0.6);
+  visibility: visible;
+  opacity: 1;
+  z-index: 3;
+}
+
+.check:checked ~ .menu-btn {
+  .bar {
+    background: #ddd;
+  }
+  .bar-top {
+    transform:  translateY(25px) rotate(405deg);
+  }
+  .bar-middle {
+    display: none;
+  }
+  .bar-bottom {
+    transition-delay: .3s;
+    transform: translateY(10px) rotate(-405deg);
+  }
+}
 /* *******************
   Feature of drawer-menu.
   This script use only Sample2 Page.
-******************* */
+*******************
 
 //現れるメニュー本体、非表示にしておく
 .drawer-menu {
@@ -47,7 +160,7 @@
     display: none;
 }
 
-/* menu button - label tag */
+/* menu button - label tag 
 .menu-btn {
   position: fixed;
   top: 7px;
@@ -119,3 +232,4 @@
     transition-delay: .5s;
     transform: translateX(300px);
 }
+*/

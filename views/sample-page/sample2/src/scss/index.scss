@@ -1,7 +1,6 @@
 @charset "UTF-8";
-
 // マスター
-@import "../../../../common-src/scss/master";
+@import "../../../../../common_src/scss/master";
 // ロゴ
 @import "./settings/logo";
 //ドロワーメニュー
@@ -12,6 +11,7 @@
 @import "settings/variables";
 
 html {
+  font-size: 62.5%;
   scroll-behavior: smooth;
 }
 
