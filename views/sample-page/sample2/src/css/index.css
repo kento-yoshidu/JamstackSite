@@ -84,48 +84,17 @@ hr {
 input, select {
   vertical-align: middle; }
 
-.nogi-base, .header-nogi {
-  background: -webkit-gradient(linear, left top, right bottom, color-stop(50%, #fff), color-stop(50.3%, #932993)) no-repeat bottom right/100% 100%;
-  background: -webkit-linear-gradient(top left, #fff 50%, #932993 50.3%) no-repeat bottom right/100% 100%;
-  background: -o-linear-gradient(top left, #fff 50%, #932993 50.3%) no-repeat bottom right/100% 100%;
-  background: linear-gradient(to bottom right, #fff 50%, #932993 50.3%) no-repeat bottom right/100% 100%;
-  position: relative;
+html {
+  font-size: 62.5%;
+  font-family: -apple-system, blinkMacSystemFont, "Helvetica Neue", "Segoe UI", YuGothicM, YuGothic, Meiryo, sans-serif;
+  scroll-behavior: smooth; }
+
+a {
+  color: #333;
+  text-decoration: none; }
+
+.title {
   font-family: 'Bitter', serif; }
-
-.nogi-before, .header-nogi::before {
-  position: absolute;
-  right: 0;
-  bottom: -30px;
-  content: "potsunen";
-  color: #932993;
-  font-size: 2rem;
-  font-style: italic; }
-
-.nogi-after, .header-nogi::after {
-  content: "47";
-  font: 80px/1em -webkit-pictograph;
-  color: #fff;
-  right: 4px;
-  bottom: 2px;
-  position: absolute; }
-
-.header-nogi {
-  width: 60px;
-  height: 63px;
-  margin: -10px 20px 0 -10px; }
-  .header-nogi::before {
-    font-size: 1.2rem;
-    bottom: -12px; }
-  .header-nogi::after {
-    font-size: 1.5rem; }
-
-@media (max-width: 768px) {
-  .header-nogi {
-    width: 45px;
-    height: 46px;
-    margin: 0 10px 0 -10px; }
-    .header-nogi::before {
-      display: none; } }
 
 .check {
   display: none; }
@@ -371,9 +340,9 @@ input, select {
 */
 .swiper-container {
   width: 50%;
-  min-width: 1000px;
+  min-width: 700px;
   margin: 5vh auto 8vh;
-  height: 50vh; }
+  height: 60vh; }
   @media screen and (max-width: 768px) {
     .swiper-container {
       width: 90%;
@@ -426,14 +395,6 @@ input, select {
 .swiper-button-next {
   color: red;
 }*/
-html {
-  font-size: 62.5%;
-  scroll-behavior: smooth; }
-
-a {
-  color: #333;
-  text-decoration: none; }
-
 .section {
   background: #fff;
   padding: 30px 0 40px; }

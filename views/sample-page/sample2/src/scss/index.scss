@@ -1,24 +1,20 @@
 @charset "UTF-8";
-// マスター
-@import "../../../../../common_src/scss/master";
-// ロゴ
-@import "./settings/logo";
+
+//リセット
+@import "./import/reset";
+
+// base
+@import "import/base";
+
 //ドロワーメニュー
-@import "feature/drawer";
+@import "import/drawer";
+
 //カルーセル
-@import "feature/carousel";
+@import "import/carousel";
+
 //変数
-@import "settings/variables";
+@import "import/variables";
 
-html {
-  font-size: 62.5%;
-  scroll-behavior: smooth;
-}
-
-a {
-  color: #333;
-  text-decoration: none;
-}
 .section {
   background: #fff;
   padding: 30px 0 40px;
