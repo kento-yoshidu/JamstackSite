@@ -1,12 +1,15 @@
 @import "../settings/variables";
 
 .swiper-container {
-  width: 60%;
-  margin: 20px auto 50px;
-  height: 420px;
+  width: 50%;
+  min-width: 1000px;
+  margin: 5vh auto 8vh;
+  //height: 420px;
+  height: 50vh;
 
   @media screen and (max-width: 768px) {
     width: 90%;
+    min-width: 0;
     height: 38vh;
     margin-bottom: 0;
   }
