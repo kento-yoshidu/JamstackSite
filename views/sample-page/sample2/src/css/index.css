@@ -714,7 +714,6 @@ a {
     color: #fff; }
   .member-section .flex {
     width: 80%;
-    max-height: 250px;
     margin: 0 auto;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -845,33 +844,28 @@ a {
 
 .thum-list .thum {
   margin: 3vh 0;
-  width: 10vh;
-  height: auto; }
+  width: 20vh;
+  height: auto;
+  position: relative; }
 
 @media screen and (max-width: 768px) {
   .thum-list .thum {
     width: 10vh; } }
 
 .detail .item {
-  border: 1px solid red;
   width: 100%;
   height: 100%;
   display: none; }
   .detail .item .wrapper {
-    border: 1px solid green;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center; }
     .detail .item .wrapper img {
       margin-top: 100px;
-      width: 40%;
+      width: 45%;
       height: auto;
       border: 1px solid red;
       margin-bottom: 50px; }
