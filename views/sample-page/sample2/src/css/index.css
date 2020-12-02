@@ -798,3 +798,105 @@ a {
     .btn a {
       font-size: 1.4rem;
       letter-spacing: 3px; } }
+
+.wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden; }
+  .wrapper .thum-list {
+    height: 100%;
+    width: 30vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+  .wrapper .detail {
+    width: 69vw;
+    height: 100%; }
+
+@media screen and (max-width: 768px) {
+  .wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column; }
+    .wrapper .thum-list {
+      width: 100%;
+      height: auto;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+      flex-direction: row; }
+    .wrapper .detail {
+      width: 100%;
+      height: auto; } }
+
+.thum-list .thum {
+  margin: 3vh 0;
+  width: 10vh;
+  height: auto; }
+
+@media screen and (max-width: 768px) {
+  .thum-list .thum {
+    width: 10vh; } }
+
+.detail .item {
+  border: 1px solid red;
+  width: 100%;
+  height: 100%;
+  display: none; }
+  .detail .item .wrapper {
+    border: 1px solid green;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+    .detail .item .wrapper img {
+      margin-top: 100px;
+      width: 40%;
+      height: auto;
+      border: 1px solid red;
+      margin-bottom: 50px; }
+    .detail .item .wrapper ol {
+      list-style-type: none;
+      border: 1px solid red; }
+  .detail .item.is-active {
+    display: block;
+    -webkit-animation: fade .6s;
+    animation: fade .6s; }
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0;
+    -webkit-transform: translateX(10vh);
+    transform: translateX(10vh); }
+  to {
+    -webkit-transform: translateX(0);
+    transform: translateX(0); } }
+
+@keyframes fade {
+  from {
+    opacity: 0;
+    -webkit-transform: translateX(10vh);
+    transform: translateX(10vh); }
+  to {
+    -webkit-transform: translateX(0);
+    transform: translateX(0); } }
