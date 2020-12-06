@@ -385,9 +385,9 @@ html {
 
 .section-links .link-item {
   display: block;
-  width: 25%;
+  width: 20vw;
+  height: 20vw;
   margin: 0 1.2%;
-  padding: 30px 0 10px;
   border: 1.5px solid #d2d2d2;
   border-radius: 3px;
   color: #444;
@@ -399,19 +399,21 @@ html {
   @media (max-width: 768px) {
     .section-links .link-item {
       width: 70%;
-      margin: 0 auto 20px; } }
+      margin: 0 auto 20px;
+      height: auto; } }
   .section-links .link-item .link-title {
     font-size: 2.2rem;
     letter-spacing: 2px;
-    margin: 10px 0 30px 0; }
+    margin: 50px 0 30px 0; }
   .section-links .link-item i {
     font-size: 6rem;
     margin: 0; }
   .section-links .link-item p {
     width: 80%;
-    margin: 30px auto;
+    margin: 40px auto 50px;
     font-family: "游ゴシック", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
-    font-size: 1.5rem; }
+    font-size: 1.8rem;
+    line-height: 1.6; }
 
 .section-links .nogi {
   background: -webkit-gradient(linear, left top, right bottom, color-stop(50%, #fff), color-stop(50.3%, #932993)) no-repeat bottom right/100% 100%;
