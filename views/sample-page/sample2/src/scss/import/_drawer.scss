@@ -40,11 +40,16 @@
 } //drawer-menu
 
 .menu-btn {
+  display: none;
   position: fixed;
   top: 15px;
   right: 40px;
   cursor: pointer;
   z-index: 100;
+
+  @media screen and (max-width: 768px) {
+    display: block;
+  }
   .bar {
     display: block;
     width: 45px;

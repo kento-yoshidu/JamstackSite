@@ -522,13 +522,36 @@ a {
 
 .footer {
   padding: 100px 10vw 50px;
-  background: linear-gradient(to bottom, $main-color2, $main-color-hover);
-  height: 40vh;
+  background: linear-gradient(to bottom, $main-color2 8%, $main-color-hover 50%);
+  color: #ddd;
+  height: 100vh;
 
   .footer-title {
-    color: #444;
-    font-size: 4rem;
+    font-size: 7rem;
     font-weight: 400;
+    text-align: center;
+    margin: 50px 0;
+  }
+
+  .wrapper {
+    border: 1px solid red;
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+
+    .list-title {
+      font-size: 2.5rem;
+      font-weight: 400;
+    }
+    ul {
+      li {
+        a {
+          color: #ddd;
+          font-size: 2rem;
+        }
+      }
+    }
   }
 }
 .btn {
