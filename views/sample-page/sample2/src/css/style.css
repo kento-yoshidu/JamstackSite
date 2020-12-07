@@ -123,11 +123,15 @@ input, select {
         font-size: 1.6rem; }
 
 .menu-btn {
+  display: none;
   position: fixed;
   top: 15px;
   right: 40px;
   cursor: pointer;
   z-index: 100; }
+  @media screen and (max-width: 768px) {
+    .menu-btn {
+      display: block; } }
   .menu-btn .bar {
     display: block;
     width: 45px;
@@ -445,15 +449,15 @@ input, select {
         .global-nav .site-nav .nav-item a:hover {
           color: #932993; }
 
-.nogi-base, .header-nogi {
-  background: -webkit-gradient(linear, left top, right bottom, color-stop(50%, #fff), color-stop(50.3%, #932993)) no-repeat bottom right/100% 100%;
-  background: -webkit-linear-gradient(top left, #fff 50%, #932993 50.3%) no-repeat bottom right/100% 100%;
-  background: -o-linear-gradient(top left, #fff 50%, #932993 50.3%) no-repeat bottom right/100% 100%;
-  background: linear-gradient(to bottom right, #fff 50%, #932993 50.3%) no-repeat bottom right/100% 100%;
+.nogi-base, .header-nogi, .footer-nogi {
+  background: -webkit-gradient(linear, left top, right bottom, color-stop(50%, rgba(255, 255, 255, 0)), color-stop(50.3%, #932993)) no-repeat bottom right/100% 100%;
+  background: -webkit-linear-gradient(top left, rgba(255, 255, 255, 0) 50%, #932993 50.3%) no-repeat bottom right/100% 100%;
+  background: -o-linear-gradient(top left, rgba(255, 255, 255, 0) 50%, #932993 50.3%) no-repeat bottom right/100% 100%;
+  background: linear-gradient(to bottom right, rgba(255, 255, 255, 0) 50%, #932993 50.3%) no-repeat bottom right/100% 100%;
   position: relative;
   font-family: 'Bitter', serif; }
 
-.nogi-before, .header-nogi::before {
+.nogi-before, .header-nogi::before, .footer-nogi::before {
   position: absolute;
   right: 0;
   bottom: -30px;
@@ -462,7 +466,7 @@ input, select {
   font-size: 2rem;
   font-style: italic; }
 
-.nogi-after, .header-nogi::after {
+.nogi-after, .header-nogi::after, .footer-nogi::after {
   content: "47";
   font: 80px/1em -webkit-pictograph;
   color: #fff;
@@ -487,6 +491,16 @@ input, select {
     margin: 0 10px 0 -10px; }
     .header-nogi::before {
       display: none; } }
+
+.footer-nogi {
+  width: 100px;
+  height: 104px;
+  margin: 0 auto; }
+  .footer-nogi::before {
+    font-size: 2rem;
+    bottom: -22px; }
+  .footer-nogi::after {
+    font-size: 2.5rem; }
 
 html {
   font-size: 62.5%;
@@ -928,15 +942,33 @@ a {
 
 .footer {
   padding: 100px 10vw 50px;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(147, 41, 147, 0.5)), to(rgba(147, 41, 147, 0.8)));
-  background: -webkit-linear-gradient(top, rgba(147, 41, 147, 0.5), rgba(147, 41, 147, 0.8));
-  background: -o-linear-gradient(top, rgba(147, 41, 147, 0.5), rgba(147, 41, 147, 0.8));
-  background: linear-gradient(to bottom, rgba(147, 41, 147, 0.5), rgba(147, 41, 147, 0.8));
-  height: 40vh; }
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(8%, rgba(147, 41, 147, 0.5)), color-stop(50%, rgba(147, 41, 147, 0.8)));
+  background: -webkit-linear-gradient(top, rgba(147, 41, 147, 0.5) 8%, rgba(147, 41, 147, 0.8) 50%);
+  background: -o-linear-gradient(top, rgba(147, 41, 147, 0.5) 8%, rgba(147, 41, 147, 0.8) 50%);
+  background: linear-gradient(to bottom, rgba(147, 41, 147, 0.5) 8%, rgba(147, 41, 147, 0.8) 50%);
+  color: #ddd;
+  height: 100vh; }
   .footer .footer-title {
-    color: #444;
-    font-size: 4rem;
-    font-weight: 400; }
+    font-size: 7rem;
+    font-weight: 400;
+    text-align: center;
+    margin: 50px 0; }
+  .footer .wrapper {
+    border: 1px solid red;
+    width: 80%;
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between; }
+    .footer .wrapper .list-title {
+      font-size: 2.5rem;
+      font-weight: 400; }
+    .footer .wrapper ul li a {
+      color: #ddd;
+      font-size: 2rem; }
 
 .btn {
   margin: 30px auto 0;
