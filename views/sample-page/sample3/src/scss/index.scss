@@ -1,6 +1,7 @@
-// リセット ＆ ベース
-@import "../../../../../common_src/scss/master";
-
+* {
+  margin: 0;
+  padding: 0;
+}
 // 変数
 @import "./import/variables";
 
@@ -13,71 +14,93 @@ html {
   position: relative;
   width: 100%;
   height: 100vh;
-  background: #24C6DC;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to left, $top-main-color1, $top-main-color2);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to left bottom, $top-main-color1, $top-main-color2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: #24C6DC;
+  background: -webkit-linear-gradient(to left, $top-main-color1, $top-main-color2); 
+  background: linear-gradient(to left bottom, $top-main-color1, $top-main-color2);
   overflow: hidden;
 
   .circle {
     position: absolute;
     top: 50%;
     left: 50%;
+    box-shadow: 0 0 50px inset rgba($top-main-color1, .3);
   }
 
   .circle1 {
-    width: 65vw;
-    height: 65vw;
+    width: 78vh;
+    height: 78vh;
     border-radius: 50% 50% 50% 53%/50% 50% 55% 55%;
     animation: circleAnimation1 20s linear infinite,
                opacity 4s forwards;
-    border: 210px solid rgba(160, 180, 240, 0.1);
+    border: 300px solid rgba(160, 180, 240, 0.05);
     @media screen and (max-width: 768px) {
-      width: 90vh;
-      height: 90vh;
-      border: 60px solid rgba(160, 180, 240, 0.1);
+      width: 48vh;
+      height: 48vh;
+      border: 40px solid rgba(160, 180, 240, 0.1);
     }
-    
   }
 
   .circle2 {
-    width: 72vw;
-    height: 78vw;
+    width: 90vh;
+    height: 96vh;
     border-radius: 52% 50% 50% 50%/50% 50% 52% 50%;
-    animation: circleAnimation1 19s linear infinite,
+    animation: circleAnimation2 15s linear infinite,
                opacity 6s forwards;
-    border: 240px solid rgba(160, 180, 240, 0.1);
+    border: 290px solid rgba(160, 180, 240, 0.05);
     @media screen and (max-width: 768px) {
-      display: none;
+      width: 45vh;
+      height: 45vh;
+      border: 80px solid rgba(160, 180, 240, 0.1);
     }
   }
 
   .circle3 {
-    width: 77vw;
-    height: 83vw;
+    width: 85vh;
+    height: 91vh;
     border-radius: 52% 50% 50% 50%/50% 50% 52% 50%;
     animation: circleAnimation1 23s linear infinite,
-               opacity 8s forwards;
-    border: 320px solid rgba(140, 160, 220, 0.1);
+               opacity 10s forwards;
+    border: 300px solid rgba(140, 160, 240, 0.05);
     @media screen and (max-width: 768px) {
-      display: none;
+      width: 45vh;
+      height: 45vh;
+      border: 80px solid rgba(160, 180, 240, 0.1);
     }
   }
 
   @keyframes circleAnimation1 {
     0% {
-      transform: translate(-48%, -55%) rotate(0deg)
+      transform: translate(-48%, -55%) rotate(0deg);
     }
     25% {
-      transform: translate(-50%, -50%) rotate(180deg);
+      transform: translate(-50%, -48%) rotate(180deg);
     }
     50% {
-      transform: translate(-51%, -48%) rotate(360deg);
+      transform: translate(-51%, -58%) rotate(360deg);
     }
     75% {
-      transform: translate(-49%, -50%) rotate(180deg);
+      transform: translate(-49%, -62%) rotate(180deg);
     }
     100% {
       transform: translate(-48%, -55%) rotate(0deg)
+    }
+  }
+
+  @keyframes circleAnimation2 {
+    0% {
+      transform: translate(-59%, -53%) rotate(0deg)
+    }
+    25% {
+      transform: translate(-50%, -51%) rotate(180deg);
+    }
+    50% {
+      transform: translate(-51%, -55%) rotate(360deg);
+    }
+    75% {
+      transform: translate(-49%, -59%) rotate(180deg);
+    }
+    100% {
+      transform: translate(-59%, -52%) rotate(0deg)
     }
   }
   @keyframes opacity {
@@ -94,14 +117,14 @@ html {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 40%;
+    width: 33%;
     color: #ddd;
     font-family: Helvetica , "游ゴシック", sans-serif;
     @media screen and (max-width: 768px) {
-      width: 60%; 
+      width: 90%; 
     }
     .header-title {
-      font-size: 3rem;
+      font-size: 4rem;
       letter-spacing: 5px;
       margin: 0 auto 10%;
       width: 60%;
@@ -109,7 +132,7 @@ html {
       @media screen and (max-width: 768px) {
         border: 1px solid red;
         width: 80%;
-        font-size: 2rem;  
+        font-size: 3rem;  
         letter-spacing: 3px;
       }
     }
@@ -120,8 +143,10 @@ html {
       justify-content: space-between;
       margin-bottom: 30px;
       @media screen and (max-width: 768px) {
-        font-size: 3.2rem;
+        font-size: 2.2rem;
         margin-bottom: 10px;
+        width: 60%;
+        margin: 0 auto;
       }
     }
   }
@@ -137,6 +162,10 @@ html {
     position: relative;
     max-width: 900px;
     margin: 0 auto;
+
+    @media screen and (max-width: 768px) {
+      flex-direction: column;;
+    }
 
     .introduction,
     .section-image {
