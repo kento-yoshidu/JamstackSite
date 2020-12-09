@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
 const scrollAnimationElm = document.querySelectorAll('.sa');
 const scrollAnimationFunc = function() {
   for(var i = 0; i < scrollAnimationElm.length; i++) {
-    const triggerMargin = 0;
+    const triggerMargin = 200;
     if (window.innerHeight > scrollAnimationElm[i].getBoundingClientRect().top + triggerMargin) {
       scrollAnimationElm[i].classList.add('show');
     }
