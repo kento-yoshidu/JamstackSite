@@ -27,10 +27,12 @@
 		<span class="bar bar-bottom"></span>
 	</label>
 
-	<label class="close-menu" for="checked"></label>
+	<!--<label class="close-menu" for="checked"></label>-->
 	<nav class="drawer-menu">
 		<ul class="drawer-list">
-			<li class="drawer-item"><a href="#">TEST</a></li>
+			<li class="drawer-item">Navi</li>
+			<li class="drawer-item"><a href="#" class="drawer-link">TOP</a></li>
+			<li class="drawer-item"><a href="#intro" class="drawer-link">What's potsunen47?</a></li>
 		</ul>
 	</nav>
 
@@ -44,8 +46,8 @@
 		</ul>
 		<ul class="site-nav">
 			<li class="nav-item"><a href="#intro">What's potsunen47?</a></li>
-			<li class="nav-item"><a href="#contents">Contents</a></li>
 			<li class="nav-item"><a href="#newRelease">New Release</a></li>
+			<li class="nav-item"><a href="#contents">Contents</a></li>
 			<li class="nav-item"><a href="#member">Member</a></li>
 		</ul>
   </nav>
@@ -281,10 +283,10 @@
 </main><!-- /main -->
 
 <footer class="footer">
-	<div class="footer-nogi sa sa--up"></div>
-	<h2 class="footer-title sa sa--up">Potsunen 47 Official Web Site</h2>
+	<div class="footer-nogi sa"></div>
+	<h2 class="footer-title sa">Potsunen 47 Official Web Site</h2>
 
-	<div class="wrapper sa sa--up">
+	<div class="wrapper sa">
 		<section class="list">
 			<h3 class="list-title">Sample Pages</h3>
 			<ul>
@@ -308,24 +310,24 @@
 			</ul>
 		</section>
 	</div>
-
+	<!--<div class="hoge"></div>-->
 </footer>
 
-  <script src="./src/js/script.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.1/js/swiper.min.js"></script>
-  <script>
-      const mySwiper = new Swiper ('.swiper-container', {
-      effect: "swiper-pagenation",
-      loop: true,
-      pagination: '.swiper-pagination',
-      nextButton: '.swiper-button-next',
-      prevButton: '.swiper-button-prev',
-			speed: 1000,
-			autoplay: 5000,
-			spaceBetween: 10,
-			//effect: ''
-      })
-  </script>
+<script src="./src/js/script.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.1/js/swiper.min.js"></script>
+<script>
+	const mySwiper = new Swiper ('.swiper-container', {
+	effect: "swiper-pagenation",
+	loop: true,
+	pagination: '.swiper-pagination',
+	nextButton: '.swiper-button-next',
+	prevButton: '.swiper-button-prev',
+	speed: 1000,
+	autoplay: 5000,
+	spaceBetween: 10,
+	//effect: ''
+	})
+</script>
 
 </body>
 </html>
