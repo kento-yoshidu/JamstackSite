@@ -145,7 +145,7 @@ a {
     padding: 30px 0 40px;
 
     .section-title {
-      font-size: 3.4rem;
+      font-size: 4rem;
       &::first-letter {
         font-size: 5rem;
       }
@@ -157,7 +157,7 @@ a {
     }
 
     .purple {
-      font-size: 2.5rem; 
+      font-size: 2rem; 
     }
   }
 }
@@ -261,7 +261,7 @@ a {
 @media screen and (max-width: 768px) {
   .disc-section {
     .section-title {
-      font-size: 3.5rem;
+      font-size: 4.5rem;
       margin-bottom: 20px;
     }
     .wrapper {
@@ -400,12 +400,15 @@ a {
       }
       .contents-wrapper {
         padding: 20px 0 10px;
+
         .title-wrapper {
           flex-direction: column;
+
           .contents-title {
             margin-bottom: 10px;
           }
         } //title-wrapper
+
         .contents-text {
           -webkit-line-clamp: 4;
           width: 80%;
@@ -417,9 +420,11 @@ a {
   .container-4 {
 
     .contents {
+
       img {
         height: 52%;
       }
+
       .contents-wrapper {
         padding: 10px 20px;
         .title-wrapper {
@@ -534,7 +539,7 @@ a {
 } //member-section
 
 .footer {
-  padding: 150px 10vw 300px;
+  padding: 150px 10vw 100px;
   background: linear-gradient(to bottom, $main-color2 8%, $main-color-hover 50%);
   color: #ddd;
 
@@ -546,16 +551,15 @@ a {
   }
 
   .wrapper {
-    width: 80%;
-    margin: 0 auto;
     display: flex;
     justify-content: space-around;
 
     .list-title {
       margin-bottom: 30px;
-      font-size: 4.5rem;
+      font-size: 4rem;
       font-weight: 400;
     }
+
     ul {
       margin-left: 10px;
       list-style: none;
@@ -563,8 +567,8 @@ a {
         margin-bottom: 15px;
         a {
           color: #ddd;
-          font-size: 2rem;
-          transition: 1s;
+          font-size: 1.8rem;
+          transition: .5s;
 
           &:hover {
             color: orange;
@@ -577,8 +581,7 @@ a {
 
 @media screen and (max-width: 768px) {
   .footer {
-    border: 1px solid red;
-    padding: 30px 0 200px;
+    padding: 30px 0 50px;
 
     .footer-title {
       width: 80%;
@@ -589,19 +592,22 @@ a {
 
     .wrapper {
       flex-direction: column;
+      width: 70%;
 
       .list {
-        margin-bottom: 25px;
+        margin-bottom: 15px;
       }
       .list-title {
-        font-size: 2.4rem;
-        margin-bottom: 15px;
+        font-size: 2rem;
+        margin-bottom: 10px;
+      }
 
-        ul {
-          li {
-            a {
-              font-size: 1.6rem;
-            }
+      ul {
+        li {
+          margin-bottom: 5px;
+          line-height: 1.8;
+          a {
+            font-size: 1.5rem;
           }
         }
       }
@@ -667,7 +673,7 @@ a {
 
 .sa {
   opacity: 0;
-  transition: all 1.2s ease;
+  transition: all .8s ease;
 }
 
 .sa.show {
@@ -685,4 +691,10 @@ a {
 
 .sa--up {
   transform: translate(0, 200px);
+}
+
+.hoge {
+  height: 100px;
+  width: 100%;
+  background-color: #000;;
 }

@@ -1,6 +1,5 @@
 @import "./variables";
 
-// チェックボックスの非表示
 .check {
   display: none;
 }
@@ -8,27 +7,36 @@
 .drawer-menu {
   position: fixed;
   top: 0;
-  right: 0;
-  width: 300px;
-  height: 100%;
-  padding: 120px 0;
-  background: linear-gradient(to bottom, #343434, #676767);
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(to bottom, rgba(52, 52, 52, .9), rgba(67, 67, 67, .9));
 
   transition-duration: .8s;
-  transform: translateX(-1vw); //少し左にずらしておく
+  transform: translateX(-10vw); //少し左にずらしておく
   opacity: 0; //透明にしておく
 
   .drawer-list {
+    padding-left: 50px;
+    margin-top: 10vh;
+
     .drawer-item { 
+      font-size: 3.8rem;
+      color: #fff;
       text-align: left;
+      margin-bottom: 18px;
+
+      &:first-of-type {
+        margin-bottom: 30px;
+      }
+
       a {
-        padding-left: 50px;
         display: block;
-        height: 50px;
-        line-height: 50px;
-        font-size: 1.5rem;
         color: #fff;
+        text-align: left;
+        font-size: 1.8rem;
         transition: .6s;
+        margin-left: 3px;
         &:hover {
           color: #444;
           background: #bbb;
@@ -40,19 +48,16 @@
 } //drawer-menu
 
 .menu-btn {
-  display: none;
+  display: block;
   position: fixed;
-  top: 15px;
-  right: 40px;
+  top: 20px;
+  right: 20px;
   cursor: pointer;
-  z-index: 100;
+  z-index: 4;
 
-  @media screen and (max-width: 768px) {
-    display: block;
-  }
   .bar {
     display: block;
-    width: 45px;
+    width: 35px;
     height: 3px;
     background: $main-color;
     border-radius: 3px;
@@ -61,43 +66,19 @@
 
   .bar-top {
     transform: translate(0);
-    margin-bottom: 10px;
+    margin-bottom: 8px;
   }
   .bar-middle {
-    margin-bottom: 10px;
+    margin-bottom: 8px;
   }
   &:hover .bar {
     background: orange;
   }
 }
 
-//ドロワーメニュー開いた時の左側の部分
-.close-menu {
-  position: fixed;
-  top: 0;
-  right: 300px;//ドロワーメニューの分だけ右にずらす
-  width: 100%;
-  height: 100vh;
-  cursor: url(http://theorthodoxworks.com/demo/images/cross.svg),auto;
-  transition-property: all;
-  transition-duration: .3s;
-  visibility: hidden;
-  opacity: 0;
-}
-
-//以下、チェックした時の動作
 .check:checked ~ .drawer-menu {
   transition-delay: .1s;
   transform: none;
-  opacity: 1;
-  z-index: 2;
-}
-
-.check:checked ~ .close-menu {
-  transition-duration: 1s;
-  transition-delay: .1s;
-  background: rgba(150,150,150,0.6);
-  visibility: visible;
   opacity: 1;
   z-index: 3;
 }
@@ -107,135 +88,19 @@
     background: #ddd;
   }
   .bar-top {
-    transform:  translateY(25px) rotate(405deg);
+    transform:  translateY(20px) rotate(405deg);
   }
   .bar-middle {
     display: none;
   }
   .bar-bottom {
     transition-delay: .3s;
-    transform: translateY(10px) rotate(-405deg);
+    transform: translateY(8px) rotate(-405deg);
   }
 }
-/* *******************
-  Feature of drawer-menu.
-  This script use only Sample2 Page.
-*******************
 
-//現れるメニュー本体、非表示にしておく
-.drawer-menu {
-  box-sizing: border-box;
-  position: fixed;
-  top: 0;
-  right: 0;
-  width: 300px;
-  height: 100%;
-  padding: 120px 0;
-  background: #222;
-  -webkit-transition-property: all;
-  transition-property: all;
-  -webkit-transition-duration: .5s;
-  transition-duration: .5s;
-  -webkit-transition-delay: 0s;
-  transition-delay: 0s;
-  transform: translateX(-100vw) rotate(90deg);
-  opacity: 0;
-  .drawer-list {
-    .drawer-item { 
-      text-align: center;
-      a {
-        display: block;
-        height: 50px;
-        line-height: 50px;
-        font-size: 1rem;
-        color: #fff;
-        -webkit-transition: all .8s;
-        transition: all .8s;
-        &:hover {
-          color: #444;
-          background: rgb(150,150,150);
-          font-size: 1.05rem;
-        }
-      }
-    } //drawer-item
-  } //drawer-list
-} //drawer-menu
-
-// チェックボックスの非表示
-.check {
+@media screen and (min-width: 768px) {
+  .menu-btn {
     display: none;
-}
-
-/* menu button - label tag 
-.menu-btn {
-  position: fixed;
-  top: 7px;
-  right: 40px;
-  cursor: pointer;
-  z-index: 11;
-  &::before {
-    font-weight: 900;
-    font-family: "Font Awesome 5 free";
-    content: '\f0c9';
-    font-size: 3.3rem;
-    color: #444;
   }
 }
-
-//ドロワーメニュー開いた時の左側の部分
-.close-menu {
-  position: fixed;
-  top: 0;
-  right: 300px;//ドロワーメニューの分だけ右にずらす
-  width: 100%;
-  height: 100vh;
-  cursor: url(http://theorthodoxworks.com/demo/images/cross.svg),auto;
-  -webkit-transition-property: all;
-  transition-property: all;
-  -webkit-transition-duration: .3s;
-  transition-duration: .3s;
-  -webkit-transition-delay: 0s;
-  transition-delay: 0s;
-  visibility: hidden;
-  opacity: 0;
-}
-
-//以下、チェックした時の動作
-.check:checked ~ .drawer-menu {
-    -webkit-transition-delay: .3s;
-    transition-delay: .1s;
-    -webkit-transform: none;
-    -ms-transform: none;
-    transform: none;
-    opacity: 1;
-    z-index: 2;
-}
-
-//コンテンツ部分は左にずらす
-.check:checked ~ .main {
-    -webkit-transition-delay: 0s;
-    transition-delay: 0s;
-    -webkit-transform: translateX(-300px);
-    -ms-transform: translate(-300px);
-    transform: translate(-300px);
-}
-
-.check:checked ~ .close-menu {
-    -webkit-transition-duration: 1s;
-    transition-duration: 1s;
-    -webkit-transition-delay: .3s;
-    transition-delay: .1s;
-    background: rgba(150,150,150,0.6);
-    visibility: visible;
-    opacity: 1;
-    z-index: 3;
-}
-
-.check:checked ~ .menu-btn::before {
-    content: "\f00d";
-    color: #fff;
-    transition-duration: 1s;
-    transition-delay: .5s;
-    transform: translateX(300px);
-}
-*/

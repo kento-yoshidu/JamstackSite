@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
 const scrollAnimationElm = document.querySelectorAll('.sa');
 const scrollAnimationFunc = function() {
   for(var i = 0; i < scrollAnimationElm.length; i++) {
-    const triggerMargin = 200;
+    const triggerMargin = 50;
     if (window.innerHeight > scrollAnimationElm[i].getBoundingClientRect().top + triggerMargin) {
       scrollAnimationElm[i].classList.add('show');
     }
@@ -33,3 +33,13 @@ const scrollAnimationFunc = function() {
 }
 window.addEventListener('load', scrollAnimationFunc);
 window.addEventListener('scroll', scrollAnimationFunc);
+
+const links = document.getElementsByClassName('drawer-link')
+const check = document.getElementById('checked')
+
+for(let i = 0; i < links.length; i++) {
+  links[i].addEventListener('click', () => {
+
+    check.checked = false;
+  })
+}

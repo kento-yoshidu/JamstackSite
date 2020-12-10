@@ -90,51 +90,54 @@ input, select {
 .drawer-menu {
   position: fixed;
   top: 0;
-  right: 0;
-  width: 300px;
-  height: 100%;
-  padding: 120px 0;
-  background: -webkit-gradient(linear, left top, left bottom, from(#343434), to(#676767));
-  background: -webkit-linear-gradient(top, #343434, #676767);
-  background: -o-linear-gradient(top, #343434, #676767);
-  background: linear-gradient(to bottom, #343434, #676767);
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(52, 52, 52, 0.9)), to(rgba(67, 67, 67, 0.9)));
+  background: -webkit-linear-gradient(top, rgba(52, 52, 52, 0.9), rgba(67, 67, 67, 0.9));
+  background: -o-linear-gradient(top, rgba(52, 52, 52, 0.9), rgba(67, 67, 67, 0.9));
+  background: linear-gradient(to bottom, rgba(52, 52, 52, 0.9), rgba(67, 67, 67, 0.9));
   -webkit-transition-duration: .8s;
   -o-transition-duration: .8s;
   transition-duration: .8s;
-  -webkit-transform: translateX(-1vw);
-  -ms-transform: translateX(-1vw);
-  transform: translateX(-1vw);
+  -webkit-transform: translateX(-10vw);
+  -ms-transform: translateX(-10vw);
+  transform: translateX(-10vw);
   opacity: 0; }
-  .drawer-menu .drawer-list .drawer-item {
-    text-align: left; }
-    .drawer-menu .drawer-list .drawer-item a {
-      padding-left: 50px;
-      display: block;
-      height: 50px;
-      line-height: 50px;
-      font-size: 1.5rem;
+  .drawer-menu .drawer-list {
+    padding-left: 50px;
+    margin-top: 10vh; }
+    .drawer-menu .drawer-list .drawer-item {
+      font-size: 3.8rem;
       color: #fff;
-      -webkit-transition: .6s;
-      -o-transition: .6s;
-      transition: .6s; }
-      .drawer-menu .drawer-list .drawer-item a:hover {
-        color: #444;
-        background: #bbb;
-        font-size: 1.6rem; }
+      text-align: left;
+      margin-bottom: 18px; }
+      .drawer-menu .drawer-list .drawer-item:first-of-type {
+        margin-bottom: 30px; }
+      .drawer-menu .drawer-list .drawer-item a {
+        display: block;
+        color: #fff;
+        text-align: left;
+        font-size: 1.8rem;
+        -webkit-transition: .6s;
+        -o-transition: .6s;
+        transition: .6s;
+        margin-left: 3px; }
+        .drawer-menu .drawer-list .drawer-item a:hover {
+          color: #444;
+          background: #bbb;
+          font-size: 1.6rem; }
 
 .menu-btn {
-  display: none;
+  display: block;
   position: fixed;
-  top: 15px;
-  right: 40px;
+  top: 20px;
+  right: 20px;
   cursor: pointer;
-  z-index: 100; }
-  @media screen and (max-width: 768px) {
-    .menu-btn {
-      display: block; } }
+  z-index: 4; }
   .menu-btn .bar {
     display: block;
-    width: 45px;
+    width: 35px;
     height: 3px;
     background: #932993;
     border-radius: 3px;
@@ -145,27 +148,11 @@ input, select {
     -webkit-transform: translate(0);
     -ms-transform: translate(0);
     transform: translate(0);
-    margin-bottom: 10px; }
+    margin-bottom: 8px; }
   .menu-btn .bar-middle {
-    margin-bottom: 10px; }
+    margin-bottom: 8px; }
   .menu-btn:hover .bar {
     background: orange; }
-
-.close-menu {
-  position: fixed;
-  top: 0;
-  right: 300px;
-  width: 100%;
-  height: 100vh;
-  cursor: url(http://theorthodoxworks.com/demo/images/cross.svg), auto;
-  -webkit-transition-property: all;
-  -o-transition-property: all;
-  transition-property: all;
-  -webkit-transition-duration: .3s;
-  -o-transition-duration: .3s;
-  transition-duration: .3s;
-  visibility: hidden;
-  opacity: 0; }
 
 .check:checked ~ .drawer-menu {
   -webkit-transition-delay: .1s;
@@ -175,27 +162,15 @@ input, select {
   -ms-transform: none;
   transform: none;
   opacity: 1;
-  z-index: 2; }
-
-.check:checked ~ .close-menu {
-  -webkit-transition-duration: 1s;
-  -o-transition-duration: 1s;
-  transition-duration: 1s;
-  -webkit-transition-delay: .1s;
-  -o-transition-delay: .1s;
-  transition-delay: .1s;
-  background: rgba(150, 150, 150, 0.6);
-  visibility: visible;
-  opacity: 1;
   z-index: 3; }
 
 .check:checked ~ .menu-btn .bar {
   background: #ddd; }
 
 .check:checked ~ .menu-btn .bar-top {
-  -webkit-transform: translateY(25px) rotate(405deg);
-  -ms-transform: translateY(25px) rotate(405deg);
-  transform: translateY(25px) rotate(405deg); }
+  -webkit-transform: translateY(20px) rotate(405deg);
+  -ms-transform: translateY(20px) rotate(405deg);
+  transform: translateY(20px) rotate(405deg); }
 
 .check:checked ~ .menu-btn .bar-middle {
   display: none; }
@@ -204,132 +179,14 @@ input, select {
   -webkit-transition-delay: .3s;
   -o-transition-delay: .3s;
   transition-delay: .3s;
-  -webkit-transform: translateY(10px) rotate(-405deg);
-  -ms-transform: translateY(10px) rotate(-405deg);
-  transform: translateY(10px) rotate(-405deg); }
+  -webkit-transform: translateY(8px) rotate(-405deg);
+  -ms-transform: translateY(8px) rotate(-405deg);
+  transform: translateY(8px) rotate(-405deg); }
 
-/* *******************
-  Feature of drawer-menu.
-  This script use only Sample2 Page.
-*******************
+@media screen and (min-width: 768px) {
+  .menu-btn {
+    display: none; } }
 
-//現れるメニュー本体、非表示にしておく
-.drawer-menu {
-  box-sizing: border-box;
-  position: fixed;
-  top: 0;
-  right: 0;
-  width: 300px;
-  height: 100%;
-  padding: 120px 0;
-  background: #222;
-  -webkit-transition-property: all;
-  transition-property: all;
-  -webkit-transition-duration: .5s;
-  transition-duration: .5s;
-  -webkit-transition-delay: 0s;
-  transition-delay: 0s;
-  transform: translateX(-100vw) rotate(90deg);
-  opacity: 0;
-  .drawer-list {
-    .drawer-item { 
-      text-align: center;
-      a {
-        display: block;
-        height: 50px;
-        line-height: 50px;
-        font-size: 1rem;
-        color: #fff;
-        -webkit-transition: all .8s;
-        transition: all .8s;
-        &:hover {
-          color: #444;
-          background: rgb(150,150,150);
-          font-size: 1.05rem;
-        }
-      }
-    } //drawer-item
-  } //drawer-list
-} //drawer-menu
-
-// チェックボックスの非表示
-.check {
-    display: none;
-}
-
-/* menu button - label tag 
-.menu-btn {
-  position: fixed;
-  top: 7px;
-  right: 40px;
-  cursor: pointer;
-  z-index: 11;
-  &::before {
-    font-weight: 900;
-    font-family: "Font Awesome 5 free";
-    content: '\f0c9';
-    font-size: 3.3rem;
-    color: #444;
-  }
-}
-
-//ドロワーメニュー開いた時の左側の部分
-.close-menu {
-  position: fixed;
-  top: 0;
-  right: 300px;//ドロワーメニューの分だけ右にずらす
-  width: 100%;
-  height: 100vh;
-  cursor: url(http://theorthodoxworks.com/demo/images/cross.svg),auto;
-  -webkit-transition-property: all;
-  transition-property: all;
-  -webkit-transition-duration: .3s;
-  transition-duration: .3s;
-  -webkit-transition-delay: 0s;
-  transition-delay: 0s;
-  visibility: hidden;
-  opacity: 0;
-}
-
-//以下、チェックした時の動作
-.check:checked ~ .drawer-menu {
-    -webkit-transition-delay: .3s;
-    transition-delay: .1s;
-    -webkit-transform: none;
-    -ms-transform: none;
-    transform: none;
-    opacity: 1;
-    z-index: 2;
-}
-
-//コンテンツ部分は左にずらす
-.check:checked ~ .main {
-    -webkit-transition-delay: 0s;
-    transition-delay: 0s;
-    -webkit-transform: translateX(-300px);
-    -ms-transform: translate(-300px);
-    transform: translate(-300px);
-}
-
-.check:checked ~ .close-menu {
-    -webkit-transition-duration: 1s;
-    transition-duration: 1s;
-    -webkit-transition-delay: .3s;
-    transition-delay: .1s;
-    background: rgba(150,150,150,0.6);
-    visibility: visible;
-    opacity: 1;
-    z-index: 3;
-}
-
-.check:checked ~ .menu-btn::before {
-    content: "\f00d";
-    color: #fff;
-    transition-duration: 1s;
-    transition-delay: .5s;
-    transform: translateX(300px);
-}
-*/
 .swiper-container {
   width: 50%;
   min-width: 700px;
@@ -397,15 +254,8 @@ input, select {
   justify-content: space-between;
   position: fixed;
   top: 0;
-  z-index: 10;
-  background: rgba(250, 250, 250, 0.3); }
-  @media screen and (max-width: 768px) {
-    .global-nav {
-      width: 100%;
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-      flex-direction: column; } }
+  z-index: 2;
+  background: rgba(250, 250, 255, 0.3); }
   .global-nav .links {
     padding: 5px 20px;
     display: -webkit-box;
@@ -422,32 +272,29 @@ input, select {
       -webkit-transition: .3s;
       -o-transition: .3s;
       transition: .3s; }
-      @media screen and (max-width: 768px) {
-        .global-nav .links i {
-          font-size: 1.2rem; } }
       .global-nav .links i:hover {
         color: #932993; }
   .global-nav .site-nav {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    padding-right: 100px; }
-    @media screen and (max-width: 768px) {
-      .global-nav .site-nav {
-        display: none; } }
+    margin-right: 5vw; }
     .global-nav .site-nav .nav-item {
       margin: 0 4px; }
       .global-nav .site-nav .nav-item a {
         display: block;
-        height: 60px;
-        font-size: 2.3rem;
+        font-size: 2rem;
         line-height: 50px;
-        -webkit-transition: .5s;
-        -o-transition: .5s;
-        transition: .5s;
-        padding: 0 20px; }
+        -webkit-transition: .3s;
+        -o-transition: .3s;
+        transition: .3s;
+        padding: 0 15px; }
         .global-nav .site-nav .nav-item a:hover {
           color: #932993; }
+
+@media screen and (max-width: 768px) {
+  .global-nav {
+    display: none; } }
 
 .nogi-base, .header-nogi, .footer-nogi {
   background: -webkit-gradient(linear, left top, right bottom, color-stop(50%, rgba(255, 255, 255, 0)), color-stop(50.3%, #932993)) no-repeat bottom right/100% 100%;
@@ -609,14 +456,14 @@ a {
   .intro-section {
     padding: 30px 0 40px; }
     .intro-section .section-title {
-      font-size: 3.4rem; }
+      font-size: 4rem; }
       .intro-section .section-title::first-letter {
         font-size: 5rem; }
     .intro-section p {
       width: 85%;
       font-size: 1.8rem; }
     .intro-section .purple {
-      font-size: 2.5rem; } }
+      font-size: 2rem; } }
 
 .disc-section .section-title {
   margin-bottom: 60px; }
@@ -712,7 +559,7 @@ a {
 
 @media screen and (max-width: 768px) {
   .disc-section .section-title {
-    font-size: 3.5rem;
+    font-size: 4.5rem;
     margin-bottom: 20px; }
   .disc-section .wrapper {
     -webkit-box-orient: vertical;
@@ -935,7 +782,7 @@ a {
         opacity: 1; }
 
 .footer {
-  padding: 150px 10vw 300px;
+  padding: 150px 10vw 100px;
   background: -webkit-gradient(linear, left top, left bottom, color-stop(8%, rgba(147, 41, 147, 0.5)), color-stop(50%, rgba(147, 41, 147, 0.8)));
   background: -webkit-linear-gradient(top, rgba(147, 41, 147, 0.5) 8%, rgba(147, 41, 147, 0.8) 50%);
   background: -o-linear-gradient(top, rgba(147, 41, 147, 0.5) 8%, rgba(147, 41, 147, 0.8) 50%);
@@ -947,8 +794,6 @@ a {
     text-align: center;
     margin: 50px 0; }
   .footer .wrapper {
-    width: 80%;
-    margin: 0 auto;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -956,7 +801,7 @@ a {
     justify-content: space-around; }
     .footer .wrapper .list-title {
       margin-bottom: 30px;
-      font-size: 4.5rem;
+      font-size: 4rem;
       font-weight: 400; }
     .footer .wrapper ul {
       margin-left: 10px;
@@ -965,17 +810,16 @@ a {
         margin-bottom: 15px; }
         .footer .wrapper ul li a {
           color: #ddd;
-          font-size: 2rem;
-          -webkit-transition: 1s;
-          -o-transition: 1s;
-          transition: 1s; }
+          font-size: 1.8rem;
+          -webkit-transition: .5s;
+          -o-transition: .5s;
+          transition: .5s; }
           .footer .wrapper ul li a:hover {
             color: orange; }
 
 @media screen and (max-width: 768px) {
   .footer {
-    border: 1px solid red;
-    padding: 30px 0 200px; }
+    padding: 30px 0 50px; }
     .footer .footer-title {
       width: 80%;
       margin: 50px auto 25px;
@@ -985,14 +829,18 @@ a {
       -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
       -ms-flex-direction: column;
-      flex-direction: column; }
+      flex-direction: column;
+      width: 70%; }
       .footer .wrapper .list {
-        margin-bottom: 25px; }
-      .footer .wrapper .list-title {
-        font-size: 2.4rem;
         margin-bottom: 15px; }
-        .footer .wrapper .list-title ul li a {
-          font-size: 1.6rem; } }
+      .footer .wrapper .list-title {
+        font-size: 2rem;
+        margin-bottom: 10px; }
+      .footer .wrapper ul li {
+        margin-bottom: 5px;
+        line-height: 1.8; }
+        .footer .wrapper ul li a {
+          font-size: 1.5rem; } }
 
 .btn {
   margin: 30px auto 0;
@@ -1042,9 +890,9 @@ a {
 
 .sa {
   opacity: 0;
-  -webkit-transition: all 1.2s ease;
-  -o-transition: all 1.2s ease;
-  transition: all 1.2s ease; }
+  -webkit-transition: all .8s ease;
+  -o-transition: all .8s ease;
+  transition: all .8s ease; }
 
 .sa.show {
   opacity: 1;
@@ -1066,3 +914,8 @@ a {
   -webkit-transform: translate(0, 200px);
   -ms-transform: translate(0, 200px);
   transform: translate(0, 200px); }
+
+.hoge {
+  height: 100px;
+  width: 100%;
+  background-color: #000; }
