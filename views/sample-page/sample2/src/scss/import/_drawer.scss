@@ -5,6 +5,7 @@
 }
 
 .drawer-menu {
+  //display: none;
   position: fixed;
   top: 0;
   left: 0;
@@ -12,7 +13,6 @@
   height: 100vh;
   background: linear-gradient(to bottom, rgba(52, 52, 52, .9), rgba(67, 67, 67, .9));
 
-  transition-duration: .8s;
   transform: translateX(-10vw); //少し左にずらしておく
   opacity: 0; //透明にしておく
 
@@ -77,10 +77,12 @@
 }
 
 .check:checked ~ .drawer-menu {
+  display: block;
   transition-delay: .1s;
   transform: none;
   opacity: 1;
   z-index: 3;
+  transition-duration: .8s;
 }
 
 .check:checked ~ .menu-btn {

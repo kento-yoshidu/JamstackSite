@@ -539,6 +539,7 @@ a {
 } //member-section
 
 .footer {
+  position: relative;
   padding: 150px 10vw 100px;
   background: linear-gradient(to bottom, $main-color2 8%, $main-color-hover 50%);
   color: #ddd;
@@ -554,9 +555,14 @@ a {
     display: flex;
     justify-content: space-around;
 
+    .list {
+      display: flex;
+      flex-direction: column;
+
+    }
     .list-title {
-      margin-bottom: 30px;
-      font-size: 4rem;
+      margin-bottom: 10px;
+      font-size: 3rem;
       font-weight: 400;
     }
 
@@ -577,6 +583,12 @@ a {
       }
     }
   }
+  .copyright {
+    position: absolute;
+    font-size: 2rem;
+    a {
+    }
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -586,14 +598,15 @@ a {
     .footer-title {
       width: 80%;
       margin: 50px auto 25px;
-      font-size: 3.5rem;
+      font-size: 3rem;
       line-height: 1.4;;
     }
 
     .wrapper {
       flex-direction: column;
       width: 70%;
-
+      margin: 0 auto;
+      border: 1px solid red;
       .list {
         margin-bottom: 15px;
       }

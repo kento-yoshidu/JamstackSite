@@ -97,9 +97,6 @@ input, select {
   background: -webkit-linear-gradient(top, rgba(52, 52, 52, 0.9), rgba(67, 67, 67, 0.9));
   background: -o-linear-gradient(top, rgba(52, 52, 52, 0.9), rgba(67, 67, 67, 0.9));
   background: linear-gradient(to bottom, rgba(52, 52, 52, 0.9), rgba(67, 67, 67, 0.9));
-  -webkit-transition-duration: .8s;
-  -o-transition-duration: .8s;
-  transition-duration: .8s;
   -webkit-transform: translateX(-10vw);
   -ms-transform: translateX(-10vw);
   transform: translateX(-10vw);
@@ -155,6 +152,7 @@ input, select {
     background: orange; }
 
 .check:checked ~ .drawer-menu {
+  display: block;
   -webkit-transition-delay: .1s;
   -o-transition-delay: .1s;
   transition-delay: .1s;
@@ -162,7 +160,10 @@ input, select {
   -ms-transform: none;
   transform: none;
   opacity: 1;
-  z-index: 3; }
+  z-index: 3;
+  -webkit-transition-duration: .8s;
+  -o-transition-duration: .8s;
+  transition-duration: .8s; }
 
 .check:checked ~ .menu-btn .bar {
   background: #ddd; }
@@ -352,8 +353,8 @@ input, select {
 @media (max-width: 768px) {
   .footer-nogi {
     margin: 0 auto 50px;
-    width: 80px;
-    height: 83px; } }
+    width: 70px;
+    height: 73px; } }
 
 html {
   font-size: 62.5%;
@@ -782,6 +783,7 @@ a {
         opacity: 1; }
 
 .footer {
+  position: relative;
   padding: 150px 10vw 100px;
   background: -webkit-gradient(linear, left top, left bottom, color-stop(8%, rgba(147, 41, 147, 0.5)), color-stop(50%, rgba(147, 41, 147, 0.8)));
   background: -webkit-linear-gradient(top, rgba(147, 41, 147, 0.5) 8%, rgba(147, 41, 147, 0.8) 50%);
@@ -799,9 +801,17 @@ a {
     display: flex;
     -ms-flex-pack: distribute;
     justify-content: space-around; }
+    .footer .wrapper .list {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column; }
     .footer .wrapper .list-title {
-      margin-bottom: 30px;
-      font-size: 4rem;
+      margin-bottom: 10px;
+      font-size: 3rem;
       font-weight: 400; }
     .footer .wrapper ul {
       margin-left: 10px;
@@ -816,6 +826,9 @@ a {
           transition: .5s; }
           .footer .wrapper ul li a:hover {
             color: orange; }
+  .footer .copyright {
+    position: absolute;
+    font-size: 2rem; }
 
 @media screen and (max-width: 768px) {
   .footer {
@@ -823,14 +836,16 @@ a {
     .footer .footer-title {
       width: 80%;
       margin: 50px auto 25px;
-      font-size: 3.5rem;
+      font-size: 3rem;
       line-height: 1.4; }
     .footer .wrapper {
       -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
       -ms-flex-direction: column;
       flex-direction: column;
-      width: 70%; }
+      width: 70%;
+      margin: 0 auto;
+      border: 1px solid red; }
       .footer .wrapper .list {
         margin-bottom: 15px; }
       .footer .wrapper .list-title {
