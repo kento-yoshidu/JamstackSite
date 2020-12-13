@@ -669,7 +669,7 @@ a {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    width: 85%;
+    width: 80%;
     max-width: 1500px;
     margin: 0 auto; }
   .contents-section .container-2 .contents {
@@ -784,12 +784,13 @@ a {
 
 .footer {
   position: relative;
-  padding: 150px 10vw 100px;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(8%, rgba(147, 41, 147, 0.5)), color-stop(50%, rgba(147, 41, 147, 0.8)));
-  background: -webkit-linear-gradient(top, rgba(147, 41, 147, 0.5) 8%, rgba(147, 41, 147, 0.8) 50%);
-  background: -o-linear-gradient(top, rgba(147, 41, 147, 0.5) 8%, rgba(147, 41, 147, 0.8) 50%);
-  background: linear-gradient(to bottom, rgba(147, 41, 147, 0.5) 8%, rgba(147, 41, 147, 0.8) 50%);
-  color: #ddd; }
+  padding: 150px 13vw 100px;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(8%, rgba(147, 41, 147, 0.5)), color-stop(90%, #bb34bb));
+  background: -webkit-linear-gradient(top, rgba(147, 41, 147, 0.5) 8%, #bb34bb 90%);
+  background: -o-linear-gradient(top, rgba(147, 41, 147, 0.5) 8%, #bb34bb 90%);
+  background: linear-gradient(to bottom, rgba(147, 41, 147, 0.5) 8%, #bb34bb 90%);
+  color: #ddd;
+  color: #932993; }
   .footer .footer-title {
     font-size: 7rem;
     font-weight: 400;
@@ -799,8 +800,9 @@ a {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-pack: distribute;
-    justify-content: space-around; }
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
     .footer .wrapper .list {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -808,19 +810,27 @@ a {
       -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
       -ms-flex-direction: column;
-      flex-direction: column; }
+      flex-direction: column;
+      margin: 0 30px; }
     .footer .wrapper .list-title {
-      margin-bottom: 10px;
-      font-size: 3rem;
+      margin-bottom: 20px;
+      font-size: 2.5rem;
+      font-weight: 400;
+      color: #444;
       font-weight: 400; }
     .footer .wrapper ul {
       margin-left: 10px;
       list-style: none; }
       .footer .wrapper ul li {
-        margin-bottom: 15px; }
+        margin-bottom: 15px;
+        text-decoration: underline; }
+        .footer .wrapper ul li i {
+          color: #444;
+          font-size: 1.4rem;
+          margin-right: 10px; }
         .footer .wrapper ul li a {
-          color: #ddd;
-          font-size: 1.8rem;
+          color: #444;
+          font-size: 1.7rem;
           -webkit-transition: .5s;
           -o-transition: .5s;
           transition: .5s; }

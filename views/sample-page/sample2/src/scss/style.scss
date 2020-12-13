@@ -385,7 +385,7 @@ a {
   **/
   .contents-container {
     display: flex;
-    width: 85%;
+    width: 80%;
     max-width: 1500px;
     margin: 0 auto;
   }
@@ -540,9 +540,10 @@ a {
 
 .footer {
   position: relative;
-  padding: 150px 10vw 100px;
-  background: linear-gradient(to bottom, $main-color2 8%, $main-color-hover 50%);
+  padding: 150px 13vw 100px;
+  background: linear-gradient(to bottom, $main-color2 8%, lighten($main-color3, 10%) 90%);
   color: #ddd;
+  color: $main-color3;
 
   .footer-title {
     font-size: 7rem;
@@ -553,16 +554,18 @@ a {
 
   .wrapper {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
 
     .list {
       display: flex;
       flex-direction: column;
-
+      margin: 0 30px;
     }
     .list-title {
-      margin-bottom: 10px;
-      font-size: 3rem;
+      margin-bottom: 20px;
+      font-size: 2.5rem;
+      font-weight: 400;
+      color: #444;
       font-weight: 400;
     }
 
@@ -571,9 +574,15 @@ a {
       list-style: none;
       li {
         margin-bottom: 15px;
+        text-decoration: underline;
+        i {
+          color: #444;
+          font-size: 1.4rem;
+          margin-right: 10px;
+        }
         a {
-          color: #ddd;
-          font-size: 1.8rem;
+          color: #444;
+          font-size: 1.7rem;
           transition: .5s;
 
           &:hover {
