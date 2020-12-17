@@ -540,21 +540,24 @@ a {
 
 .footer {
   position: relative;
-  padding: 150px 13vw 100px;
+  padding: 150px 13vw 50px;
   background: linear-gradient(to bottom, $main-color2 8%, lighten($main-color3, 10%) 90%);
-  color: #ddd;
   color: $main-color3;
 
   .footer-title {
-    font-size: 7rem;
+    font-size: 5rem;
     font-weight: 400;
     text-align: center;
-    margin: 50px 0;
+    margin: 40px 0;
   }
 
   .wrapper {
     display: flex;
     justify-content: center;
+
+    .border {
+      display: none;
+    }
 
     .list {
       display: flex;
@@ -563,26 +566,28 @@ a {
     }
     .list-title {
       margin-bottom: 20px;
-      font-size: 2.5rem;
-      font-weight: 400;
-      color: #444;
+      color: $main-color3;
+      font-size: 2rem;
       font-weight: 400;
     }
 
     ul {
       margin-left: 10px;
       list-style: none;
+
       li {
-        margin-bottom: 15px;
+        margin-bottom: 10px;
         text-decoration: underline;
+
         i {
-          color: #444;
-          font-size: 1.4rem;
-          margin-right: 10px;
+          color: $main-color3;
+          font-size: 1.3rem;
+          margin-right: 8px;
         }
+
         a {
-          color: #444;
-          font-size: 1.7rem;
+          color: $main-color3;
+          font-size: 1.4rem;
           transition: .5s;
 
           &:hover {
@@ -592,10 +597,33 @@ a {
       }
     }
   }
+
+  .link {
+    margin: 50px auto 30px;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+
+    li {
+      margin: 0 10px;
+
+      a {
+        font-size: 1.4rem;
+        transition: .2s;
+        &:hover {
+          color: orange;
+        }
+      }
+    }
+  }
+
   .copyright {
-    position: absolute;
-    font-size: 2rem;
+    font-size: 1.6rem;
+    color: #444;
+    text-align: center;
     a {
+      color: inherit;
+      text-decoration: underline;
     }
   }
 }
@@ -613,24 +641,47 @@ a {
 
     .wrapper {
       flex-direction: column;
-      width: 70%;
+      width: 90%;
       margin: 0 auto;
       border: 1px solid red;
+
+      .border {
+        display: block;
+        width: 80%;
+        margin: 0 auto 10px;
+        border-bottom: 1px solid $main-color3;
+        box-shadow: 0px 1px 0px $main-color2;
+      }
       .list {
         margin-bottom: 15px;
+        flex-direction: row;
       }
       .list-title {
-        font-size: 2rem;
         margin-bottom: 10px;
+        font-size: 1.5rem;
+        line-height: 1.5;
+        width: 30%;
       }
 
       ul {
+        width: 65%;
         li {
           margin-bottom: 5px;
-          line-height: 1.8;
+          line-height: 1.5;
           a {
-            font-size: 1.5rem;
+            font-size: 1.3rem;
           }
+        }
+      }
+    } //wrapper
+    .link {
+      border: 1px solid red;
+      margin: 0 auto 10px;
+
+      li {
+        margin: 0 5px;
+        a {
+          font-size: 1.2rem;
         }
       }
     }
@@ -713,10 +764,4 @@ a {
 
 .sa--up {
   transform: translate(0, 200px);
-}
-
-.hoge {
-  height: 100px;
-  width: 100%;
-  background-color: #000;;
 }
