@@ -362,7 +362,7 @@ html {
   scroll-behavior: smooth; }
 
 a {
-  color: #333;
+  color: #444;
   text-decoration: none; }
 
 .purple {
@@ -371,6 +371,20 @@ a {
 .title {
   font-family: 'Bitter', serif;
   font-weight: 100; }
+
+.btn-wrapper {
+  margin: 50px 0 0;
+  padding: 10px 0;
+  text-align: center; }
+  .btn-wrapper .btn {
+    color: #fff;
+    font-size: 1.7rem;
+    letter-spacing: 2px;
+    padding: 1rem 2.5rem 1.2rem;
+    background: #932993;
+    border-radius: 1.5px; }
+    .btn-wrapper .btn:hover {
+      background: rgba(147, 41, 147, 0.8); }
 
 .main {
   padding-top: 60px;
@@ -658,12 +672,12 @@ a {
       .contents-section .contents .contents-wrapper .contents-text {
         font-size: 2rem;
         line-height: 1.6;
-        width: 95%;
+        width: 80%;
         margin: 20px auto 12px;
         text-indent: .7rem;
         display: -webkit-box;
         -webkit-box-orient: vertical;
-        -webkit-line-clamp: 3;
+        -webkit-line-clamp: 4;
         overflow: hidden; }
   .contents-section .contents-container {
     display: -webkit-box;
@@ -706,24 +720,25 @@ a {
 
 @media screen and (max-width: 768px) {
   .contents-section .contents {
-    width: 85%; }
+    margin-bottom: 20px;
+    width: 80%; }
     .contents-section .contents img {
       height: 100%; }
     .contents-section .contents .contents-wrapper {
-      padding: 15px 0; }
+      padding: 15px 0 0px; }
       .contents-section .contents .contents-wrapper .title-wrapper {
         -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
         -ms-flex-direction: column;
         flex-direction: column; }
         .contents-section .contents .contents-wrapper .title-wrapper .contents-title {
-          font-size: 2.5rem;
+          font-size: 2rem;
           text-align: center;
           margin-bottom: 20px; }
         .contents-section .contents .contents-wrapper .title-wrapper time {
-          font-size: 1.8rem; }
+          font-size: 1.5rem; }
       .contents-section .contents .contents-wrapper .contents-text {
-        font-size: 1.5rem; }
+        font-size: 1.4rem; }
   .contents-section .container-2 {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -815,7 +830,7 @@ a {
       margin: 0 30px; }
     .footer .wrapper .list-title {
       margin-bottom: 20px;
-      color: #750b75;
+      color: #444;
       font-size: 2rem;
       font-weight: 400; }
     .footer .wrapper ul {
@@ -825,11 +840,11 @@ a {
         margin-bottom: 10px;
         text-decoration: underline; }
         .footer .wrapper ul li i {
-          color: #750b75;
+          color: #444;
           font-size: 1.3rem;
           margin-right: 8px; }
         .footer .wrapper ul li a {
-          color: #750b75;
+          color: #444;
           font-size: 1.4rem;
           -webkit-transition: .5s;
           -o-transition: .5s;
@@ -859,7 +874,6 @@ a {
     color: #444;
     text-align: center; }
     .footer .copyright a {
-      color: inherit;
       text-decoration: underline; }
 
 @media screen and (max-width: 768px) {
@@ -876,8 +890,7 @@ a {
       -ms-flex-direction: column;
       flex-direction: column;
       width: 90%;
-      margin: 0 auto;
-      border: 1px solid red; }
+      margin: 0 auto; }
       .footer .wrapper .border {
         display: block;
         width: 80%;
@@ -904,34 +917,16 @@ a {
           .footer .wrapper ul li a {
             font-size: 1.3rem; }
     .footer .link {
-      border: 1px solid red;
-      margin: 0 auto 10px; }
+      margin: 20px auto 10px;
+      -ms-flex-pack: distribute;
+      justify-content: space-around;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      width: 60%; }
       .footer .link li {
-        margin: 0 5px; }
+        margin: 0 5px 10px 0; }
         .footer .link li a {
           font-size: 1.2rem; } }
-
-.btn {
-  margin: 30px auto 0;
-  background: #932993;
-  padding: 10px 0 18px;
-  -webkit-transition: .3s;
-  -o-transition: .3s;
-  transition: .3s; }
-  .btn:hover {
-    background: rgba(147, 41, 147, 0.8); }
-  .btn a {
-    color: #fff;
-    font-size: 2.8rem;
-    display: block;
-    text-align: center; }
-
-.contents-btn {
-  width: 85%;
-  max-width: 1500px; }
-
-.member-btn {
-  width: 80%; }
 
 @media (max-width: 768px) {
   .menu-btn {
