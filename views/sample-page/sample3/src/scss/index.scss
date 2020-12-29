@@ -32,7 +32,7 @@ html {
     border-radius: 50% 50% 50% 53%/50% 50% 55% 55%;
     animation: circleAnimation1 20s linear infinite,
                opacity 4s forwards;
-    border: 300px solid rgba(160, 180, 240, 0.05);
+    border: 200px solid rgba(160, 180, 240, 0.05);
     @media screen and (max-width: 768px) {
       width: 48vh;
       height: 48vh;
@@ -46,7 +46,7 @@ html {
     border-radius: 52% 50% 50% 50%/50% 50% 52% 50%;
     animation: circleAnimation2 15s linear infinite,
                opacity 6s forwards;
-    border: 290px solid rgba(160, 180, 240, 0.05);
+    border: 190px solid rgba(160, 180, 240, 0.05);
     @media screen and (max-width: 768px) {
       width: 45vh;
       height: 45vh;
@@ -60,7 +60,7 @@ html {
     border-radius: 52% 50% 50% 50%/50% 50% 52% 50%;
     animation: circleAnimation1 23s linear infinite,
                opacity 10s forwards;
-    border: 300px solid rgba(140, 160, 240, 0.05);
+    border: 200px solid rgba(140, 160, 240, 0.05);
     @media screen and (max-width: 768px) {
       width: 45vh;
       height: 45vh;
@@ -117,24 +117,20 @@ html {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 33%;
-    color: #ddd;
+    color: #fff;
     font-family: Helvetica , "游ゴシック", sans-serif;
-    @media screen and (max-width: 768px) {
-      width: 90%; 
-    }
+    width: 100%;
     .header-title {
-      font-size: 4rem;
-      letter-spacing: 5px;
-      margin: 0 auto 10%;
-      width: 60%;
+      font-size: 3rem;
+      letter-spacing: 1px;
       text-align: center;
-      @media screen and (max-width: 768px) {
-        border: 1px solid red;
-        width: 80%;
-        font-size: 3rem;  
-        letter-spacing: 3px;
-      }
+      margin-bottom: 3vh;
+    }
+    .product-title {
+      font-size: 8rem;
+      text-align: center;
+      width: 100%;
+      margin-bottom: 6vh;
     }
     .text {
       font-size: 4.2rem;
@@ -142,6 +138,8 @@ html {
       display: flex;
       justify-content: space-between;
       margin-bottom: 30px;
+      width: 40%;
+      margin: 0 auto;
       @media screen and (max-width: 768px) {
         font-size: 2.2rem;
         margin-bottom: 10px;
@@ -150,7 +148,21 @@ html {
       }
     }
   }
-}
+
+  @media screen and (max-width: 768px) {
+    .text-wrapper {
+      .header-title {
+        width: 80%;
+        font-size: 2rem;  
+        margin: 0 auto 3vh;
+        letter-spacing: 1px;
+      }
+      .product-title {
+        font-size: 5rem;
+      }
+    }
+  }
+} // header
 
 .section {
   width: 100%;
@@ -240,7 +252,14 @@ html {
   }
 }
 
-.sec1 {
+.topic-section {
+  margin-top: 80px;
+  .section-title {
+    color: #888;
+    font-size: 5rem;
+    letter-spacing: 3px;
+    text-align: center;
+  }
   .introduction {
     padding-left: 8%;
     padding-top: 70px;
