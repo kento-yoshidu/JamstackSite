@@ -258,9 +258,8 @@ html {
     font-size: 5rem;
     letter-spacing: 3px;
     text-align: center; }
-  .contents-section .contents-01 {
-    border: 1px solid red; }
   .contents-section .section-wrapper {
+    padding: 50px 0 0;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -274,87 +273,96 @@ html {
     margin: 0 auto; }
     .contents-section .section-wrapper .introduction {
       position: relative;
-      border: 1px solid #eee;
-      background: #fff;
-      width: 30%; }
-      .contents-section .section-wrapper .introduction::before, .contents-section .section-wrapper .introduction::after {
-        position: absolute;
-        content: "";
-        height: 100%;
-        width: 100%; }
-      .contents-section .section-wrapper .introduction::before {
-        top: 8px;
-        left: 8px;
-        background: rgba(36, 198, 220, 0.7);
-        z-index: -1; }
-      .contents-section .section-wrapper .introduction::after {
-        top: 16px;
-        left: 16px;
-        background: rgba(81, 74, 253, 0.6);
-        z-index: -2; }
+      padding: 30px 50px;
+      width: 50%; }
       .contents-section .section-wrapper .introduction .numbering {
-        margin-bottom: 20px;
-        font-size: 3rem;
+        font-size: 2.5rem;
         font-weight: 900;
         color: #514AfD; }
       .contents-section .section-wrapper .introduction .contents-title {
-        font-size: 2rem;
+        font-size: 3rem;
         color: #444; }
-  .contents-section .section-image {
-    width: 50%;
-    border: 1px solid red; }
-    .contents-section .section-image .svg-image {
-      width: 100%;
-      min-height: 50vh;
-      background-size: 60%;
-      background-position: top center;
-      background-repeat: no-repeat; }
-  .contents-section a {
-    bottom: 50px;
-    text-decoration: none;
-    color: #fff;
-    font-size: 1.8rem;
-    font-weight: 900;
-    border-radius: 1px;
-    padding: 18px 50px;
-    background-image: -webkit-linear-gradient(to right, #24C6DC, #514AfD);
-    background-image: -webkit-gradient(linear, left top, right top, from(#514AfD), color-stop(#24C6DC), to(#514AfD));
-    background-image: -webkit-linear-gradient(left, #514AfD, #24C6DC, #514AfD);
-    background-image: -o-linear-gradient(left, #514AfD, #24C6DC, #514AfD);
-    background-image: linear-gradient(to right, #514AfD, #24C6DC, #514AfD);
-    background-size: 200%;
-    background-position: right center;
-    -webkit-transition: .3s;
-    -o-transition: .3s;
-    transition: .3s; }
-    .contents-section a:hover {
-      background-position: left center;
-      -webkit-transform: scale(1.05);
-      -ms-transform: scale(1.05);
-      transform: scale(1.05); }
-  .contents-section .section-image .svg-image {
+      .contents-section .section-wrapper .introduction .text {
+        color: #444;
+        font-size: 1.8rem; }
+    .contents-section .section-wrapper .section-image {
+      width: 50%; }
+      .contents-section .section-wrapper .section-image .svg-image {
+        width: 100%;
+        min-height: 50vh;
+        background-size: 60%;
+        background-position: top center;
+        background-repeat: no-repeat; }
+  .contents-section .btn-wrapper {
+    text-align: center; }
+    .contents-section .btn-wrapper a {
+      bottom: 50px;
+      text-decoration: none;
+      color: #fff;
+      font-size: 1.7rem;
+      font-weight: 900;
+      border-radius: 1px;
+      padding: 16px 40px;
+      background-image: -webkit-linear-gradient(to right, #24C6DC, #514AfD);
+      background-image: -webkit-gradient(linear, left top, right top, from(#514AfD), color-stop(#24C6DC), to(#514AfD));
+      background-image: -webkit-linear-gradient(left, #514AfD, #24C6DC, #514AfD);
+      background-image: -o-linear-gradient(left, #514AfD, #24C6DC, #514AfD);
+      background-image: linear-gradient(to right, #514AfD, #24C6DC, #514AfD);
+      background-size: 200%;
+      background-position: right center;
+      -webkit-transition: .3s;
+      -o-transition: .3s;
+      transition: .3s; }
+      .contents-section .btn-wrapper a:hover {
+        background-position: left center;
+        -webkit-transform: scale(1.05);
+        -ms-transform: scale(1.05);
+        transform: scale(1.05); }
+
+.contents-section .contents-01 {
+  padding-bottom: 50px; }
+  .contents-section .contents-01 .section-wrapper .introduction {
+    background: #fff;
+    border: 1px solid #eee; }
+    .contents-section .contents-01 .section-wrapper .introduction::before, .contents-section .contents-01 .section-wrapper .introduction::after {
+      position: absolute;
+      content: "";
+      height: 100%;
+      width: 100%; }
+    .contents-section .contents-01 .section-wrapper .introduction::before {
+      top: 8px;
+      left: 8px;
+      background: rgba(36, 198, 220, 0.7);
+      z-index: -1; }
+    .contents-section .contents-01 .section-wrapper .introduction::after {
+      top: 16px;
+      left: 16px;
+      background: rgba(81, 74, 253, 0.6);
+      z-index: -2; }
+  .contents-section .contents-01 .section-wrapper .section-image .svg-image {
     background-image: url(../svg/section1-bg.svg); }
 
-.sec2 {
+.contents-section .contents-02 {
   background: -webkit-gradient(linear, left bottom, right top, color-stop(10%, #b5d5fc), color-stop(70%, #fff));
   background: -webkit-linear-gradient(left bottom, #b5d5fc 10%, #fff 70%);
   background: -o-linear-gradient(left bottom, #b5d5fc 10%, #fff 70%);
   background: linear-gradient(to right top, #b5d5fc 10%, #fff 70%); }
-  .sec2 .section-wrapper {
+  .contents-section .contents-02 .section-wrapper {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: reverse;
     -ms-flex-direction: row-reverse;
     flex-direction: row-reverse; }
-    .sec2 .section-wrapper .introduction {
-      padding-top: 90px; }
-      .sec2 .section-wrapper .introduction .inner {
-        position: relative;
-        padding: 5%;
-        width: 80%;
-        border: 1px solid #ddd; }
-    .sec2 .section-wrapper .section-image .svg-image {
+    .contents-section .contents-02 .section-wrapper .section-image .svg-image {
       background-image: url(../svg/section2-bg.svg);
       background-size: 75%; }
+
+.sec2 .section-wrapper .introduction {
+  padding-top: 90px; }
+  .sec2 .section-wrapper .introduction .inner {
+    position: relative;
+    padding: 5%;
+    width: 80%;
+    border: 1px solid #ddd; }
 
 .sec3 {
   background-color: #514AfD;

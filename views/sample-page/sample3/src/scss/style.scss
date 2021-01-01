@@ -235,10 +235,8 @@ html {
     text-align: center;
   }
 
-  .contents-01 {
-    border: 1px solid red;
-  }
   .section-wrapper {
+    padding: 50px 0 0;
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -247,83 +245,112 @@ html {
 
     .introduction {
       position: relative;
-      border: 1px solid #eee;
-      background: #fff;
-      width: 30%;
-      &::before,
-      &::after {
-        position: absolute;
-        content: "";
-        height: 100%;
-        width: 100%;
-      }
-      &::before {
-        top: 8px;
-        left: 8px;
-        background: transparentize($top-main-color2, .3);
-        z-index: -1;
-      }
-      &::after {
-        top: 16px;
-        left: 16px;
-        background: transparentize($top-main-color1, .4);
-        z-index: -2;
-      }
+      padding: 30px 50px;
+      width: 50%;
       .numbering {
-        margin-bottom: 20px;
-        font-size: 3rem;
+        font-size: 2.5rem;
         font-weight: 900;
         color: $top-main-color1;
       }
       .contents-title {
-        font-size: 2rem;
+        font-size: 3rem;
         color: #444;
+      }
+      .text {
+        color: #444;
+        font-size: 1.8rem;
+      }
+    }
+
+    .section-image {
+      width: 50%;
+      .svg-image {
+        width: 100%;
+        min-height: 50vh;
+        background-size: 60%;
+        background-position: top center;
+        background-repeat: no-repeat;
       }
     }
   }
-  .section-image {
-    width: 50%;
-    border: 1px solid red;
-    .svg-image {
-      width: 100%;
-      min-height: 50vh;
-      background-size: 60%;
-      background-position: top center;
-      background-repeat: no-repeat;
-    }
-  }
 
-  a {
-    bottom: 50px;
-    text-decoration: none;
-    color: #fff;
-    font-size: 1.8rem;
-    font-weight: 900;
-    border-radius: 1px;
-    padding: 18px 50px;
-    background-image: -webkit-linear-gradient(to right, $top-main-color2, $top-main-color1);
-    background-image: linear-gradient(to right, $top-main-color1, $top-main-color2, $top-main-color1); 
-    background-size: 200%;
-    background-position: right center;
-    transition: .3s;
+  .btn-wrapper {
+    text-align: center;
+    a {
+      bottom: 50px;
+      text-decoration: none;
+      color: #fff;
+      font-size: 1.7rem;
+      font-weight: 900;
+      border-radius: 1px;
+      padding: 16px 40px;
+      background-image: -webkit-linear-gradient(to right, $top-main-color2, $top-main-color1);
+      background-image: linear-gradient(to right, $top-main-color1, $top-main-color2, $top-main-color1); 
+      background-size: 200%;
+      background-position: right center;
+      transition: .3s;
 
-    &:hover {
-      background-position: left center;
-      transform: scale(1.05);
+      &:hover {
+        background-position: left center;
+        transform: scale(1.05);
+      }
     }
   }
-  .section-image {
-    .svg-image {
-      background-image: url(../svg/section1-bg.svg);
+} //contents-section
+
+.contents-section {
+  .contents-01 {
+    padding-bottom: 50px;
+    .section-wrapper {
+      .introduction {
+        background: #fff;
+        border: 1px solid #eee;
+        &::before,
+        &::after {
+          position: absolute;
+          content: "";
+          height: 100%;
+          width: 100%;
+        }
+        &::before {
+          top: 8px;
+          left: 8px;
+          background: transparentize($top-main-color2, .3);
+          z-index: -1;
+        }
+        &::after {
+          top: 16px;
+          left: 16px;
+          background: transparentize($top-main-color1, .4);
+          z-index: -2;
+        }
+      }
+      .section-image {
+        .svg-image {
+          background-image: url(../svg/section1-bg.svg);
+        }
+      }
+    }
+  } // contents-01
+  .contents-02 {
+    background: linear-gradient(to right top, lighten(#b3d4fc, .5) 10%, #fff 70%);
+    .section-wrapper {
+      flex-direction: row-reverse;
+      .introduction {
+      }
+      .section-image {
+        .svg-image {
+          background-image: url(../svg/section2-bg.svg);
+          background-size: 75%;
+        }
+      }
     }
   }
-}
+} //contents-section
 
 .sec2 {
-  background: linear-gradient(to right top, lighten(#b3d4fc, .5) 10%, #fff 70%);
 
   .section-wrapper {
-    flex-direction: row-reverse;
 
     .introduction {
       padding-top: 90px;
@@ -336,8 +363,6 @@ html {
     }
     .section-image {
       .svg-image {
-        background-image: url(../svg/section2-bg.svg);
-        background-size: 75%;
       }
     }
   }
