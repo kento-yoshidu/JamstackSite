@@ -226,6 +226,30 @@ html {
 }
 */
 
+.btn-wrapper {
+  text-align: center;
+  padding-bottom: 30px;
+  a {
+    display: inline-block;
+    bottom: 50px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.7rem;
+    font-weight: 900;
+    border-radius: 1px;
+    padding: 16px 40px;
+    background-image: -webkit-linear-gradient(to right, $top-main-color2, $top-main-color1);
+    background-image: linear-gradient(to right, $top-main-color1, $top-main-color2, $top-main-color1); 
+    background-size: 200%;
+    background-position: right center;
+    transition: .3s;
+
+    &:hover {
+      background-position: left center;
+      transform: scale(1.05);
+    }
+  }
+}
 .contents-section {
   padding-top: 50px;
   .section-title {
@@ -274,33 +298,10 @@ html {
     }
   }
 
-  .btn-wrapper {
-    text-align: center;
-    a {
-      bottom: 50px;
-      text-decoration: none;
-      color: #fff;
-      font-size: 1.7rem;
-      font-weight: 900;
-      border-radius: 1px;
-      padding: 16px 40px;
-      background-image: -webkit-linear-gradient(to right, $top-main-color2, $top-main-color1);
-      background-image: linear-gradient(to right, $top-main-color1, $top-main-color2, $top-main-color1); 
-      background-size: 200%;
-      background-position: right center;
-      transition: .3s;
-
-      &:hover {
-        background-position: left center;
-        transform: scale(1.05);
-      }
-    }
-  }
 } //contents-section
 
 .contents-section {
   .contents-01 {
-    padding-bottom: 50px;
     .section-wrapper {
       .introduction {
         background: #fff;
@@ -336,8 +337,6 @@ html {
     background: linear-gradient(to right top, lighten(#b3d4fc, .5) 10%, #fff 70%);
     .section-wrapper {
       flex-direction: row-reverse;
-      .introduction {
-      }
       .section-image {
         .svg-image {
           background-image: url(../svg/section2-bg.svg);
@@ -348,31 +347,12 @@ html {
   }
 } //contents-section
 
-.sec2 {
-
-  .section-wrapper {
-
-    .introduction {
-      padding-top: 90px;
-      .inner {
-        position: relative;
-        padding: 5%;
-        width: 80%;
-        border: 1px solid #ddd;
-      }
-    }
-    .section-image {
-      .svg-image {
-      }
-    }
-  }
-}
-
 .sec3 {
   background-color: $top-main-color1;
   background-attachment: fixed;
   background-image: url(../svg/section3-bg.svg), linear-gradient(to right, $top-main-color1, $top-main-color2);
   display: flex;
+  padding: 50px 0 30px;
 
   .section-wrapper {
     display: flex;
@@ -392,34 +372,33 @@ html {
       .inner {
         padding: 5% 10% 5% 5%;
 
-        .numbering {
-          display: block;
-          margin-bottom: 10px;
+        .section-title {
+          color: $top-sub-color2;
           font-size: 3rem;
-          font-weight: 900;
-          color: $top-sub-color1;
-          background: linear-gradient(to right, $top-sub-color2, $top-sub-color1, $top-sub-color2); 
-          background-clip: text;
-          -webkit-text-fill-color: transparent;
+          margin-bottom: 20px;
         }
         p {
           margin-bottom: 10px;
           font-size: 2rem;
           width: 100%;
+        color: #444;
         }
       }
     }
 
-    /*
-    .link-btn {
-      position: static;
-      background-image: linear-gradient(to right, $top-sub-color2, $top-sub-color1, $top-sub-color2);
+  .btn-wrapper {
+    margin-top: 30px;
+    margin-bottom: 0;
+    a {
+      background-image: -webkit-linear-gradient(to right, $top-sub-color2, $top-main-color1);
+      background-image: linear-gradient(to right, $top-sub-color1, $top-sub-color2, $top-sub-color1); 
 
       &:hover {
         background-position: left center;
+        transform: scale(1.05);
       }
     }
-    */
+  }
   }
 }
 
@@ -427,6 +406,17 @@ html {
   position: relative;
   padding: 5% 0;
 
+      .section-image {
+      width: 50%;
+        .svg-image {
+        width: 100%;
+        min-height: 50vh;
+        background-size: 60%;
+        background-position: top center;
+        background-repeat: no-repeat;
+          background-image: url(../svg/section4-01.svg);
+        }
+      }
   #js-sec4 {
     top: 0;
     left: 0;
