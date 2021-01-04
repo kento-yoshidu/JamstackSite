@@ -404,19 +404,32 @@ html {
 
 .sec4 {
   position: relative;
-  padding: 5% 0;
 
-      .section-image {
-      width: 50%;
-        .svg-image {
-        width: 100%;
-        min-height: 50vh;
-        background-size: 60%;
-        background-position: top center;
-        background-repeat: no-repeat;
-          background-image: url(../svg/section4-01.svg);
-        }
-      }
+  .box-wrapper {
+    display: flex;
+    background: #ddd;
+  }
+  .box {
+    border: 1px solid red;
+    width: 30%;
+    .svg-image {
+      height: 240px;
+      background-size: 60%;
+      background-position: top center;
+      background-repeat: no-repeat;
+    }
+
+    .image-01 {
+      background-image: url(../svg/section4-01.svg);
+    }
+    .image-02 {
+      background-image: url(../svg/section4-02.svg);
+    }
+    .image-03 {
+      background-image: url(../svg/section4-03.svg);
+    }
+  }
+
   #js-sec4 {
     top: 0;
     left: 0;
@@ -428,6 +441,7 @@ html {
     height: 100%;
     position: absolute;
   }
+
   .wrapper {
     display: flex;
     justify-content: center;
