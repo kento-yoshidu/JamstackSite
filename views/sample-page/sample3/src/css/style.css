@@ -420,17 +420,26 @@ html {
           transform: scale(1.05); }
 
 .sec4 {
-  position: relative;
-  padding: 5% 0; }
-  .sec4 .section-image {
-    width: 50%; }
-    .sec4 .section-image .svg-image {
-      width: 100%;
-      min-height: 50vh;
+  position: relative; }
+  .sec4 .box-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    background: #ddd; }
+  .sec4 .box {
+    border: 1px solid red;
+    width: 30%; }
+    .sec4 .box .svg-image {
+      height: 240px;
       background-size: 60%;
       background-position: top center;
-      background-repeat: no-repeat;
+      background-repeat: no-repeat; }
+    .sec4 .box .image-01 {
       background-image: url(../svg/section4-01.svg); }
+    .sec4 .box .image-02 {
+      background-image: url(../svg/section4-02.svg); }
+    .sec4 .box .image-03 {
+      background-image: url(../svg/section4-03.svg); }
   .sec4 #js-sec4 {
     top: 0;
     left: 0;
