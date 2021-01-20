@@ -184,7 +184,7 @@ html {
 } //header
 
 .section {
-  padding: 7% 0 10%;  
+  padding: 5% 0;
 }
 
 .section-title {
@@ -199,6 +199,37 @@ html {
   }
 }
 
+.goal-section {
+  text-align: center;
+
+  .section-title {
+    margin-bottom: 50px;;
+  }
+
+  .sub-section {
+    margin: 50px 0;
+    display: flex;
+    justify-content: center;
+
+    div {
+      padding: 30px 50px;
+      border: 1px solid #444;
+      border-radius: 5px;
+      margin: 0 30px;
+
+      h3 {
+        color: #444;
+        font-size: 4rem;;
+      }
+      p {
+        font-size: 1.8rem;
+      }
+    }
+  }
+  p {
+    font-size: 3rem;
+  }
+}
 .section-links {
   .links-wrapper {
     display: flex;
@@ -216,9 +247,8 @@ html {
   .link-item {
     display: block;
     width: 20vw;
-    height: 20vw;
     margin: 0 1.2%;
-    border: 1.5px solid rgb(210,210,210);
+    border: 2px solid rgb(190,190,190);
     border-radius: 3px;
     color: #444;
     text-decoration: none;
