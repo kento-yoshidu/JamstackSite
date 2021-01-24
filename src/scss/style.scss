@@ -201,9 +201,10 @@ html {
 
 .goal-section {
   text-align: center;
+  color: #444;
 
   .section-title {
-    margin-bottom: 50px;;
+    margin-bottom: 50px;
   }
 
   .sub-section {
@@ -219,17 +220,54 @@ html {
 
       h3 {
         color: #444;
-        font-size: 4rem;;
+        font-size: 4rem;
+        margin-bottom: 20px;
       }
       p {
         font-size: 1.8rem;
+        text-align: left;
+        margin-bottom: 10px;
       }
     }
   }
   p {
     font-size: 3rem;
+    font-weight: 900;
   }
 }
+
+@media screen and (max-width: 768px) {
+  .goal-section {
+    p {
+      font-size: 1.8rem;
+      width: 80%;
+      margin: 0 auto;
+      line-height: 1.5;
+    }
+    .sub-section {
+      flex-direction: column;
+      margin: 30px 0;
+
+      div {
+        margin-bottom: 20px;
+        padding: 20px;
+
+        h3 {
+          font-size: 2.2rem;
+          margin-bottom: 10px;
+        }
+        p {
+          font-size: 1.5rem;
+          margin-bottom: 8px;
+        }
+      }
+    }
+  }
+}
+
+
+
+
 .section-links {
   .links-wrapper {
     display: flex;

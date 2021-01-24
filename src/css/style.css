@@ -353,6 +353,7 @@ html {
 
 .goal-section {
   text-align: center;
+  color: #444;
 }
 .goal-section .section-title {
   margin-bottom: 50px;
@@ -371,14 +372,42 @@ html {
 .goal-section .sub-section div h3 {
   color: #444;
   font-size: 4rem;
+  margin-bottom: 20px;
 }
 .goal-section .sub-section div p {
   font-size: 1.8rem;
+  text-align: left;
+  margin-bottom: 10px;
 }
 .goal-section p {
   font-size: 3rem;
+  font-weight: 900;
 }
 
+@media screen and (max-width: 768px) {
+  .goal-section p {
+    font-size: 1.8rem;
+    width: 80%;
+    margin: 0 auto;
+    line-height: 1.5;
+  }
+  .goal-section .sub-section {
+    flex-direction: column;
+    margin: 30px 0;
+  }
+  .goal-section .sub-section div {
+    margin-bottom: 20px;
+    padding: 20px;
+  }
+  .goal-section .sub-section div h3 {
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+  }
+  .goal-section .sub-section div p {
+    font-size: 1.5rem;
+    margin-bottom: 8px;
+  }
+}
 .section-links .links-wrapper {
   display: flex;
   justify-content: center;
