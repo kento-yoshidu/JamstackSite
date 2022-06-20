@@ -1,194 +1,183 @@
 import * as React from "react"
+import { Link } from "gatsby"
 
-// styles
-const pageStyles = {
-  color: "#232129",
-  padding: 96,
-  fontFamily: "-apple-system, Roboto, sans-serif, serif",
-}
-const headingStyles = {
-  marginTop: 0,
-  marginBottom: 64,
-  maxWidth: 320,
-}
-const headingAccentStyles = {
-  color: "#663399",
-}
-const paragraphStyles = {
-  marginBottom: 48,
-}
-const codeStyles = {
-  color: "#8A6534",
-  padding: 4,
-  backgroundColor: "#FFF4DB",
-  fontSize: "1.25rem",
-  borderRadius: 4,
-}
-const listStyles = {
-  marginBottom: 96,
-  paddingLeft: 0,
-}
-const doclistStyles = {
-  paddingLeft: 0,
-}
-const listItemStyles = {
-  fontWeight: 300,
-  fontSize: 24,
-  maxWidth: 560,
-  marginBottom: 30,
-}
+import * as Styles from "../styles/style.module.scss"
 
-const linkStyle = {
-  color: "#8954A8",
-  fontWeight: "bold",
-  fontSize: 16,
-  verticalAlign: "5%",
-}
-
-const docLinkStyle = {
-  ...linkStyle,
-  listStyleType: "none",
-  display: `inline-block`,
-  marginBottom: 24,
-  marginRight: 12,
-}
-
-const descriptionStyle = {
-  color: "#232129",
-  fontSize: 14,
-  marginTop: 10,
-  marginBottom: 0,
-  lineHeight: 1.25,
-}
-
-const docLinks = [
-  {
-    text: "TypeScript Documentation",
-    url: "https://www.gatsbyjs.com/docs/how-to/custom-configuration/typescript/",
-    color: "#8954A8",
-  },
-  {
-    text: "GraphQL Typegen Documentation",
-    url: "https://www.gatsbyjs.com/docs/how-to/local-development/graphql-typegen/",
-    color: "#8954A8",
-  }
-]
-
-const badgeStyle = {
-  color: "#fff",
-  backgroundColor: "#088413",
-  border: "1px solid #088413",
-  fontSize: 11,
-  fontWeight: "bold",
-  letterSpacing: 1,
-  borderRadius: 4,
-  padding: "4px 6px",
-  display: "inline-block",
-  position: "relative" as "relative",
-  top: -2,
-  marginLeft: 10,
-  lineHeight: 1,
-}
-
-// data
-const links = [
-  {
-    text: "Tutorial",
-    url: "https://www.gatsbyjs.com/docs/tutorial/",
-    description:
-      "A great place to get started if you're new to web development. Designed to guide you through setting up your first Gatsby site.",
-    color: "#E95800",
-  },
-  {
-    text: "How to Guides",
-    url: "https://www.gatsbyjs.com/docs/how-to/",
-    description:
-      "Practical step-by-step guides to help you achieve a specific goal. Most useful when you're trying to get something done.",
-    color: "#1099A8",
-  },
-  {
-    text: "Reference Guides",
-    url: "https://www.gatsbyjs.com/docs/reference/",
-    description:
-      "Nitty-gritty technical descriptions of how Gatsby works. Most useful when you need detailed information about Gatsby's APIs.",
-    color: "#BC027F",
-  },
-  {
-    text: "Conceptual Guides",
-    url: "https://www.gatsbyjs.com/docs/conceptual/",
-    description:
-      "Big-picture explanations of higher-level Gatsby concepts. Most useful for building understanding of a particular topic.",
-    color: "#0D96F2",
-  },
-  {
-    text: "Plugin Library",
-    url: "https://www.gatsbyjs.com/plugins",
-    description:
-      "Add functionality and customize your Gatsby site or app with thousands of plugins built by our amazing developer community.",
-    color: "#8EB814",
-  },
-  {
-    text: "Build and Host",
-    url: "https://www.gatsbyjs.com/cloud",
-    badge: true,
-    description:
-      "Now you’re ready to show the world! Give your Gatsby site superpowers: Build and host on Gatsby Cloud. Get started for free!",
-    color: "#663399",
-  },
-]
-
-// markup
 const IndexPage = () => {
   return (
-    <main style={pageStyles}>
-      <title>Home Page</title>
-      <h1 style={headingStyles}>
-        Congratulations
+    <div className={Styles.allWrapper}>
+      <nav className={Styles.nav}>
+        <ul className={Styles.navList}>
+          <li className={Styles.navItem}><Link to="#">HOME</Link></li>
+          <li className={Styles.navItem}><a href="#">Architecture</a></li>
+          <li className={Styles.navItem}><a href="#">Sample Sites</a></li>
+          <li className={Styles.navItem}><a href="#">Blog Article</a></li>
+        </ul>
+      </nav>
+
+      <header className={`${Styles.header} ${Styles.view}`} id="view1">
+        <h1 className={Styles.headerTitle}>
+          <span className={Styles.neon}>Jamstack</span>なWebサイトを構築してみた
+        </h1>
+
+        <p className={Styles.headerText}>2021年度中に10個の<span className={Styles.neon}>Jamstack</span>サイトを作成することを目標にしています(努力目標)。</p>
+
+        <ul className={Styles.headerBox}>
+          <li className={Styles.boxItem}>Static Site Generator</li>
+          <li className={Styles.boxItem}><span className={Styles.charGradient}>&</span></li>
+          <li className={Styles.boxItem}>HeadlessCMS<br />Text file</li>
+          <li className={Styles.boxItem}><span className={Styles.charGradient}>&</span></li>
+          <li className={Styles.boxItem}>Hosting Web Service</li>
+        </ul>
+
+        <div className={Styles.scroll}>SCROLL</div>
+      </header>
+
+      <section className={`${Styles.section} ${Styles.view} ${Styles.view2}`} id="view2">
+        <h2 className={Styles.sectionTitle}>Architecture</h2>
+        <div className={Styles.container}>
+          <div className={Styles.box}>
+            <span></span>
+            <div className={Styles.content}>
+              <h3>SSG</h3>
+              <p>NextJSやNuxt.js、Gatsbyなどのフレームワークの機能を使い、HTMLやCSSなどの静的ファイルを書き出します。</p>
+            </div>
+          </div>
+
+          <div className={Styles.box}>
+            <span></span>
+            <div className={Styles.content}>
+              <h3>Headless CMS</h3>
+              <p>動的なデータはHeadless CMSサービスを使って管理します。データベースを持つ必要はありません。</p>
+            </div>
+          </div>
+
+          <div className={Styles.box}>
+            <span></span>
+            <div className={Styles.content}>
+              <h3>CDN</h3>
+              <p>静的ファイルはCDNサービスを使って配信します。バックエンドを持たないJamstackならではのメリットです。</p>
+            </div>
+          </div>
+        </div>
+
+        <table className={Styles.archTable}>
+          <tr>
+            <th>SSG</th>
+            <td>NextJS Gatsby Nuxt.js Gridsome SvelteKit</td>
+          </tr>
+          <tr>
+            <th>Headless<br />CMS</th>
+            <td>microCMS Contentful graphCMS prismic</td>
+          </tr>
+          <tr>
+            <th>CDN</th>
+            <td>AWS Amplify Netlify Vercel Gatsby Cloud</td>
+          </tr>
+        </table>
+      </section>
+
+      <section className={`${Styles.section} ${Styles.view} ${Styles.view3}`} id="view3">
+        <h2 className={Styles.sectionTitle}>Sample Sites</h2>
+
+        <div className={Styles.wrapper}>
+
+          <Link
+            className={Styles.content}
+            to="/"
+            target="_blink"
+          >
+            <div className={`${Styles.pageNumber} ${Styles.page1}`}>
+              <span></span>
+              <h4>#01</h4>
+            </div>
+            <div className={Styles.setumei}>
+              <h3>Portfolio Site</h3>
+              <p>このドメインのサイトです。Gatsbyで作成しました。</p>
+            </div>
+          </Link>
+
+          <a
+            className={Styles.content}
+            href="https://blog.toriwatari.work/"
+            target="_blink"
+          >
+            <div className={`${Styles.pageNumber} ${Styles.page2}`}>
+              <span></span>
+              <h4>#02</h4>
+            </div>
+            <div className={Styles.setumei}>
+              <h3>鳥に生まれることができなかった人へ</h3>
+              <p>GatsbyとMarkdownファイルで個人ブログを作成しました。</p>
+            </div>
+          </a>
+
+          <a
+            className={Styles.content}
+            href="https://cssanimation-and-tips.netlify.app/"
+            target="_blank"
+          >
+            <div className={`${Styles.pageNumber} ${Styles.page3}`}>
+              <span></span>
+              <h4>#03</h4>
+            </div>
+            <div className={Styles.setumei}>
+              <h3>CSS Animation & Tips</h3>
+              <p>Gatsbyとmdxファイルで、CSSのアニメーションやTipsを解説するサイトを作成しました。</p>
+            </div>
+          </a>
+
+          <a
+            className={Styles.content}
+            href="https://nextjs-blog-sage-six.vercel.app/"
+            target="_blink"
+          >
+            <div className={`${Styles.pageNumber} ${Styles.page4}`}>
+              <span></span>
+              <h4>#04</h4>
+            </div>
+            <div className={Styles.setumei}>
+              <h3>怪文書置き場</h3>
+              <p>Next.jsとマークダウンファイルでブログを作成しました。</p>
+            </div>
+          </a>
+
+          <a
+            className={Styles.content}
+            href="https://gatsby-micro-cms.vercel.app/"
+            target="_blink"
+          >
+            <div className={`${Styles.pageNumber} ${Styles.page4}`}>
+              <span></span>
+              <h4>#05</h4>
+            </div>
+            <div className={Styles.setumei}>
+              <h3>Gatsby-microCMS-Site</h3>
+              <p>GatsbyとmicroCMSを組み合わせたサイトを作りました。Headless UIを導入しています。</p>
+            </div>
+          </a>
+
+          <a
+            className={Styles.content}
+            href="https://gatsby-contentful-site.netlify.app"
+            target="_blink"
+          >
+            <div className={`${Styles.pageNumber} ${Styles.page5}`}>
+              <span></span>
+              <h4>#06</h4>
+            </div>
+            <div className={Styles.setumei}>
+              <h3>Gatsby-Contentful-Site</h3>
+              <p>GatsbyとContentfulを組み合わせたサイトを作りました。</p>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <section className={`${Styles.section} ${Styles.view}`} id="view4">
         <br />
-        <span style={headingAccentStyles}>— you just made a Gatsby site! </span>
-        🎉🎉🎉
-      </h1>
-      <p style={paragraphStyles}>
-        Edit <code style={codeStyles}>src/pages/index.tsx</code> to see this page
-        update in real-time. 😎
-      </p>
-      <ul style={doclistStyles}>
-        {docLinks.map(doc => (
-          <li style={docLinkStyle}>
-            <a
-              style={linkStyle}
-              href={`${doc.url}?utm_source=starter&utm_medium=ts-docs&utm_campaign=minimal-starter-ts`}
-            >
-              {doc.text}
-            </a>
-          </li>
-        ))}
-      </ul>
-      <ul style={listStyles}>
-        {links.map(link => (
-          <li key={link.url} style={{ ...listItemStyles, color: link.color }}>
-            <span>
-              <a
-                style={linkStyle}
-                href={`${link.url}?utm_source=starter&utm_medium=start-page&utm_campaign=minimal-starter-ts`}
-              >
-                {link.text}
-              </a>
-              {link.badge && (
-                <span style={badgeStyle} aria-label="New Badge">
-                  NEW!
-                </span>
-              )}
-              <p style={descriptionStyle}>{link.description}</p>
-            </span>
-          </li>
-        ))}
-      </ul>
-      <img
-        alt="Gatsby G Logo"
-        src="data:image/svg+xml,%3Csvg width='24' height='24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 2a10 10 0 110 20 10 10 0 010-20zm0 2c-3.73 0-6.86 2.55-7.75 6L14 19.75c3.45-.89 6-4.02 6-7.75h-5.25v1.5h3.45a6.37 6.37 0 01-3.89 4.44L6.06 9.69C7 7.31 9.3 5.63 12 5.63c2.13 0 4 1.04 5.18 2.65l1.23-1.06A7.959 7.959 0 0012 4zm-8 8a8 8 0 008 8c.04 0 .09 0-8-8z' fill='%23639'/%3E%3C/svg%3E"
-      />
-    </main>
+      </section>
+    </div>
   )
 }
 
