@@ -1,26 +1,10 @@
-$main-color: #e7017a;
-$main-color2: #df4a1f;
-$bg-gradient: rgba(14, 24, 42, 0.99);
-$gradient-primary: $main-color linear-gradient(91.78deg, $main-color 2.57%, $main-color2 96.33%);
-
-$gradient1: linear-gradient(315deg, #ffbc00, #ff0058);
-$gradient2: linear-gradient(315deg, #0575e6, #00f260);
 
 .all-wrapper {
-  background-image: linear-gradient(to left bottom, rgba($bg-gradient, 0.99), $bg-gradient);
-  font-family:
-    "游ゴシック",
-    "Yu Gothic",
-    "Helvetica Neue",
-    Arial,
-    "Hiragino Kaku Gothic ProN",
-    "Hiragino Sans",
-    Meiryo,
-    sans-serif;
+  background-image: linear-gradient(to left bottom, var(--bg-gradient), var(--bg-gradient));
 }
 
 .nav {
-  background-image: linear-gradient(to right, $main-color, $main-color2);
+  background-image: linear-gradient(to right, var(--main-color), var(--main-color2));
   width: 100%;
   z-index: 2;
 }
@@ -94,7 +78,7 @@ $gradient2: linear-gradient(315deg, #0575e6, #00f260);
   flex-direction: column;
   align-items: center;
   list-style: none;
-  background-color: $bg-gradient;
+  background-color: var(--bg-gradient);
   overflow: hidden;
   border-radius: 10px;
   margin-bottom: 50px;
@@ -104,7 +88,7 @@ $gradient2: linear-gradient(315deg, #0575e6, #00f260);
     position: absolute;
     height: 170%;
     width: 200px;
-    background-image: linear-gradient($main-color, $main-color2);
+    background-image: linear-gradient(var(--main-color), var(--main-color2));
     animation: animate 8s linear infinite;
   }
 
@@ -112,7 +96,7 @@ $gradient2: linear-gradient(315deg, #0575e6, #00f260);
     content: "";
     position: absolute;
     inset: 4px;
-    background-color: darken($bg-gradient, 0.9);
+    background-color: darken(rgba(14, 24, 42, 0.99), 0.9);
   }
 }
 
@@ -170,7 +154,7 @@ $gradient2: linear-gradient(315deg, #0575e6, #00f260);
   background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: 900;
-  text-shadow: 0 0 3px 3px $main-color;
+  text-shadow: 0 0 3px 3px var(--main-color);
 }
 
 .view-list {
@@ -202,11 +186,11 @@ $gradient2: linear-gradient(315deg, #0575e6, #00f260);
   }
 
   &:hover {
-    box-shadow: 0 0 20px 1px rgba($main-color, 0.4);
+    box-shadow: 0 0 20px 1px rgba(var(--main-color), 0.4);
 
     a {
       svg {
-        color: $main-color;
+        color: var(--main-color);
       }
     }
   }
@@ -217,7 +201,7 @@ $gradient2: linear-gradient(315deg, #0575e6, #00f260);
 
   a {
     svg {
-      color: rgba($main-color, 0.8);
+      color: rgba(var(--main-color), 0.8);
     }
   }
 }
@@ -230,12 +214,13 @@ $gradient2: linear-gradient(315deg, #0575e6, #00f260);
 
 @keyframes viewAnime {
   0% {
-    box-shadow: 0 0 20px 1px adjust-hue($main-color, 0deg);
+    // box-shadow: 0 0 20px 1px adjust-hue(var(--main-color), 0deg);
+    box-shadow: 0 0 20px 1px adjust-hue(#e7017a, 0deg);
     filter: hue-rotate(0deg)
   } 
 
   100% {
-    box-shadow: 0 0 20px 1px adjust-hue($main-color, 360deg);
+    box-shadow: 0 0 20px 1px adjust-hue(#e7017a, 360deg);
     filter: hue-rotate(360deg)
   }
 }
@@ -292,13 +277,13 @@ $gradient2: linear-gradient(315deg, #0575e6, #00f260);
 
     &:nth-child(1)::before,
     &:nth-child(1)::after {
-      background-image: $gradient1;
+      background-image: var(--gradient1);
       transform: skewX(15deg);
     }
 
     &:nth-child(2)::before,
     &:nth-child(2)::after {
-      background-image: $gradient2;
+      background-image: var(--gradient2);
     }
 
     &:nth-child(3)::before,
@@ -567,7 +552,7 @@ $gradient2: linear-gradient(315deg, #0575e6, #00f260);
 
       &:hover {
         background-color: rgba(#fff, 0.01);
-        color: rgba($main-color, 0.8);
+        color: var(--main-color);
       }
 
       .page-number {
@@ -602,7 +587,7 @@ $gradient2: linear-gradient(315deg, #0575e6, #00f260);
           left: 0;
           height: 100%;
           width: 100%;
-          background-color: $bg-gradient;
+          background-color: var(--bg-gradient);
           z-index: 1;
         }
 
@@ -629,49 +614,49 @@ $gradient2: linear-gradient(315deg, #0575e6, #00f260);
       .page-1 {
         &::before,
         &::after {
-          background: linear-gradient(315deg, #4a569d, $bg-gradient, #dc2424);
+          background: linear-gradient(315deg, #4a569d, var(--bg-gradient), #dc2424);
         }
       }
 
       .page-2 {
         &::before,
         &::after {
-          background: linear-gradient(315deg, orange, $bg-gradient, #009fff);
+          background: linear-gradient(315deg, orange, var(--bg-gradient), #009fff);
         }
       }
 
       .page-3 {
         &::before,
         &::after {
-          background: linear-gradient(315deg, #00f260, $bg-gradient, #ffd200);
+          background: linear-gradient(315deg, #00f260, var(--bg-gradient), #ffd200);
         }
       }
 
       .page-4 {
         &::before,
         &::after {
-          background: linear-gradient(315deg, #b91d73, $bg-gradient, #f953c6);
+          background: linear-gradient(315deg, #b91d73, var(--bg-gradient), #f953c6);
         }
       }
 
       .page-5 {
         &::before,
         &::after {
-          background: linear-gradient(315deg, #ffd200, $bg-gradient, #fc466b);
+          background: linear-gradient(315deg, #ffd200, var(--bg-gradient), #fc466b);
         }
       }
 
       .page-6 {
         &::before,
         &::after {
-          background: linear-gradient(315deg, #00c3ff, $bg-gradient, #ffff1c);
+          background: linear-gradient(315deg, #00c3ff, var(--bg-gradient), #ffff1c);
         }
       }
 
       .page-7 {
         &::before,
         &::after {
-          background: linear-gradient(315deg, #6f0, $bg-gradient, #a80077);
+          background: linear-gradient(315deg, #6f0, var(--bg-gradient), #a80077);
         }
       }
     }
