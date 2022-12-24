@@ -1,5 +1,5 @@
 
-.all-wrapper {
+.allWrapper {
   background-image: linear-gradient(to left bottom, var(--bg-gradient), var(--bg-gradient));
 }
 
@@ -9,7 +9,7 @@
   z-index: 2;
 }
 
-.nav-list {
+.navList {
   padding: 13px 0;
   width: unquote("max(50%, 324px)");
   margin: 0 auto;
@@ -19,7 +19,7 @@
   white-space: nowrap;
 }
 
-.nav-item {
+.navItem {
   a {
     color: #fff;
     font-size: clamp(15px, 1.4vw, 18px);
@@ -30,11 +30,11 @@
 }
 
 @media (max-width: 768px) {
-  .nav-list {
+  .navList {
     justify-content: start;
   }
 
-  .nav-item {
+  .navItem {
     margin-right: 20px;
     font-weight: normal;
   }
@@ -160,7 +160,6 @@
   font-weight: 900;
   text-shadow: 0 0 3px 3px var(--main-color);
 }
-
 
 .section {
   padding: 50px 0 20px;

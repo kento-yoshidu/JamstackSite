@@ -1,4 +1,4 @@
-.view-list {
+.viewList {
   position: fixed;
   top: 50%;
   right: 60px;
@@ -9,7 +9,7 @@
   z-index: 9999;
 }
 
-.view-list-item {
+.viewListItem {
   border-radius: 2px;
 
   a {
@@ -37,7 +37,7 @@
   }
 }
 
-.view-list-item.active {
+.viewListItem.active {
   animation: viewAnime 10s infinite;
 
   svg {
@@ -46,7 +46,7 @@
 }
 
 @media (max-width: 768px) {
-  .view-list {
+  .viewList {
     display: none;
   }
 }
