@@ -1,8 +1,8 @@
 import React, { useEffect } from "react"
 import { Link } from "gatsby"
 
-import Styles from "../styles/style.module.scss"
-import View from "../components/viewList.module.scss"
+import * as Styles from "../styles/style.module.scss"
+import * as View from "../components/viewList.module.scss"
 
 import InterSectionObserver from "../lib/IO"
 import ViewList from "../components/viewList"

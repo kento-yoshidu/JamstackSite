@@ -1,4 +1,4 @@
-import Styles from "../components/viewList.module.scss"
+import * as Styles from "../components/viewList.module.scss"
 
 const InterSectionObserver = () => {
   const options: IntersectionObserverInit = {
