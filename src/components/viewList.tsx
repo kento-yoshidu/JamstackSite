@@ -1,8 +1,6 @@
 import React from "react"
 
-// import * as Styles from "../style.module.scss"
-
-import * as Styles from "./viewList.module.scss"
+import Styles from "./viewList.module.scss"
 
 import {
   HomeOutline,

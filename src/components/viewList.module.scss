@@ -40,10 +40,8 @@
 .view-list-item.active {
   animation: viewAnime 10s infinite;
 
-  a {
-    svg {
-      color: rgba(var(--main-color), 0.8);
-    }
+  svg {
+    color: var(--main-color);
   }
 }
 
@@ -55,7 +53,6 @@
 
 @keyframes viewAnime {
   0% {
-    // box-shadow: 0 0 20px 1px adjust-hue(var(--main-color), 0deg);
     box-shadow: 0 0 20px 1px adjust-hue(#e7017a, 0deg);
     filter: hue-rotate(0deg)
   } 
