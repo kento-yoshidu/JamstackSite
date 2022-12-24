@@ -1,6 +1,8 @@
 import React from "react"
 
-import * as Styles from "../style.module.scss"
+// import * as Styles from "../style.module.scss"
+
+import * as Styles from "./viewList.module.scss"
 
 import {
   HomeOutline,
@@ -13,7 +15,7 @@ const ViewList = () => (
   <ol id="viewList" className={Styles.viewList}>
     <li
       data-li="view1"
-      className={Styles.viewListItem}>
+      className={`${Styles.viewListItem} ${Styles.active}`}>
       <a href="#view1">
         <HomeOutline
           height="30px"

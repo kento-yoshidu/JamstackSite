@@ -1,9 +1,17 @@
-import * as React from "react"
+import React, { useEffect } from "react"
 import { Link } from "gatsby"
 
 import * as Styles from "../styles/style.module.scss"
+import * as View from "../components/viewList.module.scss"
+
+import InterSectionObserver from "../lib/IO"
+import ViewList from "../components/viewList"
 
 const IndexPage = () => {
+  useEffect(() => {
+    InterSectionObserver()
+  }, [])
+  
   return (
     <div className={Styles.allWrapper}>
       <nav className={Styles.nav}>
@@ -15,7 +23,9 @@ const IndexPage = () => {
         </ul>
       </nav>
 
-      <header className={`${Styles.header} ${Styles.view}`} id="view1">
+      <ViewList />
+
+      <header className={`${Styles.header} ${View.view}`} id="view1">
         <h1 className={Styles.headerTitle}>
           <span className={Styles.neon}>Jamstack</span>なWebサイトを構築してみた
         </h1>
@@ -33,7 +43,7 @@ const IndexPage = () => {
         <div className={Styles.scroll}>SCROLL</div>
       </header>
 
-      <section className={`${Styles.section} ${Styles.view} ${Styles.view2}`} id="view2">
+      <section className={`${Styles.section} ${View.view} ${Styles.view2}`} id="view2">
         <h2 className={Styles.sectionTitle}>Architecture</h2>
         <div className={Styles.container}>
           <div className={Styles.box}>
