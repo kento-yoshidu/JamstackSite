@@ -1,8 +1,8 @@
 import React, { useEffect } from "react"
 import { Link } from "gatsby"
 
-import * as Styles from "../styles/style.module.scss"
-import * as View from "../components/viewList.module.scss"
+import Styles from "../styles/style.module.scss"
+import View from "../components/viewList.module.scss"
 
 import InterSectionObserver from "../lib/IO"
 import ViewList from "../components/viewList"
@@ -30,7 +30,7 @@ const IndexPage = () => {
           <span className={Styles.neon}>Jamstack</span>なWebサイトを構築してみた
         </h1>
 
-        <p className={Styles.headerText}>2021年度中に10個の<span className={Styles.neon}>Jamstack</span>サイトを作成することを目標にしています(努力目標)。</p>
+        <p className={Styles.headerText}>2022年度中に10個の<span className={Styles.neon}>Jamstack</span>サイトを作成することを目標にしています(努力目標)。</p>
 
         <ul className={Styles.headerBox}>
           <li className={Styles.boxItem}>Static Site Generator</li>
@@ -49,7 +49,7 @@ const IndexPage = () => {
           <div className={Styles.box}>
             <span></span>
             <div className={Styles.content}>
-              <h3>SSG</h3>
+              <h3>Morden Web Framework</h3>
               <p>NextJSやNuxt.js、Gatsbyなどのフレームワークの機能を使い、HTMLやCSSなどの静的ファイルを書き出します。</p>
             </div>
           </div>
@@ -90,11 +90,13 @@ const IndexPage = () => {
       <section className={`${Styles.section} ${Styles.view} ${Styles.view3}`} id="view3">
         <h2 className={Styles.sectionTitle}>Sample Sites</h2>
 
+        <p className={Styles.text}>※ もはやJamstackと呼べないものも含まれているかもしれませんがご了承ください。</p>
+
         <div className={Styles.wrapper}>
 
-          <Link
+          <a
             className={Styles.content}
-            to="/"
+            href="https://www.toriwatari.work/"
             target="_blink"
           >
             <div className={`${Styles.pageNumber} ${Styles.page1}`}>
@@ -103,9 +105,9 @@ const IndexPage = () => {
             </div>
             <div className={Styles.setumei}>
               <h3>Portfolio Site</h3>
-              <p>このドメインのサイトです。Gatsbyで作成しました。</p>
+              <p>ポートフォリオサイトです。Next.jsで作成しました。</p>
             </div>
-          </Link>
+          </a>
 
           <a
             className={Styles.content}
@@ -124,7 +126,7 @@ const IndexPage = () => {
 
           <a
             className={Styles.content}
-            href="https://cssanimation-and-tips.netlify.app/"
+            href="https://snipet.gatsbyjs.io/"
             target="_blank"
           >
             <div className={`${Styles.pageNumber} ${Styles.page3}`}>
@@ -132,53 +134,8 @@ const IndexPage = () => {
               <h4>#03</h4>
             </div>
             <div className={Styles.setumei}>
-              <h3>CSS Animation & Tips</h3>
-              <p>Gatsbyとmdxファイルで、CSSのアニメーションやTipsを解説するサイトを作成しました。</p>
-            </div>
-          </a>
-
-          <a
-            className={Styles.content}
-            href="https://nextjs-blog-sage-six.vercel.app/"
-            target="_blink"
-          >
-            <div className={`${Styles.pageNumber} ${Styles.page4}`}>
-              <span></span>
-              <h4>#04</h4>
-            </div>
-            <div className={Styles.setumei}>
-              <h3>怪文書置き場</h3>
-              <p>Next.jsとマークダウンファイルでブログを作成しました。</p>
-            </div>
-          </a>
-
-          <a
-            className={Styles.content}
-            href="https://gatsby-micro-cms.vercel.app/"
-            target="_blink"
-          >
-            <div className={`${Styles.pageNumber} ${Styles.page4}`}>
-              <span></span>
-              <h4>#05</h4>
-            </div>
-            <div className={Styles.setumei}>
-              <h3>Gatsby-microCMS-Site</h3>
-              <p>GatsbyとmicroCMSを組み合わせたサイトを作りました。Headless UIを導入しています。</p>
-            </div>
-          </a>
-
-          <a
-            className={Styles.content}
-            href="https://gatsby-contentful-site.netlify.app"
-            target="_blink"
-          >
-            <div className={`${Styles.pageNumber} ${Styles.page5}`}>
-              <span></span>
-              <h4>#06</h4>
-            </div>
-            <div className={Styles.setumei}>
-              <h3>Gatsby-Contentful-Site</h3>
-              <p>GatsbyとContentfulを組み合わせたサイトを作りました。</p>
+              <h3>スニペット置き場</h3>
+              <p>GatsbyとMarkdownファイルで、ちょっとしたスニペットを保管するサイトを作成しました。</p>
             </div>
           </a>
         </div>
