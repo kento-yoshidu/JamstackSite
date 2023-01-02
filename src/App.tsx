@@ -1,5 +1,6 @@
-import NavStyles from "./styles/nav.module.scss"
 import Styles from "./styles/style.module.scss"
+import NavStyles from "./styles/nav.module.scss"
+import HeaderStyles from "./styles/header.module.scss"
 
 function App() {
   return (
@@ -12,6 +13,24 @@ function App() {
           <li className={NavStyles.navItem}><a href="#">Blog Article</a></li>
         </ul>
       </nav>
+
+      <header className={`${HeaderStyles.header}`} id="view1">
+        <h1 className={HeaderStyles.headerTitle}>
+          <span className={HeaderStyles.neon}>Jamstack</span>なWebサイトを構築してみた
+        </h1>
+
+        <p className={HeaderStyles.headerText}>10個の<span className={HeaderStyles.neon}>Jamstack</span>サイトを作成することを目標にしています(努力目標)。</p>
+
+        <ul className={HeaderStyles.headerBox}>
+          <li className={HeaderStyles.boxItem}>Web Framework</li>
+          <li className={HeaderStyles.boxItem}><span className={Styles.charGradient}>&</span></li>
+          <li className={HeaderStyles.boxItem}>Headless CMS</li>
+          <li className={HeaderStyles.boxItem}><span className={Styles.charGradient}>&</span></li>
+          <li className={HeaderStyles.boxItem}>Hosting Web Service</li>
+        </ul>
+
+        <div className={HeaderStyles.scroll}>SCROLL</div>
+      </header>
     </div>
   )
 }
