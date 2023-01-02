@@ -1,19 +1,18 @@
-import { useState } from 'react'
-
+import NavStyles from "./styles/nav.module.scss"
 import Styles from "./styles/style.module.scss"
 
 function App() {
   return (
-    <>
-      <nav className={Styles.nav}>
-        <ul className={Styles.navList}>
-          <li className={Styles.navItem}>HOME</li>
-          <li className={Styles.navItem}><a href="#">Architecture</a></li>
-          <li className={Styles.navItem}><a href="#">Sample Sites</a></li>
-          <li className={Styles.navItem}><a href="#">Blog Article</a></li>
+    <div className={Styles.allWrapper}>
+      <nav className={NavStyles.nav}>
+        <ul className={NavStyles.navList}>
+          <li className={NavStyles.navItem}><a href="/">HOME</a></li>
+          <li className={NavStyles.navItem}><a href="#">Architecture</a></li>
+          <li className={NavStyles.navItem}><a href="#">Sample Sites</a></li>
+          <li className={NavStyles.navItem}><a href="#">Blog Article</a></li>
         </ul>
       </nav>
-    </>
+    </div>
   )
 }
 
