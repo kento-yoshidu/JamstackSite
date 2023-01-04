@@ -41,21 +41,22 @@
   border-radius: 10px;
   margin-bottom: 50px;
 
-  &::before {
-    content: "";
-    position: absolute;
-    height: 170%;
-    width: 200px;
-    background-image: linear-gradient(var(--main-color), var(--main-color2));
-    animation: animate 8s linear infinite;
-  }
+}
 
-  &::after {
-    content: "";
-    position: absolute;
-    inset: 4px;
-    background-color: darken(rgba(14, 24, 42, 0.99), 0.9);
-  }
+.headerBox::before {
+  content: "";
+  position: absolute;
+  height: 170%;
+  width: 200px;
+  background-image: linear-gradient(var(--main-color), var(--main-color2));
+  animation: animate 8s linear infinite;
+}
+
+.headerBox::after {
+  content: "";
+  position: absolute;
+  inset: 4px;
+  background-color: rgb(14, 24, 42);
 }
 
 .boxItem {
@@ -93,10 +94,10 @@
   .headerBox {
     width: 70%;
     height: 200px;
+  }
 
-    &::before {
-      width: 150px;
-    }
+  .headerBox::before {
+    width: 150px;
   }
 }
 

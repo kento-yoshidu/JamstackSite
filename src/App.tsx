@@ -1,6 +1,6 @@
 import Styles from "./styles/style.module.scss"
-import NavStyles from "./styles/nav.module.scss"
-import HeaderStyles from "./styles/header.module.scss"
+import NavStyles from "./styles/nav.module.css"
+import HeaderStyles from "./styles/header.module.css"
 
 function App() {
   return (
