@@ -104,7 +104,7 @@
 .neon {
   font-size: 2em;
   color: transparent;
-  animation: animate2 10s linear infinite;
+  animation: animate2 10s infinite;
 }
 
 .charGradient {
@@ -119,21 +119,21 @@
 @keyframes animate2 {
   0% {
     color: #fff;
-    filter: blur(0.1px) hue-rotate(0deg);
     text-shadow:
-      0 0 10px #00b3ff,
-      0 0 20px #00b3ff,
-      0 0 30px #00b3ff,
-      0 0 40px #00b3ff,
-      0 0 50px #00b3ff;
+      0 0 10px #e7017a,
+      0 0 20px #e7017a,
+      0 0 30px #e7017a,
+      0 0 40px #e7017a,
+      0 0 50px #e7017a;
+    filter: blur(0.1px) hue-rotate(0deg);
   }
 
   100% {
     color: #fff;
-    filter: blur(0.1px) hue-rotate(360deg);
     text-shadow:
-      0 0 10px #00b3ff,
-      0 0 20px #00b3ff,
-      0 0 30px #00b3ff;
+      0 0 10px #e7017a,
+      0 0 20px #e7017a,
+      0 0 30px #e7017a;
+    filter: blur(0.1px) hue-rotate(360deg);
   }
 }
