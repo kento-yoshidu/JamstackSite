@@ -1,3 +1,5 @@
+import ViewList from "./components/ViewList"
+
 import Styles from "./styles/style.module.scss"
 import NavStyles from "./styles/nav.module.css"
 import HeaderStyles from "./styles/header.module.css"
@@ -5,9 +7,12 @@ import HeaderStyles from "./styles/header.module.css"
 function App() {
   return (
     <div className={Styles.allWrapper}>
+
+      <ViewList />
+
       <nav className={NavStyles.nav}>
         <ul className={NavStyles.navList}>
-          <li className={NavStyles.navItem}><a href="/">HOME</a></li>
+          <li className={NavStyles.navItem}><a href="#view1">HOME</a></li>
           <li className={NavStyles.navItem}><a href="#">Architecture</a></li>
           <li className={NavStyles.navItem}><a href="#">Sample Sites</a></li>
           <li className={NavStyles.navItem}><a href="#">Blog Article</a></li>
