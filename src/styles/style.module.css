@@ -1,0 +1,18 @@
+.allWrapper {
+  background-color: #000;
+  min-height: 100vh;
+}
+
+.section {
+  padding: 50px 0 20px;
+}
+
+.section .section-title {
+  color: transparent;
+  -webkit-text-stroke: 1px #fff;
+  font-size: clamp(35px, 2.8vw, 50px);
+  font-weight: 100;
+  letter-spacing: 3px;
+  text-align: center;
+}
+
