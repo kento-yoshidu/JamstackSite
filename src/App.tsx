@@ -69,7 +69,7 @@ function App() {
         <table className={ArchitectureStyles.archTable}>
           <tr>
             <th>SSG</th>
-            <td>NextJS Gatsby Nuxt.js Gridsome SvelteKit</td>
+            <td>Next.js Gatsby Nuxt.js Gridsome SvelteKit</td>
           </tr>
           <tr>
             <th>Headless<br />CMS</th>
@@ -80,6 +80,60 @@ function App() {
             <td>AWS Amplify Netlify Vercel Gatsby Cloud</td>
           </tr>
         </table>
+      </section>
+
+      <section className={`${Styles.section} ${Styles.view} ${Styles.view3}`} id="view3">
+        <h2 className={Styles.sectionTitle}>Sample Sites</h2>
+
+        <p className={Styles.text}>※ もはやJamstackと呼べないものも含まれているかもしれませんがご了承ください。</p>
+
+        <div className={Styles.wrapper}>
+
+          <a
+            className={Styles.content}
+            href="https://www.toriwatari.work/"
+            target="_blink"
+          >
+            <div className={`${Styles.pageNumber} ${Styles.page1}`}>
+              <span></span>
+              <h4>#01</h4>
+            </div>
+            <div className={Styles.setumei}>
+              <h3>Portfolio Site</h3>
+              <p>ポートフォリオサイトです。Next.jsで作成しました。</p>
+            </div>
+          </a>
+
+          <a
+            className={Styles.content}
+            href="https://blog.toriwatari.work/"
+            target="_blink"
+          >
+            <div className={`${Styles.pageNumber} ${Styles.page2}`}>
+              <span></span>
+              <h4>#02</h4>
+            </div>
+            <div className={Styles.setumei}>
+              <h3>鳥に生まれることができなかった人へ</h3>
+              <p>GatsbyとMarkdownファイルで個人ブログを作成しました。</p>
+            </div>
+          </a>
+
+          <a
+            className={Styles.content}
+            href="https://snipet.gatsbyjs.io/"
+            target="_blank"
+          >
+            <div className={`${Styles.pageNumber} ${Styles.page3}`}>
+              <span></span>
+              <h4>#03</h4>
+            </div>
+            <div className={Styles.setumei}>
+              <h3>スニペット置き場</h3>
+              <p>GatsbyとMarkdownファイルで、ちょっとしたスニペットを保管するサイトを作成しました。</p>
+            </div>
+          </a>
+        </div>
       </section>
     </div>
   )
