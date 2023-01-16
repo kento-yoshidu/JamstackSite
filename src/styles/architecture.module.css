@@ -257,15 +257,15 @@
   margin-right: 30px;
 }
 
-.archTable th:nth-child(1)::before {
+.archTable tr:nth-child(1) th::before {
   background: linear-gradient(315deg, #ffbc00, #ff0058);
 }
 
-.archTable th:nth-child(2)::before {
+.archTable tr:nth-child(2) th::before {
   background: linear-gradient(315deg, #0575e6, #00f260);
 }
 
-.archTable th:nth-child(3)::before {
+.archTable tr:nth-child(3) th::before {
   background: linear-gradient(45deg, #db36a4, #f7ff00);
 }
 
@@ -274,7 +274,7 @@
     margin: 30px auto 0;
   }
 
-  .archTtable tr {
+  .archTable tr {
     padding: 12px;
   }
 
@@ -289,11 +289,3 @@
     border-radius: 5px;
   }
 }
-
-/*
-      &:hover .content {
-        padding: 18px 30px;
-        width: 100%;
-      }
-    }
-*/

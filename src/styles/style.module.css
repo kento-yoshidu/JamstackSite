@@ -7,7 +7,7 @@
   padding: 50px 0 20px;
 }
 
-.section .section-title {
+.section .sectionTitle {
   color: transparent;
   -webkit-text-stroke: 1px #fff;
   font-size: clamp(35px, 2.8vw, 50px);
@@ -16,3 +16,117 @@
   text-align: center;
 }
 
+.view3 .text {
+  margin-top: 30px;
+  color: #fff;
+  font-size: 1.75rem;
+  text-align: center;
+}
+
+.view3 .wrapper {
+  width: max(60%, 324px);
+  margin: 50px auto;
+}
+
+.view3 .content {
+  display: flex;
+  margin-bottom: 30px;
+  padding: 12px 8px;
+  color: #fff;
+  transition: 0.3s;
+  text-decoration: none;
+}
+
+.view3 .content:hover {
+  background-color: rgba(0, 0, 0, 0.01);
+  color: var(--main-color);
+}
+
+.view3 .pageNumber {
+  position: relative;
+  margin-right: 50px;
+  width: 55px;
+  height: 55px;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.view3 .pageNumber::before,
+.view3 .pageNumber::after {
+  content: "";
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  right: -4px;
+  bottom: -4px;
+  transform: skewX(2deg) skewY(4deg);
+  border-radius: 2px;
+}
+
+.view3 .pageNumber::after {
+  filter: blur(15px);
+}
+
+.view3 .pageNumber span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #000;
+  z-index: 1;
+}
+
+.view3 .pageNumber h4 {
+  position: relative;
+  font-size: clamp(16px, 2vw, 18px);
+  z-index: 3;
+}
+
+.view3 .setumei h3 {
+  margin-bottom: 5px;
+  font-size: 2.8rem;
+  line-height: 1.5;
+}
+
+.view3 .setumei p {
+  font-size: 1.63rem;
+  line-height: 1.5;
+}
+
+.page1::before,
+.page1::after {
+  background: linear-gradient(315deg, #4a569d, var(--bg-gradient), #dc2424);
+}
+
+.page2::before,
+.page2::after {
+  background: linear-gradient(315deg, orange, var(--bg-gradient), #009fff);
+}
+
+.page3::before,
+.page3::after {
+  background: linear-gradient(315deg, #00f260, var(--bg-gradient), #ffd200);
+}
+
+.page4::before,
+.page4::after {
+  background: linear-gradient(315deg, #b91d73, var(--bg-gradient), #f953c6);
+}
+
+.page5::before,
+.page5::after {
+  background: linear-gradient(315deg, #ffd200, var(--bg-gradient), #fc466b);
+}
+
+.page6::before,
+.page6::after {
+  background: linear-gradient(315deg, #00c3ff, var(--bg-gradient), #ffff1c);
+}
+
+.page7::before,
+.page7::after {
+  background: linear-gradient(315deg, #6f0, var(--bg-gradient), #a80077);
+}
